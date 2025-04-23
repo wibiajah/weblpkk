@@ -38,39 +38,49 @@
 
 <body class="blog-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">LPK Sentosa Karya Aditama</h1><span>.</span>
+  <header id="header" class="header d-flex align-items-center sticky-top py-2 shadow-sm bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+  
+      <!-- Logo dan Nama -->
+      <a href="index.html" class="logo d-flex align-items-center gap-2 text-dark text-decoration-none">
+        <img src="assets/img/logoweb.png" alt="Logo" style="height: 36px;">
+        <span class="sitename fw-bold fs-5">LPK SENTOSA KARYA ADITAMA</span><span class="text-primary fs-4"></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimoni</a></li>
-              
+  
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu d-none d-xl-block">
+        <ul class="d-flex gap-4 mb-0 list-unstyled align-items-center">
+  
+          <li class="dropdown position-relative d-flex align-items-center">
+            <!-- Link utama ke about.html -->
+            <a href="about.html" class="text-dark nav-link pe-2">Tentang Kami</a>
+          
+            <!-- Tombol panah khusus untuk buka dropdown -->
+            <a href="#" class="nav-link dropdown-toggle text-dark px-1" data-bs-toggle="dropdown" role="button" aria-expanded="false"></a>
+          
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="testimonials.html">Testimoni</a></li>
             </ul>
           </li>
-          <li><a href="portfolio.html">Galeri</a></li>
-          <li><a href="pricing.html">Lowongan</a></li>
-          <li><a href="blog.html">Berita</a></li>
-          <li><a href="contact.html">Kontak</a></li>
+  
+          <li><a href="portfolio.html" class="text-dark nav-link">Galeri</a></li>
+          <li><a href="pricing.html" class="text-dark nav-link">Lowongan</a></li>
+          <li><a href="blog.html" class="text-dark nav-link">Berita</a></li>
+          <li><a href="contact.html" class="text-dark nav-link">Kontak</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+  
+      <!-- Sosial Media -->
+      <div class="header-social-links d-flex align-items-center gap-2">
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
       </div>
-
+  
+      <!-- Mobile Menu Toggle -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list fs-3 ms-3 text-dark"></i>
     </div>
   </header>
 
@@ -94,221 +104,174 @@
 
       <div class="container">
         <div class="row gy-4">
-
+    
+          <!-- Berita 1 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">April 01</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h3>
-
+                <h3 class="post-title">Pelatihan Las Bersertifikat Resmi Dibuka</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">John Doe</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Admin LPK</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Pelatihan</span>
                   </div>
                 </div>
-
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                  LPK Sentosa membuka pelatihan las untuk calon pekerja Taiwan & Korea. Kelas April resmi dimulai!
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
+          <!-- Berita 2 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-                <span class="post-date">March 19</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">March 18</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Nisi magni odit consequatur autem nulla dolorem</h3>
-
+                <h3 class="post-title">20 Alumni Diberangkatkan ke Malaysia</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Humas LPK</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Penempatan Kerja</span>
                   </div>
                 </div>
-
                 <p>
-                  Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
+                  Sebanyak 20 alumni berhasil lolos seleksi dan telah diterbangkan ke Malaysia sebagai Family Cook dan Housekeeper.
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
+          <!-- Berita 3 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-                <span class="post-date">June 24</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">February 29</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
-
+                <h3 class="post-title">Seminar Bahasa Mandarin Gratis</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Admin LPK</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Bahasa</span>
                   </div>
                 </div>
-
                 <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                  LPK menyelenggarakan seminar gratis pengenalan Bahasa Mandarin bagi peserta pelatihan baru.
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
+          <!-- Berita 4 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-4.jpg" class="img-fluid" alt="">
-                <span class="post-date">August 05</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">April 10</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</h3>
-
+                <h3 class="post-title">Kunjungan Perusahaan Taiwan</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Maria Doe</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Admin Humas</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Kerja Sama</span>
                   </div>
                 </div>
-
                 <p>
-                  Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
+                  Perusahaan Taiwan datang ke LPK untuk observasi pelatihan dan rekrutmen peserta kerja luar negeri.
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
+          <!-- Berita 5 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-5.jpg" class="img-fluid" alt="">
-                <span class="post-date">September 17</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">March 02</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-
+                <h3 class="post-title">Lomba Masak Tradisional Digelar</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">John Parker</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Chef Instruktur</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Event</span>
                   </div>
                 </div>
-
                 <p>
-                  In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo ullam ut corrupti autem consequuntur totam dolorem.
+                  Peserta Family Cook ikut lomba masak menu tradisional untuk meningkatkan skill dan kreativitas memasak.
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
+          <!-- Berita 6 -->
           <div class="col-lg-4">
             <article class="position-relative h-100">
-
               <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-6.jpg" class="img-fluid" alt="">
-                <span class="post-date">December 07</span>
+                <img src="assets/img/berita.png" class="img-fluid" alt="">
+                <span class="post-date">April 20</span>
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-
+                <h3 class="post-title">Testimoni Alumni: “Saya Bisa Bantu Keluarga Karena LPK”</h3>
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia White</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">Alumni</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Testimoni</span>
                   </div>
                 </div>
-
                 <p>
-                  Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores. Illo laboriosam officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et voluptate et consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
+                  Alumni LPK berbagi cerita suksesnya bekerja di Jepang sebagai housekeeper. “Terima kasih LPK Sentosa.”
                 </p>
-
                 <hr>
-
                 <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>
-          </div><!-- End post list item -->
-
+          </div>
+    
         </div>
       </div>
-
-    </section><!-- /Blog Posts Section -->
+    
+    </section>
+    >
 
     <!-- Blog Pagination Section -->
     <section id="blog-pagination" class="blog-pagination section">
@@ -332,75 +295,78 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer dark-background py-4">
 
     <div class="container footer-top">
-      <div class="row gy-4">
+      <div class="row gy-4 align-items-start">
+  
+        <!-- Kolom 1: Tentang -->
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Company</span>
+          <a href="index.html" class="logo d-flex align-items-center mb-2">
+            <span class="sitename">LPK Sentosa Karya Aditama</span>
           </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <div class="footer-contact small">
+            <p>Jl. Balai Desa No.2A, RT.001/RW.004, Jatirasa, Kec. Jatiasih</p>
+            <p>Kota Bks, Jawa Barat 17424</p>
+            <p class="mt-2"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
+          <div class="social-links d-flex mt-3 gap-2">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+  
+        <!-- Kolom 2: Bahasa -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+          <h5 class="mb-2">Bahasa Kami</h5>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-translate me-1"></i> Mandarin</li>
+            <li><i class="bi bi-translate me-1"></i> Kantonis</li>
+            <li><i class="bi bi-translate me-1"></i> Melayu</li>
+            <li><i class="bi bi-translate me-1"></i> Inggris</li>
           </ul>
         </div>
-
+  
+        <!-- Kolom 3: Layanan -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+          <h5 class="mb-2">Layanan</h5>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-tools me-1"></i> Welder / Tukang Las</li>
+            <li><i class="bi bi-building me-1"></i> Kontruksi</li>
+            <li><i class="bi bi-cup-hot me-1"></i> Family Cook</li>
+            <li><i class="bi bi-house-door me-1"></i> Housekeeper</li>
           </ul>
         </div>
-
+  
+        <!-- Kolom 4: Kontak -->
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <h5 class="mb-2">Kontak Kami</h5>
+          <p class="small mb-2">Ada pertanyaan? Kirimkan ke kami sekarang juga!</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            <div class="newsletter-form d-flex">
+              <input type="email" name="email" class="form-control form-control-sm me-2" placeholder="Email Anda" required>
+              <input type="submit" class="btn btn-primary btn-sm" value="Kirim">
+            </div>
+            <div class="loading mt-1 small text-muted">Loading...</div>
+            <div class="error-message mt-1 text-danger small"></div>
+            <div class="sent-message mt-1 text-success small">Pesan berhasil dikirim!</div>
           </form>
         </div>
-
+  
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Company</strong> <span>All Rights Reserved</span></p>
+  
+    <!-- Bawah Footer -->
+    <div class="container mt-4 pt-3 border-top text-center small text-light">
+      <p class="mb-1">© <strong class="sitename">LPK Sentosa Karya Aditama</strong>. All Rights Reserved.</p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+        Designed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a> |
+        Distributed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a>
       </div>
     </div>
-
+  
   </footer>
 
   <!-- Scroll Top -->

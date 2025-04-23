@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -38,41 +39,52 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
-        <h1 class="sitename mb-0">LPK Sentosa Karya Aditama</h1><span>.</span>
+  <header id="header" class="header d-flex align-items-center sticky-top py-2 shadow-sm bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+  
+      <!-- Logo dan Nama -->
+      <a href="index.html" class="logo d-flex align-items-center gap-2 text-dark text-decoration-none">
+        <img src="assets/img/logoweb.png" alt="Logo" style="height: 36px;">
+        <span class="sitename fw-bold fs-5">LPK SENTOSA KARYA ADITAMA</span><span class="text-primary fs-4"></span>
       </a>
-      
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-
-          <li class="dropdown"><a href="about.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimoni</a></li>
-              
+  
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu d-none d-xl-block">
+        <ul class="d-flex gap-4 mb-0 list-unstyled align-items-center">
+  
+          <li class="dropdown position-relative d-flex align-items-center">
+            <!-- Link utama ke about.html -->
+            <a href="about.html" class="text-dark nav-link pe-2">Tentang Kami</a>
+          
+            <!-- Tombol panah khusus untuk buka dropdown -->
+            <a href="#" class="nav-link dropdown-toggle text-dark px-1" data-bs-toggle="dropdown" role="button" aria-expanded="false"></a>
+          
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="testimonials.html">Testimoni</a></li>
             </ul>
           </li>
-          <li><a href="portfolio.html">Galeri</a></li>
-          <li><a href="pricing.html">Lowongan</a></li>
-          <li><a href="blog.html">Berita</a></li>
-          <li><a href="contact.html">Kontak</a></li>
+  
+          <li><a href="portfolio.html" class="text-dark nav-link">Galeri</a></li>
+          <li><a href="pricing.html" class="text-dark nav-link">Lowongan</a></li>
+          <li><a href="blog.html" class="text-dark nav-link">Berita</a></li>
+          <li><a href="contact.html" class="text-dark nav-link">Kontak</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+  
+      <!-- Sosial Media -->
+      <div class="header-social-links d-flex align-items-center gap-2">
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
       </div>
-
+  
+      <!-- Mobile Menu Toggle -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list fs-3 ms-3 text-dark"></i>
     </div>
   </header>
+  
 
   <main class="main">
 
@@ -80,7 +92,7 @@
     <section id="hero" class="hero section" style="position: relative;">
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-item active">
-          <img src="assets/img/tki_tes1.png" alt="" class="w-100" style="height: 100vh; object-fit: cover;">
+          <img src="assets/img/bekkgr.jpg" alt="" class="w-100" style="height: 100vh; object-fit: cover;">
     
           <!-- Teks + Form di tengah bawah -->
           <div style="
@@ -145,44 +157,38 @@
     
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
+    <section id="about" class="about section py-5">
       <div class="container">
-
-        <div class="row position-relative">
-
-          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="assets\img\lpksen.jpeg"></div>
-
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="inner-title">LPK Sentosa Karya Aditama</h2>
-            <div class="our-story">
-              <h4>Est 1988</h4>
-              <h3>Sejarah</h3>
-              <p style="text-align: justify;">
-                ​LPK Sentosa Karya Aditama, yang beroperasi di bawah naungan PT Sentosa Karya Aditama, merupakan lembaga pelatihan kerja yang fokus pada penempatan dan pelatihan calon Pekerja Migran Indonesia (PMI). Berdasarkan informasi dari Badan Perlindungan Pekerja Migran Indonesia (BP2MI), perusahaan ini memperoleh izin operasional pada 13 Januari 2017.
-              </p>
-              
-              <p style="text-align: justify;">
-                LPK Sentosa Karya Aditama memiliki beberapa cabang di berbagai daerah, termasuk Bekasi, Cirebon, Subang, dan Cilacap. Kantor pusatnya berlokasi di Jl. Balai Desa No. 2A, RT.001 RW.004, Kelurahan Jatirasa, Kecamatan Jatiasih, Kota Bekasi, Jawa Barat.
-              </p>
-              
-              <p style="text-align: justify;">
-                Perusahaan ini dipimpin oleh Direktur Utama Teguh Riyanto, S.H., dan telah aktif dalam memberikan pelatihan serta penempatan tenaga kerja ke luar negeri. Meskipun sempat menghadapi beberapa isu terkait penempatan PMI nonprosedural, pihak perusahaan telah melakukan klarifikasi dan menempuh jalur hukum untuk menjaga reputasinya.
-              </p>
-              
-              <p style="text-align: justify;">
-                Dengan pengalaman dan jaringan yang luas, LPK Sentosa Karya Aditama terus berkomitmen untuk meningkatkan kualitas pelatihan dan penempatan tenaga kerja Indonesia di pasar global.
-              </p>
-              
-              
-            </div>
+        <div class="row align-items-center gy-5">
+          
+          <!-- Gambar -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+            <img src="assets/img/lpksen.jpeg" alt="LPK Sentosa Karya Aditama" class="img-fluid rounded shadow" />
           </div>
-
+          
+          <!-- Teks -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+            <h2 class="mb-3">LPK Sentosa Karya Aditama</h2>
+            <h4 class="mb-3">Pengertian Singkat</h4>
+            <p style="text-align: justify;">
+              LPK Sentosa Karya Aditama, beroperasi di bawah naungan PT Sentosa Karya Aditama, adalah lembaga pelatihan kerja yang fokus pada pelatihan dan penempatan calon Pekerja Migran Indonesia (PMI). Izin operasional resmi dikeluarkan oleh BP2MI pada 13 Januari 2017.
+            </p>
+            <p style="text-align: justify;">
+              LPK ini memiliki cabang di berbagai wilayah seperti Bekasi, Cirebon, Subang, dan Cilacap. Kantor pusatnya terletak di Jl. Balai Desa No. 2A, RT.001 RW.004, Jatirasa, Jatiasih, Kota Bekasi.
+            </p>
+            <p style="text-align: justify;">
+              Dipimpin oleh Direktur Utama Teguh Riyanto, S.H., LPK Sentosa Karya Aditama aktif memberikan pelatihan berkualitas dan penempatan tenaga kerja ke luar negeri. Meskipun sempat menghadapi isu terkait penempatan nonprosedural, pihak perusahaan telah memberikan klarifikasi dan menempuh jalur hukum.
+            </p>
+            <p style="text-align: justify;">
+              Dengan pengalaman panjang dan jaringan luas, LPK Sentosa Karya Aditama berkomitmen untuk terus meningkatkan kualitas SDM Indonesia agar siap bersaing secara global.
+            </p>
+          </div>
+    
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
+    </section>
+    
+    
 
     <!-- Services Section -->
     
@@ -493,7 +499,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Partner</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Kami Berpartner Dengan</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -540,74 +546,81 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer dark-background py-4">
 
     <div class="container footer-top">
-      <div class="row gy-4">
+      <div class="row gy-4 align-items-start">
+  
+        <!-- Kolom 1: Tentang -->
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="index.html" class="logo d-flex align-items-center mb-2">
             <span class="sitename">LPK Sentosa Karya Aditama</span>
           </a>
-          <div class="footer-contact pt-3">
+          <div class="footer-contact small">
             <p>Jl. Balai Desa No.2A, RT.001/RW.004, Jatirasa, Kec. Jatiasih</p>
             <p>Kota Bks, Jawa Barat 17424</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p class="mt-2"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
+          <div class="social-links d-flex mt-3 gap-2">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
           </div>
         </div>
-
+  
+        <!-- Kolom 2: Bahasa -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Bahasa Kami</h4>
-          <ul>
-            <li>Mandarin</li>
-            <li>Kantonis</li>
-            <li>Melayu</li>
-            <li>Inggris</li>
+          <h5 class="mb-2">Bahasa Kami</h5>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-translate me-1"></i> Mandarin</li>
+            <li><i class="bi bi-translate me-1"></i> Kantonis</li>
+            <li><i class="bi bi-translate me-1"></i> Melayu</li>
+            <li><i class="bi bi-translate me-1"></i> Inggris</li>
           </ul>
         </div>
-        
+  
+        <!-- Kolom 3: Layanan -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li>Welder / Tukang Las</li>
-            <li>Kontruksi</li>
-            <li>Family Cook</li>
-            <li>Housekeeper</li>
+          <h5 class="mb-2">Layanan</h5>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-tools me-1"></i> Welder / Tukang Las</li>
+            <li><i class="bi bi-building me-1"></i> Kontruksi</li>
+            <li><i class="bi bi-cup-hot me-1"></i> Family Cook</li>
+            <li><i class="bi bi-house-door me-1"></i> Housekeeper</li>
           </ul>
         </div>
-        
-
+  
+        <!-- Kolom 4: Kontak -->
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Kontak Kami</h4>
-          <p>Apabila ada pertanyaan boleh kirim ke kami sekarang juga!!!</p>
+          <h5 class="mb-2">Kontak Kami</h5>
+          <p class="small mb-2">Ada pertanyaan? Kirimkan ke kami sekarang juga!</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Kirim"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            <div class="newsletter-form d-flex">
+              <input type="email" name="email" class="form-control form-control-sm me-2" placeholder="Email Anda" required>
+              <input type="submit" class="btn btn-primary btn-sm" value="Kirim">
+            </div>
+            <div class="loading mt-1 small text-muted">Loading...</div>
+            <div class="error-message mt-1 text-danger small"></div>
+            <div class="sent-message mt-1 text-success small">Pesan berhasil dikirim!</div>
           </form>
         </div>
-
+  
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">LPK Sentosa Karya Aditama</strong> <span>All Rights Reserved</span></p>
+  
+    <!-- Bawah Footer -->
+    <div class="container mt-4 pt-3 border-top text-center small text-light">
+      <p class="mb-1">© <strong class="sitename">LPK Sentosa Karya Aditama</strong>. All Rights Reserved.</p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="">LPK Sentosa Karya Aditama</a> Distributed by <a href="">LPK Sentosa Karya Aditama
+        Designed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a> |
+        Distributed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a>
       </div>
     </div>
-
+  
   </footer>
+  
+  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -627,7 +640,10 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
