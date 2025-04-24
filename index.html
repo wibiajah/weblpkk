@@ -521,42 +521,42 @@
           <!-- Card Item -->
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-person-workspace"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-person-workspace"></i></div>
               <h5 class="fw-semibold mb-1">Pelatihan Profesional</h5>
               <p class="text-muted mb-0">Dapatkan pembekalan keterampilan kerja dari para trainer berpengalaman.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-shield-check"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-shield-check"></i></div>
               <h5 class="fw-semibold">Penyaluran Legal & Aman</h5>
               <p class="text-muted">Kami bekerja sama dengan lembaga resmi untuk memastikan proses yang legal dan aman.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-globe2"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-globe2"></i></div>
               <h5 class="fw-semibold">Tujuan Negara Favorit</h5>
               <p class="text-muted">Siap berkarir di negara seperti Jepang, Hongkong, Taiwan, dan lainnya.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-people"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-people"></i></div>
               <h5 class="fw-semibold">Ribuan Alumni Sukses</h5>
               <p class="text-muted">Jaringan alumni luas dan terbukti sukses di luar negeri.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-compass"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-compass"></i></div>
               <h5 class="fw-semibold">Panduan Hingga Berangkat</h5>
               <p class="text-muted">Dibimbing dari awal pendaftaran hingga berangkat kerja.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="card shadow-sm text-center p-3 border-0 rounded-4 h-100">
-              <div class="mb-2 fs-1 text-primary"><i class="bi bi-cash-coin"></i></div>
+              <div class="mb-2 fs-1" style="color: #e3b016;"><i class="bi bi-cash-coin"></i></div>
               <h5 class="fw-semibold">Biaya Terjangkau</h5>
               <p class="text-muted">Kualitas pelatihan tinggi dengan biaya yang sangat kompetitif.</p>
             </div>
@@ -689,6 +689,20 @@
   <script>
     AOS.init();
   </script>
+  <script>
+  // Ambil path dari URL saat ini, misal: "galeri.html"
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Ambil semua link di navbar
+  document.querySelectorAll('#navmenu a').forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("active"); // Tambahkan class aktif
+    }
+  });
+</script>
+
 </body>
 
 </html>

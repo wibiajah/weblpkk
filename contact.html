@@ -76,31 +76,42 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title accent-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Contact</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
+    <div class="page-title-modern py-2 px-3">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill fs-4 text-warning"></i>
+          <div>
+            <h5 class="mb-0 fw-bold text-dark">Kontak</h5>
+          </div>
+        </div>
+        <nav>
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-warning fw-semibold">Kontak</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
-
+<br>
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
-      <div class="mb-5">
-        <iframe 
-          style="width: 100%; height: 400px;" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid" 
-          frameborder="0" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12">
+            <div style="width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+              <iframe 
+                style="width: 100%; height: 400px; border:0;" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
       </div>
+      
       
 
       <div class="container" data-aos="fade">
@@ -115,7 +126,7 @@
               </p>
           
               <div class="info-item d-flex mb-3">
-                <i class="bi bi-geo-alt flex-shrink-0 fs-4 text-success me-3"></i>
+                <i class="bi bi-geo-alt flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
                 <div>
                   <h5 class="mb-1">Alamat:</h5>
                   <p class="mb-0">Jl. Balai Desa No. 2A, RT.001/RW.004, Kel. Jatirasa, Kec. Jatiasih, Kota Bekasi, Jawa Barat 17424</p>
@@ -123,7 +134,7 @@
               </div>
           
               <div class="info-item d-flex mb-3">
-                <i class="bi bi-envelope flex-shrink-0 fs-4 text-success me-3"></i>
+                <i class="bi bi-envelope flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
                 <div>
                   <h5 class="mb-1">Email:</h5>
                   <p class="mb-0">sentosa.pusat@yahoo.com</p>
@@ -131,7 +142,7 @@
               </div>
           
               <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0 fs-4 text-success me-3"></i>
+                <i class="bi bi-phone flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
                 <div>
                   <h5 class="mb-1">Telepon / WhatsApp:</h5>
                   <p class="mb-0">+62 822-9898-2759</p>
@@ -139,6 +150,7 @@
               </div>
             </div>
           </div>
+          
           
 
           <div class="col-lg-8">
@@ -271,7 +283,20 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    // Ambil path dari URL saat ini, misal: "galeri.html"
+    const currentPage = window.location.pathname.split("/").pop();
+  
+    // Ambil semua link di navbar
+    document.querySelectorAll('#navmenu a').forEach(link => {
+      const linkPage = link.getAttribute("href");
+  
+      if (linkPage === currentPage) {
+        link.classList.add("active"); // Tambahkan class aktif
+      }
+    });
+  </script>
+  
 </body>
 
 </html>

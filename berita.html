@@ -77,13 +77,18 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title accent-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Blog</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
+    <div class="page-title-modern py-2 px-3">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill fs-4 text-warning"></i>
+          <div>
+            <h5 class="mb-0 fw-bold text-dark">Berita</h5>
+          </div>
+        </div>
+        <nav>
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-warning fw-semibold">Berita</li>
           </ol>
         </nav>
       </div>
@@ -377,7 +382,20 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    // Ambil path dari URL saat ini, misal: "galeri.html"
+    const currentPage = window.location.pathname.split("/").pop();
+  
+    // Ambil semua link di navbar
+    document.querySelectorAll('#navmenu a').forEach(link => {
+      const linkPage = link.getAttribute("href");
+  
+      if (linkPage === currentPage) {
+        link.classList.add("active"); // Tambahkan class aktif
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
