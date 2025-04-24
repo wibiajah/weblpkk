@@ -94,76 +94,82 @@
       <div class="mb-5">
         <iframe 
           style="width: 100%; height: 400px;" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.411189781866!2d106.9654153!3d-6.2950034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69930063108513%3A0xc77e7b5569acc04e!2sPT.%20SENTOSAKARYA%20ADITAMA%20(PUSAT)!5e0!3m2!1sid!2sid!4v1713773546437!5m2!1sid!2sid" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid" 
           frameborder="0" 
           allowfullscreen="" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
+      
 
       <div class="container" data-aos="fade">
 
         <div class="row gy-5 gx-lg-5">
 
           <div class="col-lg-4">
-
-            <div class="info">
-              <h3>Get in touch</h3>
-              <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
-
-              <div class="info-item d-flex">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div class="info p-4 shadow rounded-4" style="background-color: #f9f9f9;">
+              <h3 class="mb-3">Hubungi Kami</h3>
+              <p class="mb-4">
+                LPK Sentosa Karya Aditama siap membantu Anda mewujudkan karier ke luar negeri melalui pelatihan kerja berkualitas dan peluang kerja terpercaya.
+              </p>
+          
+              <div class="info-item d-flex mb-3">
+                <i class="bi bi-geo-alt flex-shrink-0 fs-4 text-success me-3"></i>
                 <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h5 class="mb-1">Alamat:</h5>
+                  <p class="mb-0">Jl. Balai Desa No. 2A, RT.001/RW.004, Kel. Jatirasa, Kec. Jatiasih, Kota Bekasi, Jawa Barat 17424</p>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+              </div>
+          
+              <div class="info-item d-flex mb-3">
+                <i class="bi bi-envelope flex-shrink-0 fs-4 text-success me-3"></i>
                 <div>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <h5 class="mb-1">Email:</h5>
+                  <p class="mb-0">sentosa.pusat@yahoo.com</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
+          
               <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0"></i>
+                <i class="bi bi-phone flex-shrink-0 fs-4 text-success me-3"></i>
                 <div>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <h5 class="mb-1">Telepon / WhatsApp:</h5>
+                  <p class="mb-0">+62 822-9898-2759</p>
                 </div>
-              </div><!-- End Info Item -->
-
+              </div>
             </div>
-
           </div>
+          
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form p-4 shadow rounded-4" style="background-color: #f9f9f9;">
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                <div class="col-md-6 form-group mb-3">
+                  <input type="text" name="name" class="form-control rounded-pill" id="name" placeholder="Nama Lengkap" required>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                <div class="col-md-6 form-group mb-3">
+                  <input type="email" class="form-control rounded-pill" name="email" id="email" placeholder="Alamat Email" required>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+              <div class="form-group mb-3">
+                <input type="text" class="form-control rounded-pill" name="subject" id="subject" placeholder="Subjek Pesan" required>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
+              <div class="form-group mb-3">
+                <textarea class="form-control rounded-4" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="loading text-success">Loading...</div>
+                <div class="error-message text-danger"></div>
+                <div class="sent-message text-success">Pesan Anda telah terkirim. Terima kasih!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success rounded-pill px-4 py-2 d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-send-fill"></i> Kirim Pesan
+                </button>
+              </div>
             </form>
           </div><!-- End Contact Form -->
+          
 
         </div>
 
