@@ -12,7 +12,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -29,6 +29,40 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .portfolio .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ddd; /* Border tipis */
+    }
+  
+    .portfolio .portfolio-item img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+  
+    .portfolio .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+  
+    .portfolio-container {
+      padding-left: 15px;  /* Jarak kiri */
+      padding-right: 15px; /* Jarak kanan */
+    }
+  </style>
+
+
 
   <!-- =======================================================
   * Template Name: Company
@@ -258,125 +292,6 @@
       </div>
     </section>
     
-    
-    
-    
-    
-    
-    
-
-    <!-- Services Section -->
-    
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Galeri Kegiatan</h2>
-        <p>Kegiatan-kegiatan di Tempat LPK Kami</p>
-      </div>
-    
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const container = document.querySelector(".isotope-container");
-              const items = Array.from(container.children);
-          
-              // Shuffle array
-              for (let i = items.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [items[i], items[j]] = [items[j], items[i]];
-              }
-          
-              // Append shuffled items
-              items.forEach(item => container.appendChild(item));
-            });
-          </script>
-          <!-- Filter -->
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Semua</li>
-            <li data-filter=".filter-welder">Welder</li>
-            <li data-filter=".filter-kontruksi">Kontruksi</li>
-            <li data-filter=".filter-familycook">Family Cook</li>
-            <li data-filter=".filter-housekeeper">Housekeeper</li>
-          </ul>
-    
-          <!-- Items -->
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-    
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/1.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 1</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 2 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/2.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 2</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 3 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/3.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 3</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 4 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/4.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 4</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 5 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/5.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 5</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/5.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 6 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/6.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 6</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/6.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-    
-            <!-- Tambah item sesuai kebutuhan dengan class filter-welder, filter-kontruksi, filter-familycook, filter-housekeeper -->
-    
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <section id="sambutan" class="section py-1">
       <div class="container section-title text-center mb-0" data-aos="fade-up">
         <h2 class="fw-bold mb-1">Sambutan</h2>
@@ -433,6 +348,193 @@
       <br>
       <br>
     </section>
+    
+<br>
+<br>
+
+
+<section id="pelatihan" class="section py-1 pb-5">
+  <div class="container section-title text-center mb-0" data-aos="fade-up">
+    <h2 class="fw-bold mb-1">Program Pelatihan Kerja</h2>
+    <p class="text-muted mb-2">Kami menyediakan berbagai pelatihan kerja berkualitas untuk menyiapkan tenaga kerja yang profesional dan siap kerja.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+      <!-- Baby Sitter -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-warning"><i class="fa-solid fa-baby"></i></div>
+          <h5 class="fw-semibold">Baby Sitter</h5>
+          <p class="text-muted">Pelatihan perawatan bayi untuk menjadi pengasuh anak yang profesional dan penuh kasih.</p>
+        </div>
+      </div>
+      <!-- Caretaker -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-danger"><i class="fa-solid fa-person-cane"></i></div>
+          <h5 class="fw-semibold">Caretaker</h5>
+          <p class="text-muted">Pelatihan perawatan lansia dengan pendekatan kesehatan dan empati tinggi.</p>
+        </div>
+      </div>
+      <!-- House Maid -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-info"><i class="fa-solid fa-broom"></i></div>
+          <h5 class="fw-semibold">House Maid</h5>
+          <p class="text-muted">Pelatihan kerja rumah tangga mencakup kebersihan, masak, dan manajemen rumah.</p>
+        </div>
+      </div>
+      <!-- House Keeper -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-primary"><i class="fa-solid fa-house-user"></i></div>
+          <h5 class="fw-semibold">House Keeper</h5>
+          <p class="text-muted">Mendalami keterampilan kebersihan dan pengelolaan rumah atau fasilitas besar.</p>
+        </div>
+      </div>
+      <!-- Manufaktur Industri -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-secondary"><i class="fa-solid fa-industry"></i></div>
+          <h5 class="fw-semibold">Manufaktur Industri</h5>
+          <p class="text-muted">Pelatihan teknik produksi, perakitan, dan keamanan kerja di industri manufaktur.</p>
+        </div>
+      </div>
+      <!-- Konstruksi -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-success"><i class="fa-solid fa-hard-hat"></i></div>
+          <h5 class="fw-semibold">Konstruksi</h5>
+          <p class="text-muted">Pelatihan pekerjaan bangunan dari pondasi hingga finishing, dengan keselamatan kerja.</p>
+        </div>
+      </div>
+      <!-- Welder -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-dark"><i class="fa-solid fa-wrench"></i></div>
+          <h5 class="fw-semibold">Welder (Pengelasan)</h5>
+          <p class="text-muted">Pelatihan teknik pengelasan untuk kebutuhan industri dan konstruksi logam.</p>
+        </div>
+      </div>
+      <!-- Peternakan -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card text-center p-3 rounded-4 h-100" style="box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+          <div class="mb-2 fs-1 text-success"><i class="fa-solid fa-cow"></i></div>
+          <h5 class="fw-semibold">Peternakan</h5>
+          <p class="text-muted">Pelatihan perawatan hewan ternak, pakan, dan manajemen peternakan modern.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Galeri Kami</h2>
+        <p>Kegiatan-kegiatan di Tempat LPK Kami</p>
+      </div>
+    
+      <!-- Container dengan padding kiri dan kanan -->
+      <div class="container portfolio-container">
+        <div class="row g-0 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/1.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 1</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/2.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 2</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/3.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 3</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/4.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 4</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/5.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 3</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/5.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/cook/6.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 4</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/cook/6.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/house/1.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 3</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/house/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 portfolio-item filter-familycook">
+            <img src="assets/img/house/2.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Family Cook 4</h4>
+              <p>Pelatihan memasak</p>
+              <a href="assets/img/house/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ 
     <!-- Clients Section -->
     <section id="lokasi" class="section">
 
