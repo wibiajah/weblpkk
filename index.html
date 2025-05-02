@@ -230,50 +230,76 @@
 
     <!-- About Section -->
 <!-- About Section with Modern Asymmetric Design -->
-<section id="about" class="about pt-5 pb-5">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 align-items-center">
-      
-      <!-- Gambar -->
-      <div class="col-lg-6">
-        <img src="assets/img/bg1.jpeg" alt="LPK Sentosa Karya Aditama"
-             class="img-fluid rounded-4 w-100 about-img"
-             style="max-height: 450px; object-fit: cover;" />
+<section id="about" class="about section">
+  <div class="container py-5 px-4">
+    <div class="row align-items-center gx-5">
+
+      <!-- Gambar Utama dengan Refleksi -->
+      <div class="col-lg-6 text-center d-flex align-items-start justify-content-center" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="w-100" style="max-width: 100%;">
+
+          <!-- Gambar Utama -->
+          <div class="position-relative shadow-lg rounded-4 overflow-hidden border border-3 border-dark" style="width: 100%;">
+            <img src="assets/img/bg1.jpeg" alt="LPK Sentosa Karya Aditama" class="img-fluid rounded-4 w-100" style="max-height: 450px; object-fit: cover;" />
+
+            <!-- Ikon -->
+            <div class="position-absolute top-0 start-0 m-3 p-3 bg-warning rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="bi bi-globe2 text-white fs-4"></i>
+            </div>
+
+            <!-- Label -->
+            <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white px-3 py-2 rounded-end">
+              <small><i class="bi bi-translate me-1"></i> Program Bahasa Asing</small>
+            </div>
+          </div>
+
+          <!-- Efek Bayangan Refleksi -->
+          <div class="position-relative overflow-hidden mt-2" style="height: 120px;">
+            <img src="assets/img/bg1.jpeg" alt="Refleksi" class="img-fluid rounded-4 w-100" style="
+              transform: scaleY(-1);
+              opacity: 0.2;
+              object-fit: cover;
+              filter: blur(1px);
+              height: 120px;
+            " />
+            <div style="
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(to bottom, rgba(255,255,255,0.05), white);
+            "></div>
+          </div>
+
+        </div>
       </div>
 
       <!-- Teks -->
-      <div class="col-lg-6">
-        <div class="content ps-lg-5">
-          <h3>Tentang Kami</h3>
-          <p class="fst-italic">
-            LPK Sentosa Karya Aditama adalah lembaga pelatihan kerja terpercaya yang telah menyalurkan tenaga kerja ke berbagai negara dengan legalitas resmi. 
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="our-story px-4 py-4" style="
+          border-left: 6px solid transparent;
+          border-image: linear-gradient(to bottom, #000000, #e3b016) 1;
+          background-color: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        ">
+          <h3 class="fw-bold text-dark mb-3">Pengertian Singkat</h3>
+          <p class="text-dark mb-3" style="text-align: justify;">
+            <strong style="color: #000000;">LPK - LN Sentosa Karya Aditama Bekasi</strong> adalah lembaga pelatihan kerja resmi yang mengkhususkan diri pada pembelajaran bahasa asing bagi Calon Pekerja Migran Indonesia. Bahasa yang diajarkan meliputi <strong>Kantonis, Mandarin, Melayu, dan Inggris</strong> dengan metode belajar efektif dan suasana yang nyaman.
           </p>
-          <ul>
-            <li><i class="bi bi-check-circle"></i> Pelatihan berkualitas dan bersertifikat.</li>
-            <li><i class="bi bi-check-circle"></i> Penempatan kerja ke luar negeri secara legal.</li>
-            <li><i class="bi bi-check-circle"></i> Pendampingan dan bimbingan hingga proses pemberangkatan.</li>
-          </ul>
-          <p>
-            Kami berkomitmen untuk menciptakan tenaga kerja terampil dan profesional yang siap bersaing di dunia kerja internasional.
+          <p class="text-dark mb-3" style="text-align: justify;">
+            <strong style="color: #000000;">Kenapa Memilih Kami?</strong><br>
+            Kami membekali peserta dengan keterampilan bahasa sekaligus membentuk <strong>mental, disiplin, dan kepercayaan diri</strong>. Dipandu oleh pengajar profesional, lulusan kami siap menghadapi tantangan kerja di luar negeri secara mandiri dan percaya diri.
           </p>
+          <a href="tentang.html" class="btn mt-2 px-4 py-2" style="background-color: #e3b016; color: rgb(0, 0, 0); border-radius: 6px; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase;">Selengkapnya</a>
+
+
         </div>
       </div>
 
     </div>
   </div>
-
-  <!-- CSS Responsif Langsung -->
-  <style>
-    @media (max-width: 768px) {
-      .about-img {
-        max-height: none !important;
-        height: auto !important;
-        object-fit: contain !important;
-      }
-    }
-  </style>
 </section>
-
 
 
 
@@ -1740,20 +1766,18 @@
     <!-- Clients Section -->
     <section id="lokasi" class="section py-5">
       <style>
-        /* Lokasi Section Styling */
         #lokasi {
           background: linear-gradient(to bottom, #f9f9f9, #ffffff);
           position: relative;
           overflow: hidden;
           padding: 80px 0;
         }
-        
-        /* Background decorations */
+    
         .location-decoration {
           position: absolute;
           z-index: 0;
         }
-        
+    
         .location-deco-1 {
           top: 40px;
           right: 10%;
@@ -1762,7 +1786,7 @@
           background: linear-gradient(135deg, rgba(227, 176, 22, 0.08) 0%, rgba(227, 176, 22, 0.03) 100%);
           border-radius: 30% 70% 50% 50% / 30% 30% 70% 70%;
         }
-        
+    
         .location-deco-2 {
           bottom: 60px;
           left: 10%;
@@ -1771,7 +1795,7 @@
           border: 6px solid rgba(227, 176, 22, 0.08);
           border-radius: 50%;
         }
-        
+    
         .location-deco-3 {
           top: 60%;
           right: 15%;
@@ -1780,15 +1804,14 @@
           border: 6px solid rgba(227, 176, 22, 0.06);
           transform: rotate(45deg);
         }
-        
-        /* Title styling */
+    
         .section-title {
           text-align: center;
           margin-bottom: 50px;
           position: relative;
           z-index: 1;
         }
-        
+    
         .section-title h2 {
           font-size: 2.5rem;
           font-weight: 700;
@@ -1798,7 +1821,7 @@
           display: inline-block;
           padding-bottom: 15px;
         }
-        
+    
         .section-title h2::after {
           content: "";
           position: absolute;
@@ -1810,69 +1833,66 @@
           background: #e3b016;
           border-radius: 2px;
         }
-        
+    
         .section-title p {
           color: #6c757d;
           font-size: 1.1rem;
           max-width: 700px;
           margin: 0 auto;
         }
-        
-        /* Location container styling */
+    
         .location-wrapper {
           position: relative;
           z-index: 1;
-          max-width: 1200px;
+          max-width: 1320px;
           margin: 0 auto;
+          padding: 0 15px;
         }
-        
+    
         .location-card {
           background: white;
           border-radius: 16px;
           overflow: hidden;
           box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-          position: relative;
           transition: all 0.4s ease;
         }
-        
+    
         .location-card:hover {
           transform: translateY(-10px);
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
-        
+    
         .map-container {
           height: 450px;
-          position: relative;
           overflow: hidden;
           border-radius: 16px 16px 0 0;
-          border: none;
         }
-        
+    
         .map-container iframe {
           width: 100%;
           height: 100%;
           border: none;
         }
-        
+    
         .location-info {
           padding: 30px;
           background: white;
           border-top: 1px solid rgba(0, 0, 0, 0.03);
         }
-        
+    
         .location-info h3 {
           font-size: 1.5rem;
           font-weight: 600;
           color: #333;
           margin-bottom: 15px;
         }
-        
+    
         .contact-info {
           display: flex;
           flex-wrap: wrap;
           margin-top: 20px;
         }
-        
+    
         .info-item {
           display: flex;
           align-items: flex-start;
@@ -1880,27 +1900,27 @@
           width: 50%;
           padding-right: 15px;
         }
-        
+    
         .info-icon {
           color: #e3b016;
           font-size: 1.2rem;
           margin-right: 15px;
           margin-top: 4px;
         }
-        
+    
         .info-content h4 {
           font-size: 1rem;
           font-weight: 600;
           color: #333;
           margin: 0 0 5px 0;
         }
-        
+    
         .info-content p {
           margin: 0;
           color: #6c757d;
           line-height: 1.5;
         }
-        
+    
         .directions-btn {
           display: inline-block;
           margin-top: 15px;
@@ -1913,33 +1933,32 @@
           transition: all 0.3s ease;
           box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3);
         }
-        
+    
         .directions-btn:hover {
           background: #c09613;
           transform: translateY(-3px);
           box-shadow: 0 8px 20px rgba(227, 176, 22, 0.4);
         }
-        
+    
         .directions-btn i {
           margin-right: 8px;
         }
-        
-        /* Responsive adjustments */
+    
         @media (max-width: 992px) {
           .info-item {
             width: 100%;
           }
-          
+    
           .section-title h2 {
             font-size: 2rem;
           }
         }
-        
+    
         @media (max-width: 768px) {
           .map-container {
             height: 350px;
           }
-          
+    
           .location-info {
             padding: 25px;
           }
@@ -1954,13 +1973,12 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Lokasi Kami</h2>
-        <p>Kunjungi LPK Sentosa Karya Aditama di Bekasi untuk konsultasi dan informasi pelatihan lebih lanjut</p>
+        <p>Kunjungi lokasi pelatihan dan kantor kami secara langsung di tempat berikut ini:</p>
       </div>
     
-      <!-- Location Content -->
-      <div class="container location-wrapper" data-aos="fade-up" data-aos-delay="100">
+      <!-- Content -->
+      <div class="location-wrapper" data-aos="fade-up" data-aos-delay="100">
         <div class="location-card">
-          <!-- Map Container -->
           <div class="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid"
@@ -1969,56 +1987,40 @@
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          
-          <!-- Location Information -->
           <div class="location-info">
-            <h3>LPK Sentosa Karya Aditama Bekasi</h3>
-            <p>Kami siap memberikan pelatihan terbaik untuk mempersiapkan Anda memasuki dunia kerja profesional. Kunjungi kantor kami untuk informasi lebih lanjut.</p>
-            
+            <h3>Sentosa Karya Aditama</h3>
             <div class="contact-info">
               <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
+                <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
                 <div class="info-content">
                   <h4>Alamat</h4>
-                  <p>Jl. Balai Desa No.2, RT.001/RW.004, Jatirasa, Kec. Jatiasih, Kota Bks, Jawa Barat 17424</p>
+                  <p>Jl. Contoh No. 123, Kota Pelatihan, Indonesia</p>
                 </div>
               </div>
-              
               <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
+                <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
                 <div class="info-content">
                   <h4>Telepon</h4>
-                  <p>+62 822-9898-2759</p>
+                  <p>+62 812 3456 7890</p>
                 </div>
               </div>
-              
               <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="info-content">
-                  <h4>Jam Operasional</h4>
-                  <p>Senin - Jumat: 08.00 - 17.00<br>Sabtu: 08.00 - 12.00</p>
-                </div>
-              </div>
-              
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
+                <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
                 <div class="info-content">
                   <h4>Email</h4>
-                  <p>lpksentosakaryaaditamabekasi@gmail.com</p>
+                  <p>info@sentosakarya.com</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
+                <div class="info-content">
+                  <h4>Jam Operasional</h4>
+                  <p>Senin - Jumat, 08.00 - 16.00</p>
                 </div>
               </div>
             </div>
-            
-            <a href="https://goo.gl/maps/9X6Z5ZJsVX6Z9ZTLA" target="_blank" class="directions-btn">
-              <i class="fas fa-directions"></i> Petunjuk Arah
+            <a href="https://maps.google.com" class="directions-btn" target="_blank">
+              <i class="bi bi-compass"></i> Lihat Rute
             </a>
           </div>
         </div>
