@@ -30,6 +30,16 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  
+    /* Menambahkan font ke tombol */
+    .btn {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  </style>
+  <style>
     .portfolio .portfolio-item {
       position: relative;
       overflow: hidden;
@@ -219,110 +229,61 @@
     
 
     <!-- About Section -->
-    <section id="about" class="about section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
-      <div class="container">
-    
-        <!-- Judul di Tengah -->
-        <div class="row justify-content-center mb-4">
-          <div class="col-lg-8 text-center">
-            <h2 class="text-dark fw-bold">
-              <i class="bi bi-mortarboard-fill me-2 text-dark"></i>LPK - LN Sentosa Karya Aditama
-            </h2>
-          </div>
-        </div>
-    
-        <!-- Isi Gambar & Teks -->
-        <div class="row align-items-start gy-4">
-    
-          <!-- Gambar + Refleksi -->
-          <div class="col-lg-6 text-center d-flex align-items-start justify-content-center" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="w-100" style="max-width: 100%;">
-    
-              <!-- Gambar Utama -->
-              <div class="position-relative shadow-lg rounded-4 overflow-hidden border border-3 border-dark" style="width: 100%;">
-                <img src="assets/img/bg1.jpeg" alt="LPK Sentosa Karya Aditama" class="img-fluid rounded-4 w-100" style="max-height: 450px; object-fit: cover;" />
-    
-                <!-- Ikon -->
-                <div class="position-absolute top-0 start-0 m-3 p-3 bg-warning rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                  <i class="bi bi-globe2 text-white fs-4"></i>
-                </div>
-    
-                <!-- Label -->
-                <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white px-3 py-2 rounded-end">
-                  <small><i class="bi bi-translate me-1"></i> Program Bahasa Asing</small>
-                </div>
-              </div>
-    
-              <!-- Efek Bayangan Refleksi -->
-              <div class="position-relative overflow-hidden mt-2" style="height: 120px;">
-                <img src="assets/img/bg1.jpeg" alt="Refleksi" class="img-fluid rounded-4 w-100" style="
-                  transform: scaleY(-1);
-                  opacity: 0.2;
-                  object-fit: cover;
-                  filter: blur(1px);
-                  height: 120px;
-                " />
-                <div style="
-                  position: absolute;
-                  top: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: linear-gradient(to bottom, rgba(255,255,255,0.05), white);
-                "></div>
-              </div>
-    
-            </div>
-          </div>
-    
-          <!-- Teks -->
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-duration="1000">
-            <div class="mb-3 border-start border-3 border-dark ps-3">
-              <p style="text-align: justify;" class="mb-2">
-                <i class="bi bi-award-fill text-dark me-2"></i>
-                <strong>LPK-LN Sentosa Karya Aditama</strong> adalah salah satu lembaga pelatihan kerja di bawah naungan 
-                <strong>SENTOSA GROUP</strong>, yang bergerak dalam pembekalan <strong>bahasa asing dan keterampilan kerja</strong> 
-                bagi <strong>Calon Pekerja Migran Indonesia (CPMI)</strong>. Seluruh program pelatihan terintegrasi dengan 
-                standar <strong>sertifikasi BNSP</strong>.
-              </p>
-            </div>
-          
-            <div class="mb-3 border-start border-3 border-dark ps-3">
-              <p style="text-align: justify;" class="mb-2">
-                <i class="bi bi-geo-alt-fill text-dark me-2"></i>
-                Saat ini, kami memiliki 4 lokasi LPK-LN yang tersebar di <strong>Bekasi, Cirebon, Subang, dan Cilacap</strong>. 
-                Setiap lokasi berfokus pada pengajaran <strong>bahasa asing</strong> seperti 
-                <strong>Mandarin, Kantonis, Melayu, dan Inggris</strong> sebagai bekal utama sebelum bekerja di luar negeri.
-              </p>
-            </div>
-          
-            <div class="mb-3 border-start border-3 border-dark ps-3">
-              <p style="text-align: justify;" class="mb-2">
-                <i class="bi bi-people-fill text-dark me-2"></i>
-                Selain pelatihan bahasa, calon pekerja migran juga dibekali keterampilan kerja yang sesuai perizinan resmi berdasarkan <strong>Permenaker No. 5 Tahun 2022</strong> melalui kepemilikan <strong>Nomor Induk Berusaha (NIB)</strong> dan <strong>Sertifikat Standar LPK</strong>. Jenis pelatihan meliputi <strong>Baby Sitter (Perawatan Bayi), Caretaker (Perawatan Lansia), House Maid (Pekerja Rumah Tangga), House Keeper, Manufaktur Industri, Konstruksi, Welder (Pengelasan)</strong>, dan <strong>Peternakan</strong>. Mereka juga mengikuti <strong>olahraga ringan, senam bersama, dan makan bersama</strong> sebagai bagian dari kegiatan harian untuk membangun kebugaran, kedisiplinan, dan kebersamaan.
-              </p>
-            </div>
-            
-            
-            
-            
-            
-            
+<!-- About Section with Modern Asymmetric Design -->
+<section id="about" class="about pt-5 pb-5">
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4 align-items-center">
+      
+      <!-- Gambar -->
+      <div class="col-lg-6">
+        <img src="assets/img/bg1.jpeg" alt="LPK Sentosa Karya Aditama"
+             class="img-fluid rounded-4 w-100 about-img"
+             style="max-height: 450px; object-fit: cover;" />
+      </div>
 
-          
-            <div class="mb-3 border-start border-3 border-dark ps-3">
-              <p style="text-align: justify;" class="mb-0">
-                <i class="bi bi-globe-americas text-dark me-2"></i>
-                <strong>LPK-LN Sentosa Karya Aditama</strong> berkomitmen menciptakan tenaga kerja yang 
-                <strong>terampil, tangguh, dan berdaya saing</strong>, baik dalam aspek <strong>mental, bahasa, keterampilan, dan budaya</strong>, 
-                sehingga siap menghadapi tantangan di dunia kerja internasional. 
-              </p>
-            </div>
-          </div>
-          
-    
+      <!-- Teks -->
+      <div class="col-lg-6">
+        <div class="content ps-lg-5">
+          <h3>Tentang Kami</h3>
+          <p class="fst-italic">
+            LPK Sentosa Karya Aditama adalah lembaga pelatihan kerja terpercaya yang telah menyalurkan tenaga kerja ke berbagai negara dengan legalitas resmi. 
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Pelatihan berkualitas dan bersertifikat.</li>
+            <li><i class="bi bi-check-circle"></i> Penempatan kerja ke luar negeri secara legal.</li>
+            <li><i class="bi bi-check-circle"></i> Pendampingan dan bimbingan hingga proses pemberangkatan.</li>
+          </ul>
+          <p>
+            Kami berkomitmen untuk menciptakan tenaga kerja terampil dan profesional yang siap bersaing di dunia kerja internasional.
+          </p>
         </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+
+  <!-- CSS Responsif Langsung -->
+  <style>
+    @media (max-width: 768px) {
+      .about-img {
+        max-height: none !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+    }
+  </style>
+</section>
+
+
+
+
+
+
+
+
+
+
+
     
     <section id="sambutan" class="section py-5 position-relative">
       <!-- Background Element -->
@@ -478,365 +439,565 @@
       </style>
     </section>
 
-<section id="skills" class="skills section py-5 position-relative">
-  <!-- Background pattern -->
-  <div class="position-absolute w-100 h-100 top-0 start-0" style="background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0id2hpdGUiPjwvcmVjdD4KPHBhdGggZD0iTTAgMCBMNjAgNjAgTTYwIDAgTDAgNjAgTTAgMzAgTDMwIDYwIE0zMCAwIEw2MCAzMCBNMCAxNSBMMTUgMCBNNDUgNjAgTDYwIDQ1IE0wIDQ1IEwxNSA2MCBNNDUgMCBMNjAgMTUiIHN0cm9rZT0iI2UzYjAxNiIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMSI+PC9wYXRoPgo8L3N2Zz4='); opacity: 0.7; z-index: -1;"></div>
-
-  <!-- Curved decoration at top -->
-  <div class="position-absolute top-0 start-0 w-100 overflow-hidden" style="height: 50px; z-index: -1;">
-    <svg preserveAspectRatio="none" width="100%" height="50" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: rgba(227, 176, 22, 0.1); width: 100%; height: 50px;">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-    </svg>
-  </div>
-
-  <div class="container section-title text-center mb-5" data-aos="fade-up">
-     
-    <h2 class="fw-bold display-5 mb-3 position-relative d-inline-block">
-      <span class="position-relative">
-        <i class="bi bi-chat-dots-fill me-2" style="color: #e3b016;"></i>Pembelajaran Bahasa
+    <section id="legalitas" class="py-5" style="background: linear-gradient(135deg, #ffffff, #fdfcf7, #f8f5e6); position: relative; overflow: hidden;">
+      <!-- Floating elements for decoration -->
+      <div style="position: absolute; width: 60px; height: 60px; top: 20%; left: 5%; opacity: 0.1; animation: floating 7s infinite ease-in-out; border-radius: 50%; background-color: rgba(227, 176, 22, 0.1); z-index: 0;"></div>
+      <div style="position: absolute; width: 40px; height: 40px; top: 70%; right: 8%; opacity: 0.15; animation: floating 5s infinite ease-in-out; border-radius: 50%; background-color: rgba(227, 176, 22, 0.1); z-index: 0;"></div>
+      <div style="position: absolute; width: 25px; height: 25px; top: 40%; right: 15%; opacity: 0.1; animation: floating 4s infinite ease-in-out 1s; border-radius: 50%; background-color: rgba(227, 176, 22, 0.1); z-index: 0;"></div>
+      <div style="position: absolute; width: 15px; height: 15px; bottom: 20%; left: 10%; opacity: 0.15; animation: floating 6s infinite ease-in-out 2s; border-radius: 50%; background-color: rgba(227, 176, 22, 0.1); z-index: 0;"></div>
       
-    </h2>
-    <p class="text-muted mx-auto fw-light fs-5" style="max-width: 800px;">
-      Di LPK Sentosa Karya Aditama, pelatihan bahasa dirancang secara komunikatif dan praktis. 
-      Kami menghadirkan berbagai pilihan bahasa untuk mempersiapkan peserta kerja ke luar negeri.
-    </p>
-  </div>
+      <!-- Background gradient overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 10% 10%, rgba(227, 176, 22, 0.05) 0%, transparent 30%), radial-gradient(circle at 90% 90%, rgba(227, 176, 22, 0.05) 0%, transparent 30%); z-index: 0;"></div>
+      
+      <div class="container text-center" style="position: relative; z-index: 1;">
+        <div class="position-relative d-inline-block mb-4 mt-2">
+          <h2 class="fw-bold position-relative d-inline-block fade-in-element" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;">
+            Legalitas & Sertifikasi
+            <span class="position-absolute" style="height: 4px; width: 60%; background: linear-gradient(90deg, transparent, #e3b016, transparent); bottom: -10px; left: 20%; position: relative;">
+              <span style="position: absolute; height: 100%; width: 15px; background-color: #fff; animation: slide 3s ease-in-out infinite; filter: blur(5px);"></span>
+            </span>
+          </h2>
+          <div class="position-absolute" style="top: -10px; right: -15px;">
+            <i class="bi bi-patch-check-fill text-warning"></i>
+          </div>
+        </div>
+        
+        <p class="text-muted mb-5 col-lg-8 mx-auto fade-in-element" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;">
+          Komitmen kami terhadap kualitas dan kepatuhan hukum dibuktikan dengan dokumen resmi dan sertifikasi dari instansi terkait.
+        </p>
+    
+        <div class="row g-4 justify-content-center" style="position: relative;">
+          <!-- Garis pemisah subtle -->
+          <div style="position: absolute; width: 90%; height: 1px; background: linear-gradient(90deg, transparent, rgba(227, 176, 22, 0.2), transparent); bottom: -20px; left: 5%;"></div>
+          
+          <div class="col-6 col-md-2 certificate-item-wrapper" style="opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease;">
+            <div style="transition: all 0.3s ease; padding: 1.5rem 0.5rem; border-radius: 10px; position: relative; z-index: 1; margin-bottom: 0.5rem;" 
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(227, 176, 22, 0.1)'; this.style.background='linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))'; this.querySelector('i').style.transform='scale(1.2)'; this.querySelector('p').style.fontWeight='600';" 
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='transparent'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('p').style.fontWeight='500';">
+              <div class="position-relative d-inline-block">
+                <i class="bi bi-patch-check fs-1 text-primary" style="transition: all 0.3s ease;"></i>
+                <span style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background-color: #e3b016; top: -5px; right: -5px; animation: pulse 2s infinite;"></span>
+              </div>
+              <p class="mt-2 mb-0" style="font-weight: 500; transition: all 0.3s ease; font-size: 0.9rem;">ISO 9001:2015</p>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-2 certificate-item-wrapper" style="opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease;">
+            <div style="transition: all 0.3s ease; padding: 1.5rem 0.5rem; border-radius: 10px; position: relative; z-index: 1; margin-bottom: 0.5rem;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(227, 176, 22, 0.1)'; this.style.background='linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))'; this.querySelector('i').style.transform='scale(1.2)'; this.querySelector('p').style.fontWeight='600';" 
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='transparent'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('p').style.fontWeight='500';">
+              <div class="position-relative d-inline-block">
+                <i class="bi bi-file-earmark-text fs-1 text-warning" style="transition: all 0.3s ease;"></i>
+                <span style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background-color: #e3b016; top: -5px; right: -5px; animation: pulse 2s infinite;"></span>
+              </div>
+              <p class="mt-2 mb-0" style="font-weight: 500; transition: all 0.3s ease; font-size: 0.9rem;">SIP3MI</p>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-2 certificate-item-wrapper" style="opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease;">
+            <div style="transition: all 0.3s ease; padding: 1.5rem 0.5rem; border-radius: 10px; position: relative; z-index: 1; margin-bottom: 0.5rem;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(227, 176, 22, 0.1)'; this.style.background='linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))'; this.querySelector('i').style.transform='scale(1.2)'; this.querySelector('p').style.fontWeight='600';" 
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='transparent'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('p').style.fontWeight='500';">
+              <div class="position-relative d-inline-block">
+                <i class="bi bi-building-check fs-1 text-success" style="transition: all 0.3s ease;"></i>
+                <span style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background-color: #e3b016; top: -5px; right: -5px; animation: pulse 2s infinite;"></span>
+              </div>
+              <p class="mt-2 mb-0" style="font-weight: 500; transition: all 0.3s ease; font-size: 0.9rem;">BLKLN</p>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-2 certificate-item-wrapper" style="opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease;">
+            <div style="transition: all 0.3s ease; padding: 1.5rem 0.5rem; border-radius: 10px; position: relative; z-index: 1; margin-bottom: 0.5rem;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(227, 176, 22, 0.1)'; this.style.background='linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))'; this.querySelector('i').style.transform='scale(1.2)'; this.querySelector('p').style.fontWeight='600';" 
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='transparent'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('p').style.fontWeight='500';">
+              <div class="position-relative d-inline-block">
+                <i class="bi bi-shield-check fs-1" style="color: #9747ff; transition: all 0.3s ease;"></i>
+                <span style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background-color: #e3b016; top: -5px; right: -5px; animation: pulse 2s infinite;"></span>
+              </div>
+              <p class="mt-2 mb-0" style="font-weight: 500; transition: all 0.3s ease; font-size: 0.9rem;">BNSP</p>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-2 certificate-item-wrapper" style="opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease;">
+            <div style="transition: all 0.3s ease; padding: 1.5rem 0.5rem; border-radius: 10px; position: relative; z-index: 1; margin-bottom: 0.5rem;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(227, 176, 22, 0.1)'; this.style.background='linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))'; this.querySelector('i').style.transform='scale(1.2)'; this.querySelector('p').style.fontWeight='600';" 
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='transparent'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('p').style.fontWeight='500';">
+              <div class="position-relative d-inline-block">
+                <i class="bi bi-journal-check fs-1 text-danger" style="transition: all 0.3s ease;"></i>
+                <span style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background-color: #e3b016; top: -5px; right: -5px; animation: pulse 2s infinite;"></span>
+              </div>
+              <p class="mt-2 mb-0" style="font-weight: 500; transition: all 0.3s ease; font-size: 0.9rem;">NIB OSS</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="mt-5 fade-in-element" style="opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease 1s, transform 0.5s ease 1s;">
+          <a href="legalitas.html" class="btn px-4 py-2" 
+             style="background-color: #e3b016; color: #000; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(227, 176, 22, 0.2);"
+             onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(227, 176, 22, 0.3)'; this.style.backgroundColor='#d9a713'; this.querySelector('.shine').style.left='100%';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(227, 176, 22, 0.2)'; this.style.backgroundColor='#e3b016'; this.querySelector('.shine').style.left='-100%';">
+            <span class="shine" style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); transition: all 0.5s ease;"></span>
+            <i class="bi bi-arrow-right-circle me-2"></i>Lihat Legalitas Lengkap
+          </a>
+        </div>
+      </div>
+      
+      <!-- CSS Animations -->
+      <style>
+        @keyframes pulse {
+          0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(227, 176, 22, 0.7);
+          }
+          70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(227, 176, 22, 0);
+          }
+          100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(227, 176, 22, 0);
+          }
+        }
+        
+        @keyframes slide {
+          0%, 100% {
+            left: 0;
+          }
+          50% {
+            left: calc(100% - 15px);
+          }
+        }
+        
+        @keyframes floating {
+          0% { transform: translate(0, 0px); }
+          50% { transform: translate(0, 10px); }
+          100% { transform: translate(0, 0px); }
+        }
+      </style>
+      
+      <!-- JavaScript for IntersectionObserver (Scroll Animation) -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Animasi saat scroll untuk section legalitas
+          const legalitasSection = document.querySelector('#legalitas');
+          const fadeElements = document.querySelectorAll('.fade-in-element');
+          const certificateItems = document.querySelectorAll('.certificate-item-wrapper');
+          
+          // Fungsi untuk menerapkan animasi pada sertifikat dengan delay bertahap
+          function animateCertificates() {
+            certificateItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 700 + (index * 100)); // Delay bertahap untuk setiap item
+            });
+          }
+          
+          // Fungsi untuk memunculkan elemen fade-in
+          function animateFadeElements() {
+            fadeElements.forEach((el) => {
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            });
+          }
+          
+          // Menggunakan Intersection Observer API untuk deteksi scroll
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Section masuk ke viewport
+                legalitasSection.style.opacity = '1';
+                legalitasSection.style.transform = 'translateY(0)';
+                
+                // Animate other elements with delay
+                setTimeout(animateFadeElements, 300);
+                setTimeout(animateCertificates, 500);
+                
+                // Berhenti mengobservasi setelah animasi dijalankan
+                observer.unobserve(legalitasSection);
+              }
+            });
+          }, {
+            threshold: 0.1 // 10% dari elemen harus terlihat
+          });
+          
+          // Mulai observasi section
+          observer.observe(legalitasSection);
+          
+          // Trigger animasi saat halaman dimuat jika section sudah terlihat
+          if (isElementInViewport(legalitasSection)) {
+            legalitasSection.style.opacity = '1';
+            legalitasSection.style.transform = 'translateY(0)';
+            setTimeout(animateFadeElements, 300);
+            setTimeout(animateCertificates, 500);
+            observer.unobserve(legalitasSection);
+          }
+          
+          // Helper function to check if element is in viewport
+          function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+              rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            );
+          }
+        });
+      </script>
+    </section>
+    
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4 justify-content-center">
-      <!-- Mandarin -->
-      <div class="col-lg-3 col-md-6" data-aos="flip-up" data-aos-delay="100">
-        <div class="language-card-container">
-          <div class="language-card-wrapper">
-            <div class="language-card">
-              <div class="card-header">
-                <div class="flag-container">
+    <section id="skills" class="skills section py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold display-5 mb-3">
+            
+            <i class="bi bi-chat-dots-fill me-2" style="color: #e3b016;"></i>Pembelajaran Bahasa
+          </h2>
+          <p class="text-muted mx-auto fw-light fs-5" style="max-width: 800px;">
+            Di LPK Sentosa Karya Aditama, pelatihan bahasa dirancang secara komunikatif dan praktis. 
+            Kami menghadirkan berbagai pilihan bahasa untuk mempersiapkan peserta kerja ke luar negeri.
+          </p>
+        </div>
+    
+        <div class="language-carousel">
+          <div class="language-item" data-language="mandarin">
+            <div class="language-content">
+              <div class="language-details">
+                <h3>Bahasa Mandarin</h3>
+                <div class="language-description">
+                  <p>Cocok untuk calon pekerja ke Taiwan atau Tiongkok. Fokus pada huruf, nada, dan percakapan kerja.</p>
+                  <ul>
+                    <li>Pelafalan & nada</li>
+                    <li>Percakapan kerja</li>
+                    <li>Karakter hanzi dasar</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="language-visual">
+                <div class="flag-wrapper">
                   <img src="https://flagcdn.com/w320/cn.png" alt="Mandarin" class="flag-img">
                 </div>
-                <h5>Bahasa Mandarin</h5>
-              </div>
-              <div class="card-body">
-                <p class="description">
-                  Cocok untuk calon pekerja ke Taiwan atau Tiongkok. Fokus pada huruf, nada, dan percakapan kerja.
-                </p>
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Pelafalan & nada</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Percakapan kerja</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Karakter hanzi dasar</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <div class="decoration-dots">
-                  <span></span><span></span><span></span>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Kantonis -->
-      <div class="col-lg-3 col-md-6" data-aos="flip-up" data-aos-delay="200">
-        <div class="language-card-container">
-          <div class="language-card-wrapper">
-            <div class="language-card">
-              <div class="card-header">
-                <div class="flag-container">
+    
+          <div class="language-item" data-language="kantonis">
+            <div class="language-content">
+              <div class="language-details">
+                <h3>Bahasa Kantonis</h3>
+                <div class="language-description">
+                  <p>Digunakan di Hong Kong & Makau. Fokus pada nada, kalimat pendek, dan simulasi komunikasi sehari-hari.</p>
+                  <ul>
+                    <li>Nada & pengucapan</li>
+                    <li>Kalimat harian</li>
+                    <li>Latihan dialog</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="language-visual">
+                <div class="flag-wrapper">
                   <img src="https://flagcdn.com/w320/hk.png" alt="Kantonis" class="flag-img">
                 </div>
-                <h5>Bahasa Kantonis</h5>
-              </div>
-              <div class="card-body">
-                <p class="description">
-                  Digunakan di Hong Kong & Makau. Fokus pada nada, kalimat pendek, dan simulasi komunikasi sehari-hari.
-                </p>
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Nada & pengucapan</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Kalimat harian</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Latihan dialog</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <div class="decoration-dots">
-                  <span></span><span></span><span></span>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Melayu -->
-      <div class="col-lg-3 col-md-6" data-aos="flip-up" data-aos-delay="300">
-        <div class="language-card-container">
-          <div class="language-card-wrapper">
-            <div class="language-card">
-              <div class="card-header">
-                <div class="flag-container">
+    
+          <div class="language-item" data-language="melayu">
+            <div class="language-content">
+              <div class="language-details">
+                <h3>Bahasa Melayu</h3>
+                <div class="language-description">
+                  <p>Untuk penempatan kerja ke Malaysia & Singapura. Materi ringan dan cepat dipahami.</p>
+                  <ul>
+                    <li>Kosakata kerja</li>
+                    <li>Percakapan umum</li>
+                    <li>Struktur kalimat</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="language-visual">
+                <div class="flag-wrapper">
                   <img src="https://flagcdn.com/w320/my.png" alt="Melayu" class="flag-img">
                 </div>
-                <h5>Bahasa Melayu</h5>
-              </div>
-              <div class="card-body">
-                <p class="description">
-                  Untuk penempatan kerja ke Malaysia & Singapura. Materi ringan dan cepat dipahami.
-                </p>
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Kosakata kerja</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Percakapan umum</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Struktur kalimat</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <div class="decoration-dots">
-                  <span></span><span></span><span></span>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Inggris -->
-      <div class="col-lg-3 col-md-6" data-aos="flip-up" data-aos-delay="400">
-        <div class="language-card-container">
-          <div class="language-card-wrapper">
-            <div class="language-card">
-              <div class="card-header">
-                <div class="flag-container">
+    
+          <div class="language-item" data-language="inggris">
+            <div class="language-content">
+              <div class="language-details">
+                <h3>Bahasa Inggris</h3>
+                <div class="language-description">
+                  <p>Bahasa internasional untuk pekerjaan global. Diajarkan dengan praktik listening & speaking.</p>
+                  <ul>
+                    <li>Grammar dasar</li>
+                    <li>Speaking aktif</li>
+                    <li>Listening & writing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="language-visual">
+                <div class="flag-wrapper">
                   <img src="https://flagcdn.com/w320/gb.png" alt="Inggris" class="flag-img">
                 </div>
-                <h5>Bahasa Inggris</h5>
-              </div>
-              <div class="card-body">
-                <p class="description">
-                  Bahasa internasional untuk pekerjaan global. Diajarkan dengan praktik listening & speaking.
-                </p>
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Grammar dasar</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Speaking aktif</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Listening & writing</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <div class="decoration-dots">
-                  <span></span><span></span><span></span>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Curved decoration at bottom -->
-  <div class="position-absolute bottom-0 start-0 w-100 overflow-hidden" style="height: 50px; z-index: -1;">
-    <svg preserveAspectRatio="none" width="100%" height="50" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: rgba(227, 176, 22, 0.1); width: 100%; height: 50px; transform: rotate(180deg);">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-    </svg>
-  </div>
-
-  <!-- Styling -->
-  <style>
-    .language-card-container {
-      height: 100%;
-      perspective: 1000px;
-    }
-
-    .language-card-wrapper {
-      height: 100%;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    .language-card-container:hover .language-card-wrapper {
-      transform: translateY(-10px);
-    }
-
-    .language-card {
-      position: relative;
-      height: 100%;
-      background: linear-gradient(145deg, #e3b016, #d9a714);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      display: flex;
-      flex-direction: column;
-      border: none;
-      overflow: hidden;
-      transition: all 0.5s ease;
-    }
-
-    .language-card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .language-card:after {
-      content: '';
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
-      top: -25%;
-      left: -25%;
-      opacity: 0;
-      transition: all 0.5s ease;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .language-card:hover:after {
-      opacity: 1;
-    }
-
-    .language-card-container:hover .language-card {
-      box-shadow: 0 15px 35px rgba(227, 176, 22, 0.4);
-    }
-
-    .card-header {
-      padding: 25px 20px 15px;
-      text-align: center;
-      position: relative;
-    }
-
-    .flag-container {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      border: 3px solid rgba(255, 255, 255, 0.8);
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .language-card:hover .flag-container {
-      transform: scale(1.1);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .flag-img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .card-header h5 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: white;
-      margin: 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-      position: relative;
-      display: inline-block;
-    }
-
-    .card-header h5:after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 3px;
-      background: white;
-      bottom: -8px;
-      left: 25%;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .language-card:hover .card-header h5:after {
-      width: 80%;
-      left: 10%;
-    }
-
-    .card-body {
-      padding: 20px;
-      flex: 1;
-      position: relative;
-      z-index: 2;
-    }
-
-    .description {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-list {
-      padding-left: 0;
-      list-style: none;
-      margin-bottom: 0;
-    }
-
-    .feature-list li {
-      color: white;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-list li:last-child {
-      margin-bottom: 0;
-    }
-
-    .feature-list li i {
-      color: white;
-      margin-right: 8px;
-      font-size: 1rem;
-      filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
-    }
-
-    .language-card:hover .feature-list li {
-      transform: translateX(5px);
-    }
-
-    .card-footer {
-      padding: 15px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      display: flex;
-      justify-content: center;
-    }
-
-    .decoration-dots {
-      display: flex;
-      gap: 8px;
-    }
-
-    .decoration-dots span {
-      width: 8px;
-      height: 8px;
-      background-color: white;
-      border-radius: 50%;
-      opacity: 0.7;
-    }
     
-    /* Enhanced pattern animation */
-    @keyframes patternShift {
-      0% { background-position: 0 0; }
-      100% { background-position: 50px 50px; }
-    }
+      <style>
+        .skills.section {
+          position: relative;
+          background-color: #fafafa;
+          overflow: hidden;
+        }
     
-    .skills.section {
-      animation: patternShift 60s linear infinite;
-    }
-  </style>
-</section>
+        .skills.section::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.05) 0%, rgba(255, 255, 255, 0) 50%, rgba(227, 176, 22, 0.05) 100%);
+          z-index: 0;
+        }
     
+        .section-title h2 {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .section-title h2::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 3px;
+          background-color: #e3b016;
+          border-radius: 3px;
+        }
+    
+        .language-carousel {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin-top: 3rem;
+          position: relative;
+          z-index: 1;
+        }
+    
+        .language-item {
+          position: relative;
+          transition: transform 0.3s ease;
+        }
+    
+        .language-item::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 4px;
+          height: 0;
+          background-color: #e3b016;
+          transition: height 0.3s ease;
+        }
+    
+        .language-item:hover::before {
+          height: 80%;
+        }
+    
+        .language-content {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+          overflow: hidden;
+          transition: all 0.3s ease;
+          padding-left: 15px;
+        }
+    
+        .language-item:hover .language-content {
+          transform: translateX(10px);
+          box-shadow: 0 15px 35px rgba(227, 176, 22, 0.15);
+        }
+    
+        .language-details {
+          flex: 1;
+          padding: 25px;
+        }
+    
+        .language-details h3 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+          color: #333;
+          position: relative;
+          display: inline-block;
+        }
+    
+        .language-details h3::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #e3b016;
+          transition: width 0.3s ease;
+        }
+    
+        .language-item:hover .language-details h3::after {
+          width: 100%;
+        }
+    
+        .language-description p {
+          color: #555;
+          margin-bottom: 15px;
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+    
+        .language-description ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+    
+        .language-description ul li {
+          background-color: rgba(227, 176, 22, 0.1);
+          padding: 6px 12px;
+          border-radius: 30px;
+          font-size: 0.85rem;
+          color: #333;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+    
+        .language-description ul li::before {
+          content: "•";
+          margin-right: 5px;
+          color: #e3b016;
+          font-weight: bold;
+        }
+    
+        .language-description ul li:hover {
+          background-color: rgba(227, 176, 22, 0.2);
+          transform: translateY(-2px);
+        }
+    
+        .language-visual {
+          width: 200px;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(227, 176, 22, 0.05);
+          align-self: stretch;
+        }
+    
+        .flag-wrapper {
+          position: relative;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+        }
+    
+        .language-item:hover .flag-wrapper {
+          transform: scale(1.05) rotate(5deg);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+    
+        .flag-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .language-content {
+            flex-direction: column-reverse;
+            padding-left: 0;
+          }
+    
+          .language-visual {
+            width: 100%;
+            padding: 15px;
+          }
+    
+          .flag-wrapper {
+            width: 80px;
+            height: 80px;
+          }
+    
+          .language-description ul {
+            flex-direction: column;
+            gap: 5px;
+          }
+        }
+    
+        /* Animated dots background */
+        .skills.section::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: radial-gradient(rgba(227, 176, 22, 0.15) 1px, transparent 1px);
+          background-size: 30px 30px;
+          z-index: -1;
+          opacity: 0.5;
+        }
+      </style>
+    
+      <script>
+        // Add some simple animations when scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+          const languageItems = document.querySelectorAll('.language-item');
+          
+          function checkIfInView() {
+            languageItems.forEach((item, index) => {
+              const rect = item.getBoundingClientRect();
+              const isInView = rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0;
+              
+              if (isInView) {
+                setTimeout(() => {
+                  item.style.opacity = '1';
+                  item.style.transform = 'translateY(0)';
+                }, index * 150);
+              }
+            });
+          }
+          
+          // Initial setup
+          languageItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          });
+          
+          // Check on scroll and initial load
+          window.addEventListener('scroll', checkIfInView);
+          checkIfInView();
+        });
+      </script>
+    </section>
+    
+
+
 <br>
 <br>
 
@@ -854,7 +1015,24 @@
       --text-muted: #6c757d;
       --white: #ffffff;
       --light-bg: #f9f9f9;
-      --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      
+      /* Program Colors */
+      --babysitter-color: #FF6B6B;
+      --babysitter-light: #FFE5E5;
+      --caretaker-color: #4ECDC4;
+      --caretaker-light: #E0F7F5;
+      --housemaid-color: #9D65C9;
+      --housemaid-light: #F0E5F9;
+      --housekeeper-color: #F9CB40;
+      --housekeeper-light: #FEF7E1;
+      --manufaktur-color: #5D9CEC;
+      --manufaktur-light: #E4EFFD;
+      --konstruksi-color: #FC913A;
+      --konstruksi-light: #FFEDD9;
+      --welder-color: #E84855;
+      --welder-light: #FCE1E3;
+      --peternakan-color: #58C184;
+      --peternakan-light: #E3F5EA;
     }
     
     #pelatihan {
@@ -864,7 +1042,7 @@
       padding: 80px 0;
     }
     
-    /* Enhanced Background Decorations */
+    /* Background Decorations */
     .decoration {
       position: absolute;
       z-index: 0;
@@ -932,9 +1110,11 @@
       to { transform: rotate(405deg); }
     }
     
-    /* Title Section Styling */
+    /* Section Title Styling */
     .section-title {
       margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
     }
     
     .section-title h2 {
@@ -964,139 +1144,180 @@
       line-height: 1.7;
     }
     
-    /* Enhanced Card Design */
-    .program-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Program Grid Layout */
+    .program-grid {
       position: relative;
       z-index: 1;
-      margin-bottom: 30px;
-      border: 1px solid rgba(0,0,0,0.03);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
     }
     
-    .program-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(227, 176, 22, 0.05), rgba(227, 176, 22, 0));
-      opacity: 0;
+    .program-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .program-item {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0 15px;
+      margin-bottom: 30px;
       transition: all 0.4s ease;
+    }
+    
+    .program-card {
+      background-color: var(--white);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
     }
     
     .program-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
     
-    .program-card:hover::before {
-      opacity: 1;
-    }
-    
-    .program-card:hover .card-icon {
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 15px 25px rgba(227, 176, 22, 0.4);
-    }
-    
-    .card-header {
+    /* Card Header with Icon */
+    .program-icon {
+      height: 120px;
       position: relative;
-      padding: 30px 25px 0;
-      text-align: center;
-    }
-    
-    .card-icon {
-      width: 90px;
-      height: 90px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      font-size: 32px;
-      margin: 0 auto 25px;
-      transition: all 0.5s ease;
-      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-      color: white;
-      box-shadow: 0 10px 20px rgba(227, 176, 22, 0.3);
-      border: 5px solid rgba(255, 255, 255, 0.8);
+      overflow: hidden;
     }
     
-    .card-content {
-      padding: 0 25px 30px;
-      text-align: center;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
+    .program-icon::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
     }
     
-    .card-content h4 {
-      margin-bottom: 15px;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text-dark);
+    .program-icon img {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      z-index: 2;
       transition: all 0.3s ease;
     }
     
-    .program-card:hover .card-content h4 {
-      color: var(--primary-dark);
+    .program-card:hover .program-icon img {
+      transform: scale(1.1);
     }
     
-    .card-content p {
-      color: var(--text-muted);
-      margin-bottom: 25px;
-      line-height: 1.7;
-      flex-grow: 1;
+    /* Program Specific Colors */
+    .babysitter-card .program-icon::before {
+      background: linear-gradient(120deg, var(--babysitter-color) 0%, #FF9E9E 100%);
     }
     
-    .learn-more {
-      display: inline-block;
-      padding: 10px 24px;
-      background-color: white;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      margin-top: auto;
+    .caretaker-card .program-icon::before {
+      background: linear-gradient(120deg, var(--caretaker-color) 0%, #A5F2EA 100%);
     }
     
-    .learn-more:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(227, 176, 22, 0.3);
+    .housemaid-card .program-icon::before {
+      background: linear-gradient(120deg, var(--housemaid-color) 0%, #C39BDC 100%);
     }
     
-    /* Card Grid Layout */
-    .program-grid {
+    .housekeeper-card .program-icon::before {
+      background: linear-gradient(120deg, var(--housekeeper-color) 0%, #FFE596 100%);
+    }
+    
+    .manufaktur-card .program-icon::before {
+      background: linear-gradient(120deg, var(--manufaktur-color) 0%, #8EB9F5 100%);
+    }
+    
+    .konstruksi-card .program-icon::before {
+      background: linear-gradient(120deg, var(--konstruksi-color) 0%, #FFBC7D 100%);
+    }
+    
+    .welder-card .program-icon::before {
+      background: linear-gradient(120deg, var(--welder-color) 0%, #F2969E 100%);
+    }
+    
+    .peternakan-card .program-icon::before {
+      background: linear-gradient(120deg, var(--peternakan-color) 0%, #90E0AD 100%);
+    }
+    
+    /* Card Content */
+    .program-content {
+      padding: 25px;
       position: relative;
     }
     
-    .program-grid .col-lg-3:nth-child(odd) {
-      transform: translateY(20px);
+    .program-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+      position: relative;
+      display: inline-block;
     }
     
+    .babysitter-card .program-title {
+      color: var(--babysitter-color);
+    }
+    
+    .caretaker-card .program-title {
+      color: var(--caretaker-color);
+    }
+    
+    .housemaid-card .program-title {
+      color: var(--housemaid-color);
+    }
+    
+    .housekeeper-card .program-title {
+      color: var(--housekeeper-color);
+    }
+    
+    .manufaktur-card .program-title {
+      color: var(--manufaktur-color);
+    }
+    
+    .konstruksi-card .program-title {
+      color: var(--konstruksi-color);
+    }
+    
+    .welder-card .program-title {
+      color: var(--welder-color);
+    }
+    
+    .peternakan-card .program-title {
+      color: var(--peternakan-color);
+    }
+    
+    .program-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    
+    /* Removed Button Styling */
+    
+    /* Responsive Styles */
     @media (max-width: 992px) {
-      .program-grid .col-lg-3:nth-child(odd) {
-        transform: translateY(0);
-      }
-      
-      .program-card {
-        margin-bottom: 20px;
+      .program-item {
+        flex: 0 0 50%;
+        max-width: 50%;
       }
       
       .section-title h2 {
         font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .program-item {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -1112,139 +1333,122 @@
     <p class="text-muted mx-auto" style="max-width: 700px;">Tingkatkan keterampilan Anda dengan program pelatihan yang dirancang secara profesional untuk menyiapkan tenaga kerja berkualitas dan siap bersaing di dunia kerja.</p>
   </div>
 
-  <div class="container program-grid" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-4">
-
+  <div class="container program-grid" data-aos="fade-up">
+    <div class="program-row">
+  
       <!-- Baby Sitter -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="100">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-child"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/10030/10030762.png" alt="Babysitter Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Baby Sitter</h4>
-            <p>Pelatihan perawatan bayi untuk menjadi pengasuh anak yang profesional dan penuh kasih sayang.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Baby Sitter</h4>
+            <p class="program-desc">Pelatihan perawatan bayi untuk menjadi pengasuh anak yang profesional dan penuh kasih sayang. Program ini mencakup perkembangan anak, kebutuhan nutrisi, dan teknik pengasuhan yang tepat.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- Caretaker -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="200">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-hand-holding-heart"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2755/2755213.png" alt="Caretaker Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Caretaker</h4>
-            <p>Pelatihan perawatan lansia dengan pendekatan kesehatan dan empati tinggi untuk kenyamanan maksimal.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Caretaker</h4>
+            <p class="program-desc">Pelatihan perawatan lansia dengan pendekatan kesehatan dan empati tinggi. Mempelajari teknik mobilisasi, perawatan medis dasar, dan dukungan psikologis.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- House Maid -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="300">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-house-user"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/10221/10221689.png" alt="House Maid Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>House Maid</h4>
-            <p>Pelatihan kerja rumah tangga mencakup kebersihan, masak, dan manajemen rumah yang efisien.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">House Maid</h4>
+            <p class="program-desc">Pelatihan kerja rumah tangga mencakup kebersihan, memasak, dan manajemen rumah. Diajarkan pula penggunaan alat rumah tangga modern.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- House Keeper -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="400">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-clipboard-check"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/6966/6966785.png" alt="House Keeper Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>House Keeper</h4>
-            <p>Mendalami keterampilan kebersihan dan pengelolaan rumah atau fasilitas besar dengan standar tinggi.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">House Keeper</h4>
+            <p class="program-desc">Pelatihan pengelolaan rumah besar, penataan ruang, kebersihan, sanitasi, dan pengelolaan barang-barang rumah tangga.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- Manufaktur Industri -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="500">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-cogs"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4598/4598682.png" alt="Manufaktur Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Manufaktur Industri</h4>
-            <p>Pelatihan teknik produksi, perakitan, dan keamanan kerja di industri manufaktur modern.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Manufaktur Industri</h4>
+            <p class="program-desc">Pelatihan produksi, perakitan, dan keselamatan kerja. Diperkenalkan juga otomasi dan praktik efisien di industri modern.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- Konstruksi -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="600">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-hard-hat"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/956/956614.png" alt="Konstruksi Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Konstruksi</h4>
-            <p>Pelatihan pekerjaan bangunan dari pondasi hingga finishing, dengan protokol keselamatan kerja terbaru.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Konstruksi</h4>
+            <p class="program-desc">Pelatihan kerja bangunan dari pondasi hingga finishing, termasuk membaca rencana dan penggunaan alat konstruksi.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- Welder -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="700">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-fire-alt"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/949/949964.png" alt="Welder Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Welder (Pengelasan)</h4>
-            <p>Pelatihan teknik pengelasan untuk kebutuhan industri dan konstruksi logam dengan standar internasional.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Welder (Pengelasan)</h4>
+            <p class="program-desc">Pelatihan teknik pengelasan industri logam sesuai standar internasional. Termasuk berbagai jenis las dan keselamatan kerja.</p>
           </div>
         </div>
       </div>
-
+  
       <!-- Peternakan -->
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
+      <div class="program-item" data-aos="fade-up" data-aos-delay="800">
         <div class="program-card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-tractor"></i>
-            </div>
+          <div class="program-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1036/1036573.png" alt="Peternakan Icon" width="64" />
           </div>
-          <div class="card-content">
-            <h4>Peternakan</h4>
-            <p>Pelatihan perawatan hewan ternak, pakan, dan manajemen peternakan modern yang berkelanjutan.</p>
-            <a href="#" class="learn-more">Pelajari Lebih</a>
+          <div class="program-content">
+            <h4 class="program-title">Peternakan</h4>
+            <p class="program-desc">Pelatihan beternak, pemberian pakan, kesehatan hewan, dan manajemen peternakan berkelanjutan dengan teknik modern.</p>
           </div>
         </div>
       </div>
-
+  
     </div>
   </div>
+  
+  
+
+
+  
+  
+  
 </section>
 
     <!-- Portfolio Section -->
@@ -1481,9 +1685,9 @@
     
           <!-- Gallery Item 4 -->
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/cook/4.jpeg" alt="Pelatihan Memasak">
+            <img src="assets/img/cook/23.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
-              <a href="assets/img/cook/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
+              <a href="assets/img/cook/23.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
             </div>
