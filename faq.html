@@ -26,7 +26,42 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <style>
+    /* Perkecil tinggi header */
+    #header {
+      padding: 10px 0;
+      height: auto;
+    }
+    
+    /* Kurangi tinggi elemen di dalamnya */
+    #header .logo img {
+      height: 22px;
+      margin-right: 6px;
+    }
+    
+    #header .sitename {
+      font-size: 0.95rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+    
+    #header .logo span {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+    }
+    
+    /* Perkecil padding nav menu */
+    #navmenu ul li a {
+      padding: 6px 8px;
+      font-size: 0.9rem;
+    }
+    
+    /* Perkecil icon sosial */
+    .header-social-links a {
+      font-size: 14px;
+      margin-left: 6px;
+    }
+  </style> 
   <!-- =======================================================
   * Template Name: Company
   * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
@@ -36,7 +71,7 @@
   ======================================================== -->
 </head>
 
-<body class="team-page">
+<body class="blog-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
@@ -57,7 +92,7 @@
           <li><a href="index.html">Home</a></li>
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="team.html">Team</a></li>
+              <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
               <li><a href="testimonials.html">Testimoni</a></li>
               
             </ul>
@@ -65,6 +100,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -88,104 +124,211 @@
         <div class="d-flex align-items-center gap-2">
           <i class="bi bi-info-circle-fill fs-4 text-warning"></i>
           <div>
-            <h5 class="mb-0 fw-bold text-dark">Tim</h5>
+            <h5 class="mb-0 fw-bold text-dark">Faq</h5>
           </div>
         </div>
         <nav>
           <ol class="breadcrumb mb-0 small">
             <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
-            <li class="breadcrumb-item active text-warning fw-semibold">Tim</li>
+            <li class="breadcrumb-item active text-warning fw-semibold">Faq</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
+  
 
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/iconcewe.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/iconcewe.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/iconcowo.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/iconcowo.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+    <section id="faq" class="section py-5">
+      <style>
+        #faq {
+          background: #fdfdfd;
+          padding: 80px 0;
+          position: relative;
+        }
+    
+        .faq-wrapper {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 0 15px;
+          position: relative;
+          z-index: 1;
+        }
+    
+        .faq-title {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+    
+        .faq-title h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 15px;
+          position: relative;
+        }
+    
+        .faq-title h2::after {
+          content: "";
+          position: absolute;
+          width: 70px;
+          height: 4px;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #e3b016;
+          border-radius: 2px;
+        }
+    
+        .faq-title p {
+          color: #6c757d;
+          font-size: 1.1rem;
+        }
+    
+        .accordion-item {
+          background-color: #fff;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          border: 1px solid #eee;
+          overflow: hidden;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+    
+        .accordion-header {
+          padding: 18px 25px;
+          cursor: pointer;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.05rem;
+        }
+    
+        .accordion-header:hover {
+          background-color: #fafafa;
+        }
+    
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease;
+          padding: 0 25px;
+        }
+    
+        .accordion-content p {
+          margin: 15px 0;
+          color: #555;
+        }
+    
+        .accordion-item.active .accordion-content {
+          max-height: 500px;
+          padding-bottom: 20px;
+        }
+    
+        .accordion-icon {
+          transition: transform 0.3s ease;
+        }
+    
+        .accordion-item.active .accordion-icon {
+          transform: rotate(45deg);
+        }
+    
+        @media (max-width: 768px) {
+          .faq-title h2 {
+            font-size: 2rem;
+          }
+        }
+      </style>
+    
+      <div class="faq-wrapper" data-aos="fade-up">
+        <div class="faq-title">
+          <h2>Pertanyaan Umum</h2>
+          <p>Temukan jawaban dari pertanyaan yang sering diajukan seputar LPK - LN Sentosa Karya Aditama Bekasi.</p>
         </div>
-
+    
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Bahasa apa saja yang diajarkan di Cabang Bekasi?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Kami menyediakan pelatihan bahasa Mandarin, Kantonis, Melayu, dan Inggris, disesuaikan dengan kebutuhan negara tujuan kerja.</p>
+          </div>
+        </div>
+    
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Apakah harus sudah bisa bahasa sebelum ikut pelatihan?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Tidak. Program dirancang untuk pemula dan akan dimulai dari tingkat dasar hingga peserta siap berkomunikasi aktif.</p>
+          </div>
+        </div>
+    
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Apa saja keterampilan kerja yang diajarkan selain bahasa?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Selain pelatihan bahasa, kami juga memberikan pelatihan keterampilan dasar seperti house keeping, babysitter, dan seni dasar (art) untuk mendukung kesiapan kerja peserta di luar negeri.</p>
+          </div>
+        </div>
+    
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Berapa lama program pelatihan berlangsung?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Durasi pelatihan rata-rata berkisar antara 3 hingga 6 bulan, tergantung jenis bahasa dan kemampuan peserta.</p>
+          </div>
+        </div>
+    
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Apakah tersedia kelas online?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Untuk saat ini pelatihan utama dilakukan secara langsung (offline) agar peserta bisa berlatih komunikasi secara intensif. Namun, beberapa materi pendukung juga tersedia secara daring.</p>
+          </div>
+        </div>
+    
+        <!-- FAQ Item 6 -->
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            Apakah ada sertifikat setelah menyelesaikan program?
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Ya. Setelah menyelesaikan pelatihan dan lulus evaluasi, peserta akan mendapatkan sertifikat pelatihan bahasa dan keterampilan kerja.</p>
+          </div>
+        </div>
       </div>
+    
+      <script>
+        function toggleAccordion(header) {
+          const item = header.parentElement;
+          const isActive = item.classList.contains("active");
+          document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
+          if (!isActive) item.classList.add("active");
+        }
+      </script>
+    </section>
+    
+    
+    
+  
+    <!-- Blog Pagination Section -->
 
-    </section><!-- /Team Section -->
-
+  
   </main>
+  
 
   <footer id="footer" class="footer dark-background py-4">
 
@@ -234,14 +377,28 @@
   
         <!-- Kolom 3: Layanan -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h5 class="mb-2">Layanan</h5>
+          <h5 class="mb-2 text-white">Menu</h5>
           <ul class="list-unstyled small">
-            <li><i class="bi bi-tools me-1"></i> Welder / Tukang Las</li>
-            <li><i class="bi bi-building me-1"></i> Kontruksi</li>
-            <li><i class="bi bi-cup-hot me-1"></i> Family Cook</li>
-            <li><i class="bi bi-house-door me-1"></i> Housekeeper</li>
+            <li>
+              <i class="bi bi-house-door me-1 text-white"></i>
+              <a href="index.html" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-info-circle me-1 text-white"></i>
+              <a href="tentang.html" class="text-decoration-none text-white">Tentang Kami</a>
+            </li>
+            <li>
+              <i class="bi bi-question-circle me-1 text-white"></i>
+              <a href="faq.html" class="text-decoration-none text-white">FAQ</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-1 text-white"></i>
+              <a href="contact.html" class="text-decoration-none text-white">Kontak</a>
+            </li>
           </ul>
         </div>
+        
+        
   
         <!-- Kolom 4: Kontak -->
         <div class="col-lg-4 col-md-12 footer-newsletter">
@@ -294,22 +451,17 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
- const currentPage = window.location.pathname.split("/").pop();
-
-document.querySelectorAll('#navmenu a').forEach(link => {
-  const linkPage = link.getAttribute("href");
-
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-
-    // Jika menu anak aktif, tandai juga parent <li>
-    const parentLi = link.closest("li.dropdown");
-    if (parentLi) {
-      parentLi.querySelector("a").classList.add("active");
-    }
-  }
-});
-
+    // Ambil path dari URL saat ini, misal: "galeri.html"
+    const currentPage = window.location.pathname.split("/").pop();
+  
+    // Ambil semua link di navbar
+    document.querySelectorAll('#navmenu a').forEach(link => {
+      const linkPage = link.getAttribute("href");
+  
+      if (linkPage === currentPage) {
+        link.classList.add("active"); // Tambahkan class aktif
+      }
+    });
   </script>
   
 </body>

@@ -26,7 +26,42 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <style>
+    /* Perkecil tinggi header */
+    #header {
+      padding: 10px 0;
+      height: auto;
+    }
+    
+    /* Kurangi tinggi elemen di dalamnya */
+    #header .logo img {
+      height: 22px;
+      margin-right: 6px;
+    }
+    
+    #header .sitename {
+      font-size: 0.95rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+    
+    #header .logo span {
+      font-size: 0.75rem;
+      padding: 2px 6px;
+    }
+    
+    /* Perkecil padding nav menu */
+    #navmenu ul li a {
+      padding: 6px 8px;
+      font-size: 0.9rem;
+    }
+    
+    /* Perkecil icon sosial */
+    .header-social-links a {
+      font-size: 14px;
+      margin-left: 6px;
+    }
+  </style> 
   <!-- =======================================================
   * Template Name: Company
   * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
@@ -57,7 +92,7 @@
           <li><a href="index.html">Home</a></li>
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="team.html">Team</a></li>
+              <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
               <li><a href="testimonials.html">Testimoni</a></li>
               
             </ul>
@@ -65,6 +100,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -101,116 +137,506 @@
     </div><!-- End Page Title -->
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
+    <section id="testimonials" class="testimonials-section py-5">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcewe.png" class="testimonial-img" alt="">
-              <h3>Imelika Tyas</h3>
-              <h4>2 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>LPK SentosaKarya Aditama sangat membantu saya dalam proses ke luar negri, memberikan bimbingan pelatihan kepada CPMI dengan sangat luar biasa. semoga jaya selalu PT Sentosa Karya Aditama🙏🏻🔥💯</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcowo.png" class="testimonial-img" alt="">
-              <h3>Faqih Alfarizi</h3>
-              <h4>2 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Terimakasih PT.SENTOSAKARYA ADITAMA   yang telah mempermudah kita proses disini .sudah mendidik kita jadi yang lebih baik.semoga tambah jaya sukses sllu🤲... trimakasih kepada teman teman semangat buat kalian ☺️sukses sehat semua kita di negara tujuan masing"</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcewe.png" class="testimonial-img" alt="">
-              <h3>Ratu Pujian</h3>
-              <h4>2 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Terimakasih banyak untuk PT sentosa karya Aditama karena sudah membimbing saya sampai sejauh ini dan Mau membantu proses saya dengan Cepat Semoga PT SENTOSA KARYA ADITAMA Semakin jaya untuk kedepannya dan Semangat untuk teman teman lainnya semoga Kita semua pulang membawa kesuksesan
-                  Aamiin🤲♥️</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcewe.png" class="testimonial-img" alt="">
-              <h3>Anggun Montor</h3>
-              <h4>4 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>rimksih untuk PT sentosakarya aditama
-                  Dan jajaran staf, tidak bisa panjang lebar, intinya WO AI NIMEN jajaran staf♥️
-                  
-                  Dan untuk semua teman" ku yg masih di PT, yg semangat ya ciayooo 💪💪</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcewe.png" class="testimonial-img" alt="">
-              <h3>Pingky Andini</h3>
-              <h4>7 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Trimakasih untuk PT SENTOSAKARYA ADITAMA sudah memproses saya sampai terbang,Buat temen temen yng ada di PT SKA Tetep semangat untuk proses ingat tujuan awal kalian, tidak ada usaha yng menghianati hasil, tetap sabar semangat semuannya lelah kalian akan terbayarkan nantinya AAMIIN</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="testimonial-item">
-              <img src="assets/img/iconcowo.png" class="testimonial-img" alt="">
-              <h3>Tenga Pompa</h3>
-              <h4>5 bulan lalu</h4>
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                <i class="bi bi-quote quote-icon-left"></i>
-                <span>Tempat yang penuh kenangan bersama teman2 terimakasih pt SKA jika kita terbang pasti pasti akan slalu di rindukan kebersamaan kita di sini,buat teman2 semangat semoga cepat dapat job semua☺️</span>
-                <i class="bi bi-quote quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
+        <!-- Header dengan desain minimalis -->
+        <!-- <div class="section-header text-center mb-5 animate__animated animate__fadeIn animate__delay-1s">
+          <h2 class="position-relative d-inline-block fw-bold">
+            Testimoni Alumni
+          </h2>
+          <p class="section-description mt-4 mx-auto">Pengalaman para alumni yang telah kami bantu untuk mencapai tujuan karir mereka di luar negeri.</p>
+        </div> -->
+        <div class="text-center position-relative mb-5">
+          <h2 class="position-relative d-inline-block fw-bold">
+            Testimoni Alumni
+            <span class="position-absolute" style="height: 4px; width: 60%; background: linear-gradient(90deg, transparent, #e3b016, transparent); bottom: -10px; left: 20%;"></span>
+          </h2>
+          <p class="text-muted mt-3 mb-0 col-lg-8 mx-auto">Pengalaman para alumni yang telah kami bantu untuk mencapai tujuan karir mereka di luar negeri.</p>
         </div>
-
+        <!-- Testimonial Cards dengan layout grid yang elegan -->
+        <div class="testimonial-grid" id="testimonialGrid">
+          <!-- Testimoni 1 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">LPK SentosaKarya Aditama sangat membantu saya dalam proses ke luar negri, memberikan bimbingan pelatihan kepada CPMI dengan sangat luar biasa. semoga jaya selalu PT Sentosa Karya Aditama🙏🏻🔥💯</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcewe.png" alt="Imelika Tyas" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Imelika Tyas</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">2 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimoni 2 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">Terimakasih PT.SENTOSAKARYA ADITAMA yang telah mempermudah kita proses disini. Sudah mendidik kita jadi yang lebih baik. Semoga tambah jaya sukses selalu🤲... Trimakasih kepada teman teman semangat buat kalian ☺️</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcowo.png" alt="Faqih Alfarizi" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Faqih Alfarizi</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">2 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimoni 3 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-3s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">Terimakasih banyak untuk PT sentosa karya Aditama karena sudah membimbing saya sampai sejauh ini dan Mau membantu proses saya dengan Cepat. Semoga PT SENTOSA KARYA ADITAMA Semakin jaya untuk kedepannya.</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcewe.png" alt="Ratu Pujian" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Ratu Pujian</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">2 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimoni 4 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-4s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">Trimaksih untuk PT sentosakarya aditama dan jajaran staf, tidak bisa panjang lebar, intinya WO AI NIMEN jajaran staf♥️ Dan untuk semua teman² ku yg masih di PT, yg semangat ya ciayooo 💪💪</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcewe.png" alt="Anggun Montor" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Anggun Montor</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">4 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimoni 5 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-5s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">Trimakasih untuk PT SENTOSAKARYA ADITAMA sudah memproses saya sampai terbang. Buat temen² yng ada di PT SKA Tetep semangat untuk proses ingat tujuan awal kalian, tidak ada usaha yng menghianati hasil.</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcewe.png" alt="Pingky Andini" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Pingky Andini</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">7 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimoni 6 -->
+          <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-6s">
+            <div class="card-header">
+              <div class="quote-mark">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C5.46957 11 4.96086 10.7893 4.58579 10.4142C4.21071 10.0391 4 9.53043 4 9V7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H8C8.53043 5 9.03914 5.21071 9.41421 5.58579C9.78929 5.96086 10 6.46957 10 7V15C10 16.0609 9.57857 17.0783 8.82843 17.8284C8.07828 18.5786 7.06087 19 6 19H5M20 11H16C15.4696 11 14.9609 10.7893 14.5858 10.4142C14.2107 10.0391 14 9.53043 14 9V7C14 6.46957 14.2107 5.96086 14.5858 5.58579C14.9609 5.21071 15.4696 5 16 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V15C20 16.0609 19.5786 17.0783 18.8284 17.8284C18.0783 18.5786 17.0609 19 16 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="testimonial-text">Tempat yang penuh kenangan bersama teman2 terimakasih pt SKA jika kita terbang pasti pasti akan slalu di rindukan kebersamaan kita di sini, buat teman2 semangat semoga cepat dapat job semua☺️</p>
+            </div>
+            <div class="card-footer">
+              <div class="avatar">
+                <img src="assets/img/iconcowo.png" alt="Tenga Pompa" class="avatar-img">
+              </div>
+              <div class="testimonial-meta">
+                <h4 class="author-name">Tenga Pompa</h4>
+                <div class="testimonial-info">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="testimonial-date">5 bulan lalu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    
+      <!-- Link to Animate.css CDN -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      
+      <style>
+        .testimonials-section {
+          background-color: #f8f9fa;
+          position: relative;
+          overflow: hidden;
+          padding: 80px 0;
+        }
+        
+        .testimonials-section::before {
+          content: "";
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.03) 0%, rgba(227, 176, 22, 0.08) 100%);
+          top: -150px;
+          right: -100px;
+          z-index: 0;
+          animation: floatBubble 15s ease-in-out infinite alternate;
+        }
+        
+        .testimonials-section::after {
+          content: "";
+          position: absolute;
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.02);
+          bottom: -100px;
+          left: -100px;
+          z-index: 0;
+          animation: floatBubble 20s ease-in-out infinite alternate-reverse;
+        }
+        
+        .section-subtitle {
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 3px;
+          font-weight: 600;
+          color: #e3b016;
+          margin-bottom: 10px;
+          position: relative;
+          display: inline-block;
+        }
+        
+        .section-subtitle::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -3px;
+          left: 50%;
+          background-color: #e3b016;
+          transform: translateX(-50%);
+          transition: width 1s ease;
+          animation: expandWidth 1.5s forwards 1.5s;
+        }
+        
+        .section-title {
+          font-size: 36px;
+          font-weight: 700;
+          color: #222;
+          margin-bottom: 15px;
+          position: relative;
+          display: inline-block;
+        }
+        
+       
+        
+       
+        
+        .section-description {
+          color: #666;
+          max-width: 700px;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+        
+        .testimonial-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          gap: 25px;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .testimonial-card {
+          background-color: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+          transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+          position: relative;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          transform-origin: center bottom;
+        }
+        
+        .testimonial-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+          z-index: 5;
+        }
+        
+        .testimonial-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(90deg, #e3b016, #e3d582);
+          z-index: 1;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.5s ease;
+        }
+        
+        .testimonial-card:hover::before {
+          transform: scaleX(1);
+        }
+        
+        .card-header {
+          padding: 25px 25px 0;
+          position: relative;
+        }
+        
+        .quote-mark {
+          color: rgba(227, 176, 22, 0.15);
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          transition: transform 0.5s ease, color 0.5s ease;
+        }
+        
+        .testimonial-card:hover .quote-mark {
+          transform: scale(1.2) rotate(10deg);
+          color: rgba(227, 176, 22, 0.3);
+        }
+        
+        .card-content {
+          padding: 0 25px 20px;
+          flex-grow: 1;
+        }
+        
+        .testimonial-text {
+          color: #444;
+          font-size: 15px;
+          line-height: 1.8;
+          margin-bottom: 0;
+          transition: color 0.3s ease;
+        }
+        
+        .testimonial-card:hover .testimonial-text {
+          color: #222;
+        }
+        
+        .card-footer {
+          padding: 20px 25px;
+          border-top: 1px solid rgba(0, 0, 0, 0.05);
+          display: flex;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .card-footer::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background: linear-gradient(90deg, #e3b016, transparent);
+          transition: width 0.5s ease;
+        }
+        
+        .testimonial-card:hover .card-footer::after {
+          width: 100%;
+        }
+        
+        .avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 3px solid #fff;
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+          margin-right: 15px;
+          flex-shrink: 0;
+          transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .testimonial-card:hover .avatar {
+          transform: scale(1.1) rotate(5deg);
+          box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3);
+          border-color: rgba(227, 176, 22, 0.2);
+        }
+        
+        .avatar-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+        
+        .testimonial-card:hover .avatar-img {
+          transform: scale(1.1);
+        }
+        
+        .testimonial-meta {
+          flex-grow: 1;
+        }
+        
+        .author-name {
+          font-size: 16px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 3px;
+          transition: color 0.3s ease, transform 0.3s ease;
+          display: inline-block;
+        }
+        
+        .testimonial-card:hover .author-name {
+          color: #e3b016;
+          transform: translateX(5px);
+        }
+        
+        .testimonial-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        
+        .rating {
+          color: #e3b016;
+          font-size: 14px;
+          opacity: 0.8;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover .rating {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        
+        .testimonial-date {
+          font-size: 12px;
+          color: #777;
+          transition: color 0.3s ease;
+        }
+        
+        .testimonial-card:hover .testimonial-date {
+          color: #555;
+        }
+        
+        /* Animations */
+  /* Animations */
+  @keyframes floatBubble {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
 
+  @keyframes expandWidth {
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+</style>
+      </style>
     </section><!-- /Testimonials Section -->
 
   </main>
@@ -262,14 +688,28 @@
   
         <!-- Kolom 3: Layanan -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h5 class="mb-2">Layanan</h5>
+          <h5 class="mb-2 text-white">Menu</h5>
           <ul class="list-unstyled small">
-            <li><i class="bi bi-tools me-1"></i> Welder / Tukang Las</li>
-            <li><i class="bi bi-building me-1"></i> Kontruksi</li>
-            <li><i class="bi bi-cup-hot me-1"></i> Family Cook</li>
-            <li><i class="bi bi-house-door me-1"></i> Housekeeper</li>
+            <li>
+              <i class="bi bi-house-door me-1 text-white"></i>
+              <a href="index.html" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-info-circle me-1 text-white"></i>
+              <a href="tentang.html" class="text-decoration-none text-white">Tentang Kami</a>
+            </li>
+            <li>
+              <i class="bi bi-question-circle me-1 text-white"></i>
+              <a href="faq.html" class="text-decoration-none text-white">FAQ</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-1 text-white"></i>
+              <a href="contact.html" class="text-decoration-none text-white">Kontak</a>
+            </li>
           </ul>
         </div>
+        
+        
   
         <!-- Kolom 4: Kontak -->
         <div class="col-lg-4 col-md-12 footer-newsletter">

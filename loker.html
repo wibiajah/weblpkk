@@ -75,11 +75,16 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
-        <h1 class="sitename mb-0">LPK Sentosa Karya Aditama</h1><span></span>
+        <div class="d-flex align-items-center">
+          <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
+          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
+        </div>
       </a>
+      
+      
+      
       
 
       <nav id="navmenu" class="navmenu">
@@ -87,23 +92,25 @@
           <li><a href="index.html">Home</a></li>
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="team.html">Team</a></li>
+              <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
               <li><a href="testimonials.html">Testimoni</a></li>
               
             </ul>
           </li>
           <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="loker.html">Lowongan</a></li>
+          <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/6282298982759"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/people/Sentosakarya-Aditama/61557006988058/?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sentosatki/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@sentosatki"><i class="bi bi-tiktok"></i></a>
       </div>
 
     </div>
@@ -201,15 +208,26 @@
             <span class="sitename">LPK Sentosa Karya Aditama</span>
           </a>
           <div class="footer-contact small">
-            <p>Jl. Balai Desa No.2A, RT.001/RW.004, Jatirasa, Kec. Jatiasih</p>
+            <p>Jl. Balai Desa No.2, RT.001/RW.004, Jatirasa, Kec. Jatiasih</p>
             <p>Kota Bks, Jawa Barat 17424</p>
-            <p class="mt-2"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-2">
+              <strong>Phone:</strong>
+              <a href="https://wa.me/6282298982759" 
+                 style="text-decoration: none; color: inherit;" 
+                 onmouseover="this.style.textDecoration='underline'" 
+                 onmouseout="this.style.textDecoration='none'" 
+                 target="_blank">
+                +62 822-9898-2759
+              </a>
+            </p>
+            
+            <p><strong>Email:</strong> lpksentosakaryaaditamabekasi@gmail.com <span></span></p>
           </div>
           <div class="social-links d-flex mt-3 gap-2">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/6282298982759"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.facebook.com/people/Sentosakarya-Aditama/61557006988058/?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/sentosatki/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sentosatki"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
   
@@ -226,14 +244,28 @@
   
         <!-- Kolom 3: Layanan -->
         <div class="col-lg-2 col-md-3 footer-links">
-          <h5 class="mb-2">Layanan</h5>
+          <h5 class="mb-2 text-white">Menu</h5>
           <ul class="list-unstyled small">
-            <li><i class="bi bi-tools me-1"></i> Welder / Tukang Las</li>
-            <li><i class="bi bi-building me-1"></i> Kontruksi</li>
-            <li><i class="bi bi-cup-hot me-1"></i> Family Cook</li>
-            <li><i class="bi bi-house-door me-1"></i> Housekeeper</li>
+            <li>
+              <i class="bi bi-house-door me-1 text-white"></i>
+              <a href="index.html" class="text-decoration-none text-white">Home</a>
+            </li>
+            <li>
+              <i class="bi bi-info-circle me-1 text-white"></i>
+              <a href="tentang.html" class="text-decoration-none text-white">Tentang Kami</a>
+            </li>
+            <li>
+              <i class="bi bi-question-circle me-1 text-white"></i>
+              <a href="faq.html" class="text-decoration-none text-white">FAQ</a>
+            </li>
+            <li>
+              <i class="bi bi-envelope me-1 text-white"></i>
+              <a href="contact.html" class="text-decoration-none text-white">Kontak</a>
+            </li>
           </ul>
         </div>
+        
+        
   
         <!-- Kolom 4: Kontak -->
         <div class="col-lg-4 col-md-12 footer-newsletter">
@@ -255,12 +287,15 @@
   
     <!-- Bawah Footer -->
     <div class="container mt-4 pt-3 border-top text-center small text-light">
-      <p class="mb-1">© <strong class="sitename">LPK Sentosa Karya Aditama</strong>. All Rights Reserved.</p>
+      <p class="mb-1">
+        © <strong class="sitename" style="color: #e3b016;">LPK Sentosa Karya Aditama 2025</strong>. All Rights Reserved.
+      </p>
       <div class="credits">
-        Designed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a> |
-        Distributed by <a href="#" class="text-light">LPK Sentosa Karya Aditama</a>
+        Designed by <a href="#" style="color: #e3b016;">LPK Sentosa Karya Aditama</a> |
+        Distributed by <a href="#" style="color: #e3b016;">LPK Sentosa Karya Aditama</a>
       </div>
     </div>
+    
   
   </footer>
 
