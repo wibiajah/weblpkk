@@ -167,6 +167,7 @@
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
           <li><a href="faq.html">FAQ?</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -1680,6 +1681,272 @@
       </div>
     </section>
     
+    <section id="pendaftaran" class="py-5 bg-light position-relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0">
+        <div class="bg-shape-1"></div>
+        <div class="bg-shape-2"></div>
+        <div class="bg-shape-3"></div>
+        <div class="bg-dots"></div>
+      </div>
+      
+      <div class="container position-relative" style="z-index: 1">
+        <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+          <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+            Pendaftaran
+            <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
+          </h2>
+          <p class="text-muted">Silakan klik tombol di bawah untuk mendaftar program pembelajaran bahasa, dan pelatihan di LPK - LN Sentosa Karya Aditama Bekasi.</p>
+        </div>
+    
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 mb-4" data-aos="fade-up">
+            <div class="card-hover p-4 bg-white shadow-sm rounded-4 position-relative text-center">
+              <div class="accent-line"></div>
+              
+              <div class="hero-icon mb-4">
+                <div class="icon-circle">
+                  <i class="bi bi-person-plus-fill"></i>
+                </div>
+              </div>
+              
+              <h4 class="fw-bold mb-3">Mari Bergabung Bersama Kami</h4>
+              <p class="text-muted mb-4">Lanjutkan pendaftaran anda dengan mengklik halaman pendaftaran untuk memulai perjalanan karir bersama LPK - LN Sentosa Karya Aditama Bekasi.</p>
+              
+              <a href="pendaftaran.html" class="btn btn-primary btn-lg rounded-pill btn-shine px-4 py-2">
+                <i class="bi bi-arrow-right-circle me-2"></i>Mulai Pendaftaran
+              </a>
+              
+              <div class="note-box mt-4">
+                <small class="text-muted"><i class="bi bi-info-circle me-1"></i> Tim kami akan secepatnya menghubungi Anda setelah pendaftaran diisi.</small>
+              </div>
+              
+              <div class="card-decoration-1"></div>
+              <div class="card-decoration-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- CSS dengan Animasi dan Hiasan -->
+      <style>
+        /* Background Elements */
+        .bg-shape-1 {
+          position: absolute;
+          top: -50px;
+          left: -50px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: rgba(0, 123, 255, 0.05);
+          animation: float 15s infinite ease-in-out;
+        }
+        
+        .bg-shape-2 {
+          position: absolute;
+          bottom: -30px;
+          right: -30px;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background: rgba(227, 176, 22, 0.05);
+          animation: float 12s infinite ease-in-out;
+          animation-delay: 2s;
+        }
+        
+        .bg-shape-3 {
+          position: absolute;
+          top: 50%;
+          right: 15%;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: rgba(227, 176, 22, 0.08);
+          animation: float 10s infinite ease-in-out;
+          animation-delay: 1s;
+        }
+        
+        .bg-dots {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+          background-size: 20px 20px;
+          opacity: 0.3;
+        }
+        
+        @keyframes float {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          25% { transform: translate(10px, 10px) rotate(5deg); }
+          50% { transform: translate(0, 15px) rotate(0deg); }
+          75% { transform: translate(-10px, 5px) rotate(-5deg); }
+          100% { transform: translate(0, 0) rotate(0deg); }
+        }
+    
+        /* Hero Icon Styling */
+        .hero-icon {
+          margin-bottom: 1.5rem;
+        }
+    
+        .icon-circle {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #ffffff, #f5f7fa);
+          box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
+          border: 2px solid rgba(0, 123, 255, 0.1);
+          transition: all 0.4s ease;
+          position: relative;
+          z-index: 1;
+        }
+    
+        .icon-circle:before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #000000, #e3b016);
+          opacity: 0;
+          z-index: -1;
+          transition: all 0.4s ease;
+        }
+    
+        .card-hover:hover .icon-circle:before {
+          opacity: 0.3;
+        }
+    
+        .icon-circle .bi {
+          font-size: 3rem;
+          color: #e3b016;
+          transition: all 0.3s ease;
+        }
+    
+        .card-hover:hover .icon-circle {
+          transform: translateY(-10px);
+        }
+    
+        .card-hover:hover .icon-circle .bi {
+          transform: scale(1.1);
+          color: #e3b016;
+        }
+    
+        /* Card Styling & Animation */
+        .card-hover {
+          transition: all 0.4s ease;
+          border: 1px solid rgba(0,0,0,0.05);
+          overflow: hidden;
+        }
+        
+        .card-hover:hover {
+          transform: translateY(-15px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+        }
+        
+        .accent-line {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(90deg, #000000, #e3b016);
+        }
+        
+        /* Button Styling */
+        .btn-shine {
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          border: none;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+        }
+    
+        .btn-shine:after {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: all 0.8s;
+        }
+    
+        .btn-shine:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+        }
+    
+        .btn-shine:hover:after {
+          opacity: 1;
+          left: 100%;
+        }
+    
+        .btn-primary {
+          background: linear-gradient(135deg, #e3b016, #000000);
+          border: none;
+        }
+        
+        /* Decorative Elements */
+        .card-decoration-1 {
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: rgba(0, 123, 255, 0.05);
+          bottom: -60px;
+          right: -60px;
+          transition: all 0.5s ease;
+        }
+        
+        .card-decoration-2 {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: rgba(227, 176, 22, 0.05);
+          top: -40px;
+          left: -40px;
+          transition: all 0.5s ease;
+        }
+        
+        .card-hover:hover .card-decoration-1 {
+          transform: scale(1.5);
+        }
+        
+        .card-hover:hover .card-decoration-2 {
+          transform: scale(1.5) translate(10px, 10px);
+        }
+        
+        /* Note Box */
+        .note-box {
+          padding: 10px 20px;
+          border-radius: 30px;
+          background-color: rgba(255,255,255,0.9);
+          display: inline-block;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+          border-left: 3px solid #e3b016;
+          transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover .note-box {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+      </style>
+    </section>
+
     <!-- Clients Section -->
     <section id="lokasi" class="section py-5">
       <style>
@@ -1948,6 +2215,8 @@
         </div>
       </div>
     </section><!-- /Lokasi Section -->
+   
+    
     
   </main>
 
