@@ -62,6 +62,197 @@
       margin-left: 6px;
     }
   </style> 
+   <style>
+    /* Styling untuk Section Galeri */
+    .gallery-section {
+      padding: 80px 0;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #e3b016;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .gallery-item.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      vertical-align: middle;
+      transition: transform 0.6s ease;
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .zoom-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e3b016;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transform: scale(0);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 15px rgba(227, 176, 22, 0.5);
+    }
+    
+    .gallery-item:hover .zoom-btn {
+      transform: scale(1);
+    }
+    
+    /* Lightbox styling */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 80vh;
+      border: 5px solid white;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      transform: scale(0.9);
+      transition: transform 0.4s ease;
+    }
+    
+    .lightbox.active .lightbox-img {
+      transform: scale(1);
+    }
+    
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(227, 176, 22, 0.7);
+      transition: background-color 0.3s ease;
+    }
+    
+    .close-lightbox:hover {
+      background-color: #e3b016;
+    }
+    
+    /* Responsiveness */
+    @media (max-width: 991px) {
+      .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .section-title h2 {
+        font-size: 28px;
+      }
+      
+      .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 10px;
+      }
+      
+      .gallery-item img {
+        height: 250px;
+      }
+    }
+  </style>
   <!-- =======================================================
 
   ======================================================== -->
@@ -133,301 +324,25 @@
     </div><!-- End Page Title -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Galeri Kegiatan</h2>
-        <p>Kegiatan-kegiatan di Tempat LPK Kami</p>
+    <section id="portfolio" class="gallery-section">
+      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+          Galeri Kami
+          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
+        </h2>
+        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
+          Dokumentasi kegiatan pembelajaran, pelatihan, serta suasana kegiatan di LPK Sentosa Karya Aditama Bekasi.
+        </p>
       </div>
-    
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const container = document.querySelector(".isotope-container");
-              const items = Array.from(container.children);
-          
-              // Shuffle array
-              for (let i = items.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [items[i], items[j]] = [items[j], items[i]];
-              }
-          
-              // Append shuffled items
-              items.forEach(item => container.appendChild(item));
-            });
-          </script>
-          <!-- Filter -->
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Semua</li>
-            <li data-filter=".filter-welder">Welder</li>
-            <li data-filter=".filter-kontruksi">Kontruksi</li>
-            <li data-filter=".filter-familycook">Family Cook</li>
-            <li data-filter=".filter-housekeeper">Housekeeper</li>
-          </ul>
-    
-          <!-- Items -->
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-    
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 1</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 2</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/2.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 3</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/3.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 4</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/4.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 5</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/5.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-welder">
-              <img src="assets/img/welder/6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Welder 6</h4>
-                <p>Kegiatan pelatihan Welder</p>
-                <a href="assets/img/welder/6.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-welder"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-    
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 1</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 2</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/2.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 3</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/3.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 4</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/4.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 5</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/5.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 6</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/6.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-kontruksi">
-              <img src="assets/img/kontruksi/7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Kontruksi 7</h4>
-                <p>Pekerjaan lapangan</p>
-                <a href="assets/img/kontruksi/7.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-kontruksi"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-            
-            <!-- FAMILY COOK 1 -->
-            <!-- FAMILY COOK 1 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/1.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 1</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 2 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/2.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 2</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 3 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/3.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 3</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 4 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/4.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 4</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 5 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/5.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 5</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/5.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- FAMILY COOK 6 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-familycook">
-              <img src="assets/img/cook/6.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Family Cook 6</h4>
-                <p>Pelatihan memasak</p>
-                <a href="assets/img/cook/6.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-familycook"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-
-    
-            <!-- HOUSEKEEPER 1 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-housekeeper">
-              <img src="assets/img/house/1.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Housekeeper 1</h4>
-                <p>Praktek kerja rumah tangga</p>
-                <a href="assets/img/house/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-housekeeper"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- HOUSEKEEPER 2 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-housekeeper">
-              <img src="assets/img/house/2.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Housekeeper 2</h4>
-                <p>Praktek kerja rumah tangga</p>
-                <a href="assets/img/house/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-housekeeper"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- HOUSEKEEPER 3 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-housekeeper">
-              <img src="assets/img/house/3.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Housekeeper 3</h4>
-                <p>Praktek kerja rumah tangga</p>
-                <a href="assets/img/house/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-housekeeper"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- HOUSEKEEPER 4 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-housekeeper">
-              <img src="assets/img/house/4.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Housekeeper 4</h4>
-                <p>Praktek kerja rumah tangga</p>
-                <a href="assets/img/house/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-housekeeper"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-            <!-- HOUSEKEEPER 5 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-housekeeper">
-              <img src="assets/img/house/5.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Housekeeper 5</h4>
-                <p>Praktek kerja rumah tangga</p>
-                <a href="assets/img/house/5.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-housekeeper"><i class="bi bi-zoom-in"></i></a>
-                  
-              </div>
-            </div>
-
-    
-            <!-- Tambah item sesuai kebutuhan dengan class filter-welder, filter-kontruksi, filter-familycook, filter-housekeeper -->
-    
-          </div>
-        </div>
+       
+      <div class="gallery-container">
+        <!-- Semua gambar akan dirender secara dinamis dengan JavaScript -->
+      </div>
+      
+      <!-- Lightbox container -->
+      <div div class="lightbox">
+        <img class="lightbox-img" src="" alt="Enlarged gallery image">
+        <button class="close-lightbox">&times;</button>
       </div>
     </section>
     
@@ -567,7 +482,149 @@
       }
     });
   </script>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Daftar semua gambar dari semua kategori
+      const allImages = [
+        // Welder
+        { src: 'assets/img/welder/1.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/welder/2.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/welder/3.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/welder/4.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/welder/5.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/welder/6.jpg', alt: 'Kegiatan LPK' },
+        
+        // Konstruksi
+        { src: 'assets/img/kontruksi/1.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/2.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/3.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/4.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/5.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/6.jpg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/kontruksi/7.jpg', alt: 'Kegiatan LPK' },
+        
+        // Family Cook
+        { src: 'assets/img/cook/1.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/cook/2.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/cook/3.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/cook/4.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/cook/5.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/cook/6.jpeg', alt: 'Kegiatan LPK' },
+        
+        // Housekeeper
+        { src: 'assets/img/house/1.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/house/2.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/house/3.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/house/4.jpeg', alt: 'Kegiatan LPK' },
+        { src: 'assets/img/house/5.jpeg', alt: 'Kegiatan LPK' }
+      ];
+      
+      // Acak urutan gambar
+      shuffleArray(allImages);
+      
+      // Render galeri
+      renderGallery(allImages);
+      
+      // Setup intersection observer untuk animasi
+      setupIntersectionObserver();
+      
+      // Setup lightbox
+      setupLightbox();
+    });
+    
+    // Fungsi untuk mengacak array (algoritma Fisher-Yates)
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    // Fungsi untuk render galeri
+    function renderGallery(images) {
+      const galleryContainer = document.querySelector('.gallery-container');
+      galleryContainer.innerHTML = '';
+      
+      images.forEach((image, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.setAttribute('data-delay', (index * 100));
+        
+        galleryItem.innerHTML = `
+          <img src="${image.src}" alt="${image.alt}">
+          <div class="gallery-overlay">
+            <button class="zoom-btn" aria-label="Zoom image">
+              <i class="bi bi-zoom-in">+</i>
+            </button>
+          </div>
+        `;
+        
+        galleryContainer.appendChild(galleryItem);
+      });
+    }
+    
+    // Setup intersection observer untuk animasi muncul
+    function setupIntersectionObserver() {
+      const options = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('show');
+            }, entry.target.dataset.delay);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        observer.observe(item);
+      });
+    }
+    
+    // Setup lightbox functionality
+    function setupLightbox() {
+      const lightbox = document.querySelector('.lightbox');
+      const lightboxImg = document.querySelector('.lightbox-img');
+      const closeBtn = document.querySelector('.close-lightbox');
+      
+      // Open lightbox when clicking zoom button
+      document.querySelectorAll('.zoom-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const imgSrc = this.closest('.gallery-item').querySelector('img').src;
+          lightboxImg.src = imgSrc;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      // Close lightbox
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      
+      // Close with escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+      
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
 </body>
 
 </html>

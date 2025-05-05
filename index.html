@@ -107,7 +107,26 @@
       margin-left: 6px;
     }
   </style> 
- 
+ <style>
+  .counter-card {
+    background-color: rgba(227, 176, 22, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .counter-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e3b016;
+  }
+
+  small {
+    display: block;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+</style>
+
 
   <!-- =======================================================
   * Template Name: Company
@@ -229,30 +248,73 @@
     </section>
     <!-- About Section -->
 <!-- About Section with Modern Asymmetric Design -->
-<section id="about" class="about section">
-  <div class="container py-5 px-4">
+<section id="about" class="about section position-relative">
+  <!-- Background Elements -->
+  <div class="position-absolute top-0 end-0 d-none d-lg-block" style="width: 150px; height: 150px; z-index: 0; opacity: 0.05;">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#e3b016" d="M48.8,-57.2C62.9,-44.7,74.3,-29.1,76.9,-12C79.5,5.1,73.3,23.7,62,38.3C50.8,52.9,34.4,63.4,15.8,69.6C-2.8,75.8,-23.6,77.6,-39.5,69.7C-55.3,61.8,-66.3,44.2,-71.7,25.7C-77.1,7.2,-76.9,-12.3,-69.6,-28.8C-62.2,-45.4,-47.6,-59,-32.2,-70.5C-16.8,-82.1,-0.4,-91.7,15.1,-88.6C30.6,-85.6,60.2,-70,73.1,-52.8C86.1,-35.6,82.4,-17.8,77.4,-2.3C72.4,13.3,66.1,26.6,57.7,37.4C49.4,48.3,39,56.7,28.1,62.9C17.3,69.1,6.2,73.2,-4.9,74.5C-16,75.7,-31.9,74.2,-47.7,68.9C-63.5,63.7,-79.1,54.7,-87.9,41C-96.8,27.3,-98.8,9,-98.2,-10.6C-97.6,-30.2,-94.2,-51,-82.6,-64.6C-70.9,-78.2,-50.9,-84.5,-33.1,-83.7C-15.3,-83,-0.7,-75.2,14.7,-70.5C30.1,-65.8,46.4,-64.3,60.8,-57.6C75.2,-50.9,87.7,-39.2,87.7,-26.1C87.7,-13.1,75.2,1.2,66.7,14C58.2,26.7,53.8,37.9,45.5,46.6C37.3,55.3,25.3,61.5,12.2,65.8C-0.8,70.1,-14.9,72.5,-29,70.5C-43.1,68.5,-57.2,62.2,-69.7,51.8C-82.2,41.5,-93.2,27.2,-95.5,11.8C-97.8,-3.6,-91.3,-20.1,-82.3,-34.5C-73.3,-48.9,-61.7,-61.2,-47.6,-73.1C-33.5,-85,-16.7,-96.4,-0.9,-95.3C14.8,-94.2,29.7,-80.6,42.3,-67.6C55,-54.6,65.4,-42.2,77.6,-26.4C89.8,-10.7,103.8,8.3,104.9,27.1C106,45.9,94.4,64.4,78.5,76.8C62.6,89.2,42.5,95.4,23.2,96.1C3.9,96.8,-14.7,92,-34.3,86.2C-53.9,80.5,-74.6,73.8,-85.4,59.6C-96.2,45.3,-97.1,23.5,-95.9,2.9C-94.7,-17.7,-91.4,-37.2,-80.2,-48.9C-69,-60.7,-49.8,-64.7,-33.9,-62.6C-18,-60.6,-5.5,-52.4,8.7,-49.2C22.8,-46,38.7,-47.7,49.6,-42.1C60.5,-36.4,66.6,-23.2,70.2,-9.3C73.9,4.6,75.1,19.3,71.6,32.5C68.1,45.7,59.9,57.5,48.2,68.8C36.4,80.1,21.2,91,2.1,98.2C-17,105.4,-39.9,108.9,-58.5,103C-77.1,97,-91.3,81.5,-96.6,63.7C-101.8,45.8,-98,25.6,-96.1,7.2C-94.1,-11.3,-94,-27.9,-87.3,-41.9C-80.5,-55.8,-67.1,-67.1,-51.4,-68.7C-35.7,-70.3,-17.9,-62.2,0.3,-59.2C18.5,-56.2,37,-58.4,54.9,-53.7C72.8,-49,90,-37.5,100.2,-21.7C110.4,-6,113.5,14.1,105.9,29C98.3,43.9,79.9,53.7,63.1,65.7C46.3,77.7,31,92.1,12.2,99.1C-6.6,106.1,-28.8,105.8,-49.6,100C-70.3,94.3,-89.5,83.1,-96.3,66.3C-103,49.4,-97.3,26.9,-92.9,7.6C-88.6,-11.7,-85.7,-27.7,-80.1,-44.6C-74.5,-61.5,-66.2,-79.3,-52.4,-90.7C-38.6,-102.1,-19.3,-107,-0.9,-106.1C17.5,-105.1,34.9,-98.3,47.9,-86.8C60.9,-75.3,69.5,-59,77.5,-42.6C85.6,-26.2,93.2,-9.6,96.9,9C100.5,27.5,100.2,48.1,90.9,61.8C81.6,75.5,63.3,82.4,45.5,82.9C27.7,83.4,10.3,77.4,-8.2,76.1C-26.7,74.8,-46.3,78.1,-58.4,71C-70.5,63.8,-75.1,46.2,-80.2,29.5C-85.4,12.8,-91.2,-3,-91.9,-19.5C-92.6,-36,-88.2,-53.3,-77.5,-65.8C-66.9,-78.4,-49.9,-86.1,-33.2,-90.4C-16.5,-94.7,0,-95.5,17.4,-95.9C34.8,-96.2,53.1,-96.1,67.8,-88.4C82.6,-80.6,93.9,-65.3,97.7,-48.7C101.5,-32.1,97.9,-14.2,94.9,2.3C91.8,18.7,89.3,33.7,82.5,48.7C75.7,63.7,64.5,78.6,50.1,88.8C35.7,99.1,17.8,104.5,-0.5,105.1C-18.8,105.6,-37.5,101.2,-53.1,92.2C-68.6,83.3,-80.8,69.8,-88.7,54C-96.5,38.2,-99.9,20.1,-99.4,2.4" transform="translate(100 100)" />
+    </svg>
+  </div>
+  
+  <div class="position-absolute bottom-0 start-0 d-none d-lg-block" style="width: 120px; height: 120px; z-index: 0; opacity: 0.04;">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#000000" d="M39.4,-63.2C50.9,-54.8,59.9,-42.8,67.5,-29.3C75.1,-15.9,81.3,-0.9,79.2,12.6C77.2,26.1,66.9,38.2,55.1,46.9C43.3,55.7,30,61.2,15.5,65.4C1.1,69.7,-14.6,72.7,-26.8,68.2C-39,63.7,-47.8,51.5,-57.8,39.2C-67.8,26.8,-79,14.4,-81.7,-0.2C-84.4,-14.7,-78.7,-31.5,-68.3,-43.6C-57.9,-55.7,-42.9,-63.2,-28.4,-70C-13.8,-76.8,0.3,-82.9,14.2,-80.5C28.1,-78.1,41.8,-67.3,39.4,-63.2Z" transform="translate(100 100)" />
+    </svg>
+  </div>
+  
+  <div class="decoration-dots position-absolute" style="width: 150px; height: 80px; top: 20%; right: 5%; opacity: 0.05; z-index: 0; background: radial-gradient(circle, #e3b016 1px, transparent 1px); background-size: 10px 10px; transform: rotate(15deg);"></div>
+  
+  <div class="decoration-dots position-absolute" style="width: 120px; height: 80px; bottom: 15%; left: 8%; opacity: 0.05; z-index: 0; background: radial-gradient(circle, #000000 1px, transparent 1px); background-size: 12px 12px;"></div>
+
+  <div class="container py-5 px-4 position-relative">
     <div class="row align-items-center gx-5">
 
       <!-- Gambar Utama dengan Refleksi -->
       <div class="col-lg-6 text-center d-flex align-items-start justify-content-center" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="w-100" style="max-width: 100%;">
+        <div class="w-100 position-relative" style="max-width: 100%;">
+          <!-- Decorative elements behind image -->
+          <div class="position-absolute" style="width: 200px; height: 200px; top: -25px; left: -25px; border: 4px solid #e3b016; border-radius: 20px; opacity: 0.1; z-index: -1; transform: rotate(-8deg); animation: pulse 6s infinite alternate;"></div>
+          
+          <div class="position-absolute" style="width: 100px; height: 100px; bottom: 90px; right: -30px; background: #000000; border-radius: 12px; opacity: 0.05; z-index: -1; transform: rotate(15deg); animation: float 7s ease-in-out infinite;"></div>
 
           <!-- Gambar Utama -->
-          <div class="position-relative shadow-lg rounded-4 overflow-hidden border border-3 border-dark" style="width: 100%;">
+          <div class="position-relative shadow-lg rounded-4 overflow-hidden border border-3 border-dark hover-scale" style="width: 100%; transition: all 0.4s ease;">
             <img src="assets/img/bg1.jpeg" alt="LPK Sentosa Karya Aditama" class="img-fluid rounded-4 w-100" style="max-height: 450px; object-fit: cover;" />
 
-            <!-- Ikon -->
-            <div class="position-absolute top-0 start-0 m-3 p-3 bg-warning rounded-circle shadow d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-              <i class="bi bi-globe2 text-white fs-4"></i>
+            <!-- Corner Accents -->
+            <div class="position-absolute" style="top: 0; left: 0; width: 20px; height: 20px; border-top: 4px solid #e3b016; border-left: 4px solid #e3b016; opacity: 0.8;"></div>
+            <div class="position-absolute" style="top: 0; right: 0; width: 20px; height: 20px; border-top: 4px solid #e3b016; border-right: 4px solid #e3b016; opacity: 0.8;"></div>
+            <div class="position-absolute" style="bottom: 0; left: 0; width: 20px; height: 20px; border-bottom: 4px solid #e3b016; border-left: 4px solid #e3b016; opacity: 0.8;"></div>
+            <div class="position-absolute" style="bottom: 0; right: 0; width: 20px; height: 20px; border-bottom: 4px solid #e3b016; border-right: 4px solid #e3b016; opacity: 0.8;"></div>
+
+            <!-- Ikon dengan animasi -->
+            <div class="position-absolute top-0 start-0 m-3 p-3 bg-warning rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; animation: bounce 2s infinite alternate;">
+              <i class="bi bi-globe2 text-white fs-3"></i>
             </div>
 
-            <!-- Label -->
-            <div class="position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white px-3 py-2 rounded-end">
-              <small><i class="bi bi-translate me-1"></i> Program Bahasa Asing</small>
+            <!-- Badge dengan blur backdrop -->
+            <div class="position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.3); animation: fadeInDown 1s;">
+              <span class="fw-bold text-dark"><i class="bi bi-patch-check-fill text-warning me-1"></i> Resmi & Terpercaya</span>
+            </div>
+
+            <!-- Label dengan gradien -->
+            <div class="position-absolute bottom-0 start-0 w-100 py-2 px-3" style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); animation: slideInUp 0.8s;">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-translate text-warning me-2 fs-4"></i>
+                <div>
+                  <span class="text-white fs-6 fw-bold">Program Bahasa Asing</span>
+                  <div class="d-flex mt-1">
+                    <span class="badge bg-warning text-dark me-1">Kantonis</span>
+                    <span class="badge bg-warning text-dark me-1">Mandarin</span>
+                    <span class="badge bg-warning text-dark me-1">Melayu</span>
+                    <span class="badge bg-warning text-dark">Inggris</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Efek Bayangan Refleksi -->
+          <!-- Efek Bayangan Refleksi dengan animasi -->
           <div class="position-relative overflow-hidden mt-2" style="height: 120px;">
             <img src="assets/img/bg1.jpeg" alt="Refleksi" class="img-fluid rounded-4 w-100" style="
               transform: scaleY(-1);
@@ -260,6 +322,7 @@
               object-fit: cover;
               filter: blur(1px);
               height: 120px;
+              animation: ripple 3s infinite;
             " />
             <div style="
               position: absolute;
@@ -275,29 +338,168 @@
 
       <!-- Teks -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="our-story px-4 py-4" style="
+        <div class="our-story px-4 py-4 position-relative" style="
           border-left: 6px solid transparent;
           border-image: linear-gradient(to bottom, #000000, #e3b016) 1;
           background-color: #fff;
           border-radius: 12px;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+          transition: all 0.3s ease;
         ">
-          <h3 class="fw-bold text-dark mb-3">Pengertian Singkat</h3>
-          <p class="text-dark mb-3" style="text-align: justify;">
-            <strong style="color: #000000;">LPK - LN Sentosa Karya Aditama Bekasi</strong> adalah lembaga pelatihan kerja resmi yang mengkhususkan diri pada pembelajaran bahasa asing dan beberapa keterampilan kerja bagi Calon Pekerja Migran Indonesia. Bahasa yang diajarkan meliputi <strong>Kantonis, Mandarin, Melayu, dan Inggris</strong> dengan metode belajar efektif dan suasana yang nyaman.
-          </p>
-          <p class="text-dark mb-3" style="text-align: justify;">
-            <strong style="color: #000000;">Kenapa Memilih Kami?</strong><br>
-            Kami membekali peserta dengan keterampilan kerja serta bahasa sekaligus membentuk <strong>mental, disiplin, dan kepercayaan diri</strong>. Dipandu oleh pengajar profesional, lulusan kami siap menghadapi tantangan kerja di luar negeri secara mandiri dan percaya diri.
-          </p>
-          <a href="tentang.html" class="btn mt-2 px-4 py-2" style="background-color: #e3b016; color: rgb(0, 0, 0); border-radius: 6px; font-family: 'Poppins', sans-serif; font-weight: 600; text-transform: uppercase;">Selengkapnya</a>
+          <!-- Decorative elements for text section -->
+          <div class="position-absolute" style="width: 40px; height: 40px; top: -10px; right: -10px; background: #e3b016; border-radius: 8px; opacity: 0.1; transform: rotate(25deg);"></div>
+          <div class="position-absolute" style="width: 25px; height: 25px; bottom: 20px; right: 40px; background: #000000; border-radius: 50%; opacity: 0.05;"></div>
+          
+          <!-- Decorated heading -->
+          <div class="position-relative mb-4">
+            <h3 class="fw-bold text-dark mb-0 position-relative d-inline-block">
+              Pengertian Singkat
+              <div class="position-absolute" style="height: 10px; width: 50%; bottom: -5px; left: 0; background: rgba(227, 176, 22, 0.3); z-index: -1;"></div>
+            </h3>
+            <div class="ms-2 d-inline-block" style="width: 8px; height: 8px; background-color: #e3b016; border-radius: 50%;"></div>
+          </div>
 
-
+          <!-- Animated highlight text -->
+          <p class="text-dark mb-3 position-relative" style="text-align: justify;">
+            <strong class="position-relative" style="color: #000000; z-index: 1;">
+              LPK - LN Sentosa Karya Aditama Bekasi
+              <span class="position-absolute" style="left: 0; bottom: 0; width: 100%; height: 6px; background-color: rgba(227, 176, 22, 0.2); z-index: -1;"></span>
+            </strong> 
+            adalah lembaga pelatihan kerja resmi yang mengkhususkan diri pada pembelajaran bahasa asing dan beberapa keterampilan kerja bagi Calon Pekerja Migran Indonesia. Bahasa yang diajarkan meliputi 
+            <strong style="color: #000000; border-bottom: 2px dotted #e3b016;">Kantonis, Mandarin, Melayu, dan Inggris</strong> dengan metode belajar efektif dan suasana yang nyaman.
+          </p>
+          
+          <p class="text-dark mb-3" style="text-align: justify;">
+            <strong class="position-relative" style="color: #000000;">
+              Kenapa Memilih Kami?
+            </strong><br>
+            Kami membekali peserta dengan keterampilan kerja serta bahasa sekaligus membentuk 
+            <strong class="highlight-text">mental, disiplin, dan kepercayaan diri</strong>. 
+            Dipandu oleh pengajar profesional, lulusan kami siap menghadapi tantangan kerja di luar negeri secara mandiri dan percaya diri.
+          </p>
+          
+          <!-- Stats counter -->
+          <div class="row mb-4 text-center">
+            <div class="col-4">
+              <div class="p-2 counter-card">
+                <h4 class="mb-0 fw-bold counter-value" data-target="500" data-plus="true">0</h4>
+                <small>Lulusan</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-2 counter-card">
+                <h4 class="mb-0 fw-bold counter-value" data-target="4" data-plus="false">0</h4>
+                <small>Bahasa</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-2 counter-card">
+                <h4 class="mb-0 fw-bold counter-value" data-target="10" data-plus="true">0</h4>
+                <small>Tahun</small>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Animated button -->
+          <a href="tentang.html" class="btn mt-2 px-4 py-2 position-relative overflow-hidden" style="
+            background-color: #e3b016; 
+            color: rgb(0, 0, 0); 
+            border-radius: 6px; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 600; 
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(227, 176, 22, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1;
+          ">
+            <span class="position-relative" style="z-index: 2;">Selengkapnya <i class="bi bi-arrow-right ms-1"></i></span>
+            <span class="position-absolute top-0 start-0 w-0 h-100 bg-dark" style="transition: all 0.3s ease; z-index: 1; opacity: 0.1;"></span>
+          </a>
         </div>
       </div>
 
     </div>
   </div>
+  
+  <!-- CSS Animation Keyframes -->
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-8deg); }
+      50% { transform: scale(1.05) rotate(-8deg); }
+      100% { transform: scale(1) rotate(-8deg); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(15deg); }
+      50% { transform: translateY(-10px) rotate(15deg); }
+      100% { transform: translateY(0) rotate(15deg); }
+    }
+    
+    @keyframes ripple {
+      0% { opacity: 0.15; }
+      50% { opacity: 0.25; }
+      100% { opacity: 0.15; }
+    }
+    
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
+    }
+    
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.02);
+    }
+    
+    .highlight-text {
+      position: relative;
+      color: #000000;
+      z-index: 1;
+    }
+    
+    .highlight-text::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(227, 176, 22, 0.2);
+      z-index: -1;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(227, 176, 22, 0.4);
+    }
+    
+    .btn:hover span:nth-child(2) {
+      width: 100%;
+    }
+    
+    .counter {
+      animation: countUp 2.5s ease-out forwards;
+    }
+    
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .our-story:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+  </style>
 </section>
     
     <section id="sambutan" class="section py-5 position-relative">
@@ -309,16 +511,16 @@
       <div class="position-absolute" style="top: 75%; right: 8%; width: 80px; height: 80px; background-color: rgba(227, 176, 22, 0.1); border-radius: 50%; animation: float 9s ease-in-out infinite 1s;"></div>
       <div class="position-absolute" style="top: 40%; right: 15%; width: 30px; height: 30px; background-color: rgba(227, 176, 22, 0.1); border-radius: 10px; transform: rotate(45deg); animation: float 8s ease-in-out infinite 2s;"></div>
       
-      <div class="container section-title text-center mb-5 position-relative" data-aos="fade-up">
-
-        <h2 class="fw-bold mb-2 display-5 position-relative">
-          <span class="position-relative">
-            Sambutan
-           
-          </span>
+      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+          Sambutan
+          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
         </h2>
-        <p class="text-muted mb-0 fs-5 fw-light">Kenapa Harus Belajar di <span class="fw-semibold" style="color: #000000;">LPK Sentosa Karya Aditama Bekasi?</span></p>
+        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
+          Kenapa Harus Belajar di <span class="fw-semibold" style="color: #000000;">LPK Sentosa Karya Aditama Bekasi?</span>
+        </p>
       </div>
+      
     
       <div class="container px-4" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-4">
@@ -662,17 +864,17 @@
 
     <section id="skills" class="skills section py-5">
       <div class="container">
-        <div class="section-title text-center mb-5">
-          <h2 class="fw-bold display-5 mb-3">
-            
-            <i class="bi bi-chat-dots-fill me-2" style="color: #e3b016;"></i>Pembelajaran Bahasa
+        <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+          <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+            Pembelajaran Bahasa
+            <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
           </h2>
           <p class="text-muted mx-auto fw-light fs-5" style="max-width: 800px;">
             Di LPK Sentosa Karya Aditama, pelatihan bahasa dirancang secara komunikatif dan praktis. 
             Kami menghadirkan berbagai pilihan bahasa untuk mempersiapkan peserta kerja ke luar negeri.
           </p>
         </div>
-    
+       
         <div class="language-carousel">
           <div class="language-item" data-language="mandarin">
             <div class="language-content">
@@ -1037,6 +1239,7 @@
           height: 250px;
           background-color: #e3b016;
           border-radius: 28% 72% 50% 50% / 28% 42% 58% 72%;
+          animation: float 8s ease-in-out infinite;
         }
         
         .decoration-2 {
@@ -1046,6 +1249,65 @@
           height: 180px;
           background-color: #e3b016;
           border-radius: 72% 28% 50% 50% / 42% 28% 72% 58%;
+          animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        /* Additional decorations */
+        .decoration-3 {
+          top: 60%;
+          right: 15%;
+          width: 120px;
+          height: 120px;
+          background-color: #e3b016;
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          animation: float 12s ease-in-out infinite 1s;
+          opacity: 0.02;
+        }
+        
+        .decoration-4 {
+          top: 20%;
+          left: 15%;
+          width: 100px;
+          height: 100px;
+          background-color: #e3b016;
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+          animation: float 9s ease-in-out infinite 0.5s;
+          opacity: 0.02;
+        }
+        
+        .decoration-dots {
+          position: absolute;
+          width: 200px;
+          height: 100px;
+          opacity: 0.05;
+          z-index: 0;
+        }
+        
+        .dots-1 {
+          top: 15%;
+          left: 10%;
+          background: radial-gradient(circle, #e3b016 1px, transparent 1px);
+          background-size: 15px 15px;
+        }
+        
+        .dots-2 {
+          bottom: 10%;
+          right: 5%;
+          background: radial-gradient(circle, #e3b016 1px, transparent 1px);
+          background-size: 15px 15px;
+          transform: rotate(15deg);
+        }
+        
+        @keyframes float {
+          0% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-15px) rotate(5deg);
+          }
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
         }
         
         /* Title styling */
@@ -1078,6 +1340,19 @@
           border-radius: 2px;
         }
         
+        .section-title h2::before {
+          content: "";
+          position: absolute;
+          width: 35px;
+          height: 4px;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #e3b016;
+          border-radius: 2px;
+          opacity: 0.6;
+        }
+        
         .section-title p {
           color: #6c757d;
           font-size: 1.1rem;
@@ -1107,6 +1382,8 @@
           overflow: hidden;
           border: 2px solid white;
           transition: all 0.4s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          margin-bottom: 15px;
         }
         
         .gallery-item img {
@@ -1174,6 +1451,82 @@
           transform: translateY(-3px);
         }
         
+        /* View More Button */
+        .view-more-container {
+          text-align: center;
+          margin-top: 40px;
+          position: relative;
+          z-index: 2;
+        }
+        
+        .view-more-btn {
+          display: inline-block;
+          padding: 12px 28px;
+          background-color: #e3b016;
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          border-radius: 30px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .view-more-btn::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.1);
+          transform: translateX(-100%) rotate(45deg);
+          transition: all 0.5s ease;
+        }
+        
+        .view-more-btn:hover {
+          background-color: #c99813;
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(227, 176, 22, 0.4);
+        }
+        
+        .view-more-btn:hover::before {
+          transform: translateX(100%) rotate(45deg);
+        }
+        
+        .view-more-btn i {
+          margin-left: 8px;
+          transition: all 0.3s ease;
+        }
+        
+        .view-more-btn:hover i {
+          transform: translateX(5px);
+        }
+        
+        /* Highlight effect for some items */
+        .gallery-item.highlight {
+          transform: scale(1.02);
+          z-index: 2;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Corner ribbon */
+        .corner-ribbon {
+          position: absolute;
+          top: 20px;
+          right: -35px;
+          background: #e3b016;
+          color: white;
+          padding: 5px 30px;
+          transform: rotate(45deg);
+          font-size: 0.8rem;
+          font-weight: 600;
+          z-index: 3;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 992px) {
           .gallery-item {
@@ -1197,25 +1550,41 @@
           .gallery-item img {
             height: 220px;
           }
+          
+          .view-more-btn {
+            padding: 10px 25px;
+            font-size: 0.95rem;
+          }
         }
       </style>
     
       <!-- Background Decorations -->
       <div class="gallery-decoration decoration-1"></div>
       <div class="gallery-decoration decoration-2"></div>
+      <div class="gallery-decoration decoration-3"></div>
+      <div class="gallery-decoration decoration-4"></div>
+      <div class="decoration-dots dots-1"></div>
+      <div class="decoration-dots dots-2"></div>
     
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Galeri</h2>
-        <p>Berikut ini adalah dokumentasi foto yang ada ditempat kami</p>
-      </div>
+      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+          Galeri Kami
+          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
+        </h2>
+        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
+          Beberapa dokumentasi kegiatan di tempat kami:
+        </p>
+      </div>  
     
       <div class="container portfolio-container">
         <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
           
           <!-- Gallery Item 1 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item highlight">
+            <div class="corner-ribbon">Terbaru</div>
             <img src="assets/img/team/1.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+            
               <a href="assets/img/team/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
@@ -1226,28 +1595,29 @@
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
             <img src="assets/img/cook/3.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+             
               <a href="assets/img/cook/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
             </div>
           </div>
+          
           <!-- Gallery Item 3 -->
-
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
             <img src="assets/img/team/2.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+              
               <a href="assets/img/team/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
             </div>
           </div>
-
-
     
           <!-- Gallery Item 4 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item highlight">
             <img src="assets/img/cook/23.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+             
               <a href="assets/img/cook/23.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
@@ -1258,6 +1628,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
             <img src="assets/img/team/3.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+             
               <a href="assets/img/team/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
@@ -1268,6 +1639,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
             <img src="assets/img/cook/6.jpeg" alt="Pelatihan Memasak">
             <div class="gallery-info">
+              
               <a href="assets/img/cook/6.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
@@ -1278,6 +1650,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
             <img src="assets/img/house/1.jpeg" alt="Pelatihan Housekeeping">
             <div class="gallery-info">
+             
               <a href="assets/img/house/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
@@ -1286,14 +1659,23 @@
     
           <!-- Gallery Item 8 -->
           <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
+            <div class="corner-ribbon">Populer</div>
             <img src="assets/img/team/4.jpeg" alt="Pelatihan Housekeeping">
             <div class="gallery-info">
+             
               <a href="assets/img/team/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
                 <i class="bi bi-zoom-in"></i>
               </a>
             </div>
           </div>
     
+        </div>
+        
+        <!-- View More Button -->
+        <div class="view-more-container" data-aos="fade-up" data-aos-delay="300">
+          <a href="galeri.html" class="view-more-btn">
+            Lihat Selengkapnya <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -1506,10 +1888,15 @@
       <div class="location-decoration location-deco-3"></div>
     
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Lokasi Kami</h2>
-        <p>Kunjungi lokasi pelatihan dan kantor kami secara langsung di tempat berikut ini:</p>
-      </div>
+      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+          Lokasi Kami
+          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
+        </h2>
+        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
+          Kunjungi lokasi pelatihan dan kantor kami secara langsung di tempat berikut ini:
+        </p>
+      </div>    
     
       <!-- Content -->
       <div class="location-wrapper" data-aos="fade-up" data-aos-delay="100">
@@ -1703,7 +2090,49 @@
     }
   });
 </script>
+<script>
+  function animateCounter(counter) {
+    const target = +counter.getAttribute("data-target");
+    const showPlus = counter.getAttribute("data-plus") === "true";
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+    let step = 0;
 
+    const update = () => {
+      step++;
+      current += increment;
+      if (step < steps) {
+        counter.innerText = Math.floor(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + (showPlus ? "+" : "");
+      }
+    };
+
+    update();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter-value");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          obs.unobserve(entry.target); // stop observing after animation starts
+        }
+      });
+    }, {
+      threshold: 0.5 // start when 50% visible
+    });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  });
+</script>
 </body>
 
 </html>
