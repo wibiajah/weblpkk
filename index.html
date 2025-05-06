@@ -39,38 +39,7 @@
       text-transform: uppercase;
     }
   </style>
-  <style>
-    .portfolio .portfolio-item {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #ddd; /* Border tipis */
-    }
-  
-    .portfolio .portfolio-item img {
-      height: 250px;
-      object-fit: cover;
-      width: 100%;
-      display: block;
-      margin: auto;
-    }
-  
-    .portfolio .portfolio-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
-    }
-  
-    .portfolio-container {
-      padding-left: 15px;  /* Jarak kiri */
-      padding-right: 15px; /* Jarak kanan */
-    }
-  </style>
+
   <style>
     /* Perkecil tinggi header */
     #header {
@@ -158,6 +127,10 @@
           <li><a href="index.html">Home</a></li>
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
+              <li><a href="visimisi.html">Visi - Misi</a></li>
+              <li><a href="legal.html">Legalitas dan Sertifikasi</a></li>
+              <li><a href="mitra.html">Mitra Kami</a></li>
+              <li><a href="nilai2.html">Nilai Value Kami</a></li>
               <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
               <li><a href="testimonials.html">Testimoni</a></li>
               
@@ -1216,175 +1189,84 @@
 <br>
 <br>
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section py-5">
+    <section id="portfolio" class="gallery-section">
+      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
+          Galeri Kami
+          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
+        </h2>
+        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
+          Dokumentasi kegiatan pembelajaran, pelatihan, serta suasana kegiatan di LPK Sentosa Karya Aditama Bekasi.
+        </p>
+      </div>
+       
+      <div class="gallery-container">
+        <!-- Semua gambar akan dirender secara dinamis dengan JavaScript -->
+      </div>
+      
+      <!-- Lightbox container -->
+      <div div class="lightbox">
+        <img class="lightbox-img" src="" alt="Enlarged gallery image">
+        <button class="close-lightbox">&times;</button>
+      </div>
       <style>
-        /* Gallery Section Styling */
-        #portfolio {
-          background-color: #f9f9f9;
-          position: relative;
-          overflow: hidden;
+        /* Styling untuk Section Galeri */
+        .gallery-section {
           padding: 80px 0;
+          background-color: #fff;
+          overflow: hidden;
         }
         
-        /* Background decorations */
-        .gallery-decoration {
-          position: absolute;
-          z-index: 0;
-          opacity: 0.03;
-        }
-        
-        .decoration-1 {
-          top: 10%;
-          right: 8%;
-          width: 250px;
-          height: 250px;
-          background-color: #e3b016;
-          border-radius: 28% 72% 50% 50% / 28% 42% 58% 72%;
-          animation: float 8s ease-in-out infinite;
-        }
-        
-        .decoration-2 {
-          bottom: 15%;
-          left: 8%;
-          width: 180px;
-          height: 180px;
-          background-color: #e3b016;
-          border-radius: 72% 28% 50% 50% / 42% 28% 72% 58%;
-          animation: float 10s ease-in-out infinite reverse;
-        }
-        
-        /* Additional decorations */
-        .decoration-3 {
-          top: 60%;
-          right: 15%;
-          width: 120px;
-          height: 120px;
-          background-color: #e3b016;
-          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-          animation: float 12s ease-in-out infinite 1s;
-          opacity: 0.02;
-        }
-        
-        .decoration-4 {
-          top: 20%;
-          left: 15%;
-          width: 100px;
-          height: 100px;
-          background-color: #e3b016;
-          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-          animation: float 9s ease-in-out infinite 0.5s;
-          opacity: 0.02;
-        }
-        
-        .decoration-dots {
-          position: absolute;
-          width: 200px;
-          height: 100px;
-          opacity: 0.05;
-          z-index: 0;
-        }
-        
-        .dots-1 {
-          top: 15%;
-          left: 10%;
-          background: radial-gradient(circle, #e3b016 1px, transparent 1px);
-          background-size: 15px 15px;
-        }
-        
-        .dots-2 {
-          bottom: 10%;
-          right: 5%;
-          background: radial-gradient(circle, #e3b016 1px, transparent 1px);
-          background-size: 15px 15px;
-          transform: rotate(15deg);
-        }
-        
-        @keyframes float {
-          0% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-15px) rotate(5deg);
-          }
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-        }
-        
-        /* Title styling */
         .section-title {
           text-align: center;
-          margin-bottom: 50px;
+          margin-bottom: 70px;
           position: relative;
-          z-index: 1;
         }
         
         .section-title h2 {
-          font-size: 2.5rem;
+          font-size: 32px;
           font-weight: 700;
-          color: #2c2c2c;
-          margin-bottom: 15px;
+          color: #333;
           position: relative;
-          display: inline-block;
           padding-bottom: 15px;
+          margin-bottom: 0;
+          letter-spacing: 1px;
         }
         
-        .section-title h2::after {
-          content: "";
+        .section-title:after {
+          content: '';
           position: absolute;
-          width: 70px;
-          height: 4px;
-          bottom: 0;
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: #e3b016;
+          bottom: -10px;
           left: 50%;
           transform: translateX(-50%);
-          background: #e3b016;
-          border-radius: 2px;
         }
         
-        .section-title h2::before {
-          content: "";
-          position: absolute;
-          width: 35px;
-          height: 4px;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: #e3b016;
-          border-radius: 2px;
-          opacity: 0.6;
-        }
-        
-        .section-title p {
-          color: #6c757d;
-          font-size: 1.1rem;
-          max-width: 700px;
-          margin: 0 auto;
-        }
-        
-        /* Gallery container */
-        .portfolio-container {
-          position: relative;
-          z-index: 1;
-          max-width: 1320px;
+        .gallery-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          grid-gap: 20px;
+          max-width: 1200px;
           margin: 0 auto;
           padding: 0 15px;
         }
         
-        /* Gallery grid */
-        .gallery-grid {
-          display: flex;
-          flex-wrap: wrap;
-          margin: 0;
-        }
-        
-        /* Gallery item */
         .gallery-item {
           position: relative;
           overflow: hidden;
-          border: 2px solid white;
-          transition: all 0.4s ease;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-          margin-bottom: 15px;
+          border-radius: 8px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          transform: translateY(40px);
+          opacity: 0;
+          transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .gallery-item.show {
+          transform: translateY(0);
+          opacity: 1;
         }
         
         .gallery-item img {
@@ -1392,293 +1274,221 @@
           height: 300px;
           object-fit: cover;
           vertical-align: middle;
-          transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: transform 0.6s ease;
         }
         
-        .gallery-info {
+        .gallery-overlay {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.7);
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.6);
           display: flex;
-          flex-direction: column;
-          justify-content: center;
           align-items: center;
-          padding: 20px;
+          justify-content: center;
           opacity: 0;
-          transform: translateY(20px);
-          transition: all 0.4s ease;
+          transition: opacity 0.4s ease;
         }
         
-        .gallery-item:hover .gallery-info {
+        .gallery-item:hover .gallery-overlay {
           opacity: 1;
-          transform: translateY(0);
         }
         
         .gallery-item:hover img {
           transform: scale(1.1);
         }
         
-        .gallery-info h4 {
-          color: white;
-          font-size: 1.2rem;
-          font-weight: 600;
-          margin-bottom: 5px;
-        }
-        
-        .gallery-info p {
-          color: #e3b016;
-          font-size: 0.9rem;
-          margin-bottom: 15px;
-        }
-        
-        .preview-link {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 45px;
-          height: 45px;
-          background: rgba(227, 176, 22, 0.8);
+        .zoom-btn {
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
-          color: white;
-          font-size: 1.2rem;
-          transition: all 0.3s ease;
-        }
-        
-        .preview-link:hover {
-          background: #e3b016;
-          transform: translateY(-3px);
-        }
-        
-        /* View More Button */
-        .view-more-container {
-          text-align: center;
-          margin-top: 40px;
-          position: relative;
-          z-index: 2;
-        }
-        
-        .view-more-btn {
-          display: inline-block;
-          padding: 12px 28px;
           background-color: #e3b016;
           color: white;
-          font-weight: 600;
-          font-size: 1rem;
-          border-radius: 30px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3);
-          position: relative;
-          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          transform: scale(0);
+          transition: transform 0.4s ease;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 0 15px rgba(227, 176, 22, 0.5);
         }
         
-        .view-more-btn::before {
-          content: "";
-          position: absolute;
+        .gallery-item:hover .zoom-btn {
+          transform: scale(1);
+        }
+        
+        /* Lightbox styling */
+        .lightbox {
+          position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(255, 255, 255, 0.1);
-          transform: translateX(-100%) rotate(45deg);
-          transition: all 0.5s ease;
+          background: rgba(0, 0, 0, 0.9);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
         }
         
-        .view-more-btn:hover {
-          background-color: #c99813;
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(227, 176, 22, 0.4);
+        .lightbox.active {
+          opacity: 1;
+          pointer-events: all;
         }
         
-        .view-more-btn:hover::before {
-          transform: translateX(100%) rotate(45deg);
+        .lightbox-img {
+          max-width: 90%;
+          max-height: 80vh;
+          border: 5px solid white;
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+          transform: scale(0.9);
+          transition: transform 0.4s ease;
         }
         
-        .view-more-btn i {
-          margin-left: 8px;
-          transition: all 0.3s ease;
+        .lightbox.active .lightbox-img {
+          transform: scale(1);
         }
         
-        .view-more-btn:hover i {
-          transform: translateX(5px);
-        }
-        
-        /* Highlight effect for some items */
-        .gallery-item.highlight {
-          transform: scale(1.02);
-          z-index: 2;
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Corner ribbon */
-        .corner-ribbon {
+        .close-lightbox {
           position: absolute;
           top: 20px;
-          right: -35px;
-          background: #e3b016;
+          right: 20px;
           color: white;
-          padding: 5px 30px;
-          transform: rotate(45deg);
-          font-size: 0.8rem;
-          font-weight: 600;
-          z-index: 3;
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          font-size: 40px;
+          cursor: pointer;
+          background: none;
+          border: none;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: rgba(227, 176, 22, 0.7);
+          transition: background-color 0.3s ease;
         }
         
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-          .gallery-item {
-            height: 250px;
+        .close-lightbox:hover {
+          background-color: #e3b016;
+        }
+        
+        /* Responsiveness */
+        @media (max-width: 991px) {
+          .gallery-container {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           }
-          
-          .gallery-item img {
-            height: 250px;
-          }
-          
+        }
+        
+        @media (max-width: 767px) {
           .section-title h2 {
-            font-size: 2rem;
+            font-size: 28px;
           }
-        }
-        
-        @media (max-width: 768px) {
-          .gallery-item {
-            height: 220px;
+          
+          .gallery-container {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
           }
           
           .gallery-item img {
-            height: 220px;
-          }
-          
-          .view-more-btn {
-            padding: 10px 25px;
-            font-size: 0.95rem;
+            height: 250px;
           }
         }
       </style>
-    
-      <!-- Background Decorations -->
-      <div class="gallery-decoration decoration-1"></div>
-      <div class="gallery-decoration decoration-2"></div>
-      <div class="gallery-decoration decoration-3"></div>
-      <div class="gallery-decoration decoration-4"></div>
-      <div class="decoration-dots dots-1"></div>
-      <div class="decoration-dots dots-2"></div>
-    
-      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
-        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
-          Galeri Kami
-          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
-        </h2>
-        <p class="text-muted mb-0 fs-5 fw-light" data-aos="fade-up" data-aos-delay="500">
-          Beberapa dokumentasi kegiatan di tempat kami:
-        </p>
-      </div>  
-    
-      <div class="container portfolio-container">
-        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
-          
-          <!-- Gallery Item 1 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item highlight">
-            <div class="corner-ribbon">Terbaru</div>
-            <img src="assets/img/team/1.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-            
-              <a href="assets/img/team/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 2 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/cook/3.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-             
-              <a href="assets/img/cook/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Gallery Item 3 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/team/2.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-              
-              <a href="assets/img/team/2.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 4 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item highlight">
-            <img src="assets/img/cook/23.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-             
-              <a href="assets/img/cook/23.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 5 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/team/3.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-             
-              <a href="assets/img/team/3.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 6 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/cook/6.jpeg" alt="Pelatihan Memasak">
-            <div class="gallery-info">
-              
-              <a href="assets/img/cook/6.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 7 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <img src="assets/img/house/1.jpeg" alt="Pelatihan Housekeeping">
-            <div class="gallery-info">
-             
-              <a href="assets/img/house/1.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-          <!-- Gallery Item 8 -->
-          <div class="col-lg-3 col-md-4 col-sm-6 gallery-item">
-            <div class="corner-ribbon">Populer</div>
-            <img src="assets/img/team/4.jpeg" alt="Pelatihan Housekeeping">
-            <div class="gallery-info">
-             
-              <a href="assets/img/team/4.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery">
-                <i class="bi bi-zoom-in"></i>
-              </a>
-            </div>
-          </div>
-    
-        </div>
-        
-        <!-- View More Button -->
-        <div class="view-more-container" data-aos="fade-up" data-aos-delay="300">
-          <a href="galeri.html" class="view-more-btn">
-            Lihat Selengkapnya <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const allImages = [
+            { src: 'assets/img/team/1.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/team/2.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/team/5.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/team/4.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/cook/3.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/cook/4.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/cook/6.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/house/1.jpeg', alt: 'Kegiatan LPK' },
+            { src: 'assets/img/house/3.jpeg', alt: 'Kegiatan LPK' }
+          ];
+      
+          shuffleArray(allImages);
+          renderGallery(allImages);
+          setupObserver();
+          setupLightbox();
+        });
+      
+        function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+        }
+      
+        function renderGallery(images) {
+          const galleryContainer = document.querySelector('.gallery-container');
+          galleryContainer.innerHTML = '';
+          images.forEach(image => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `
+              <img src="${image.src}" alt="${image.alt}">
+              <div class="gallery-overlay">
+                <button class="zoom-btn" aria-label="Zoom image">
+                  <i class="bi bi-zoom-in">+</i>
+                </button>
+              </div>
+            `;
+            galleryContainer.appendChild(item);
+          });
+        }
+      
+        function setupObserver() {
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show'); // animasi ringan via CSS
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+      
+          document.querySelectorAll('.gallery-item').forEach(item => {
+            observer.observe(item);
+          });
+        }
+      
+        function setupLightbox() {
+          const lightbox = document.querySelector('.lightbox');
+          const lightboxImg = document.querySelector('.lightbox-img');
+          const closeBtn = document.querySelector('.close-lightbox');
+      
+          document.querySelectorAll('.zoom-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+              const imgSrc = this.closest('.gallery-item').querySelector('img').src;
+              lightboxImg.src = imgSrc;
+              lightbox.classList.add('active');
+              document.body.style.overflow = 'hidden';
+            });
+          });
+      
+          closeBtn.addEventListener('click', closeLightbox);
+          lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) closeLightbox();
+          });
+          document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+          });
+      
+          function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      </script>
     </section>
     
     <section id="pendaftaran" class="py-5 bg-light position-relative overflow-hidden">
