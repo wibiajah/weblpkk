@@ -139,102 +139,365 @@
     <!-- End Page Title -->
   
 
-    <section id="faq" class="section py-5">
+    <section id="faq" class="section">
       <style>
         #faq {
-          background: #fdfdfd;
-          padding: 80px 0;
+          background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+          padding: 100px 0;
           position: relative;
+          overflow: hidden;
         }
-    
+        
+        #faq::before {
+          content: "";
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: rgba(227, 176, 22, 0.03);
+          top: -100px;
+          left: -100px;
+        }
+        
+        #faq::after {
+          content: "";
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: rgba(227, 176, 22, 0.05);
+          bottom: -80px;
+          right: -80px;
+        }
+        
         .faq-wrapper {
           max-width: 960px;
           margin: 0 auto;
-          padding: 0 15px;
+          padding: 0 20px;
           position: relative;
           z-index: 1;
         }
-    
+        
         .faq-title {
           text-align: center;
-          margin-bottom: 50px;
+          margin-bottom: 60px;
         }
-    
+        
         .faq-title h2 {
           font-size: 2.5rem;
           font-weight: 700;
-          margin-bottom: 15px;
+          margin-bottom: 20px;
+          color: #000;
           position: relative;
+          display: inline-block;
         }
-    
+        
         .faq-title h2::after {
           content: "";
           position: absolute;
-          width: 70px;
+          width: 60px;
           height: 4px;
+          background: #e3b016;
           bottom: -10px;
           left: 50%;
           transform: translateX(-50%);
-          background: #e3b016;
           border-radius: 2px;
         }
-    
+        
         .faq-title p {
-          color: #6c757d;
+          color: #000;
           font-size: 1.1rem;
+          max-width: 700px;
+          margin: 0 auto;
         }
-    
+        
+        .faq-group {
+          display: grid;
+          grid-gap: 25px;
+          position: relative;
+        }
+        
+        /* Decoration lines */
+        .faq-group::before {
+          content: "";
+          position: absolute;
+          left: 20px;
+          top: 0;
+          height: 100%;
+          width: 2px;
+          background: linear-gradient(to bottom, transparent, #e3b016 20%, #e3b016 80%, transparent);
+          opacity: 0.2;
+        }
+        
+        .faq-group::after {
+          content: "";
+          position: absolute;
+          right: 20px;
+          top: 0;
+          height: 100%;
+          width: 2px;
+          background: linear-gradient(to bottom, transparent, #e3b016 20%, #e3b016 80%, transparent);
+          opacity: 0.2;
+        }
+        
         .accordion-item {
           background-color: #fff;
-          border-radius: 8px;
-          margin-bottom: 20px;
-          border: 1px solid #eee;
+          border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+          transform: translateY(0);
+          transition: all 0.4s ease;
+          position: relative;
+          z-index: 1;
         }
-    
+        
+        .accordion-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+        
+        .accordion-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-item:hover::before {
+          opacity: 1;
+        }
+        
+        /* Numbered bullets */
+        .accordion-item {
+          counter-increment: faq-counter;
+        }
+        
         .accordion-header {
-          padding: 18px 25px;
+          padding: 22px 30px 22px 70px;
           cursor: pointer;
           font-weight: 600;
           display: flex;
           justify-content: space-between;
           align-items: center;
           font-size: 1.05rem;
+          color: #333;
+          border-left: 3px solid transparent;
+          transition: all 0.3s ease;
+          position: relative;
         }
-    
-        .accordion-header:hover {
-          background-color: #fafafa;
+        
+        .accordion-header::before {
+          content: counter(faq-counter, decimal-leading-zero);
+          position: absolute;
+          left: 25px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #e3b016;
+          opacity: 0.5;
+          transition: all 0.3s ease;
         }
-    
+        
+        .accordion-item:nth-child(1) .accordion-header {
+          border-left-color: #e3b016;
+        }
+        
+        .accordion-item:nth-child(2) .accordion-header {
+          border-left-color: #5383ff;
+        }
+        
+        .accordion-item:nth-child(3) .accordion-header {
+          border-left-color: #FF6B6B;
+        }
+        
+        .accordion-item:nth-child(4) .accordion-header {
+          border-left-color: #4CD964;
+        }
+        
+        .accordion-item:nth-child(5) .accordion-header {
+          border-left-color: #9C27B0;
+        }
+        
+        .accordion-item:nth-child(6) .accordion-header {
+          border-left-color: #FF9500;
+        }
+        
+        .accordion-item.active .accordion-header {
+          background-color: rgba(227, 176, 22, 0.05);
+        }
+        
+        .accordion-item.active .accordion-header::before {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        
         .accordion-content {
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.4s ease;
-          padding: 0 25px;
+          transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+          padding: 0 30px;
         }
-    
+        
         .accordion-content p {
-          margin: 15px 0;
-          color: #555;
+          margin: 0;
+          padding: 20px 0;
+          color: #666;
+          line-height: 1.7;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.4s ease, transform 0.4s ease;
+          transition-delay: 0.1s;
         }
-    
+        
         .accordion-item.active .accordion-content {
-          max-height: 500px;
-          padding-bottom: 20px;
+          max-height: 1000px;
+          transition: max-height 1s ease-in-out;
         }
-    
+        
+        .accordion-item.active .accordion-content p {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
         .accordion-icon {
-          transition: transform 0.3s ease;
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: #f8f9fa;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
         }
-    
+        
+        .accordion-icon::before,
+        .accordion-icon::after {
+          content: "";
+          position: absolute;
+          background: #555;
+          transition: all 0.3s ease;
+        }
+        
+        .accordion-icon::before {
+          width: 12px;
+          height: 2px;
+        }
+        
+        .accordion-icon::after {
+          width: 2px;
+          height: 12px;
+        }
+        
         .accordion-item.active .accordion-icon {
-          transform: rotate(45deg);
+          background: #e3b016;
+          transform: rotate(180deg);
         }
-    
+        
+        .accordion-item.active .accordion-icon::before,
+        .accordion-item.active .accordion-icon::after {
+          background: #fff;
+        }
+        
+        .accordion-item.active .accordion-icon::after {
+          opacity: 0;
+        }
+        
+        /* Search Box */
+        .faq-search {
+          position: relative;
+          max-width: 500px;
+          margin: 30px auto 40px;
+        }
+        
+        .faq-search input {
+          width: 100%;
+          padding: 15px 20px;
+          padding-right: 50px;
+          border: none;
+          border-radius: 30px;
+          background: #fff;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+          font-size: 1rem;
+          transition: all 0.3s ease;
+        }
+        
+        .faq-search input:focus {
+          outline: none;
+          box-shadow: 0 5px 25px rgba(227, 176, 22, 0.2);
+        }
+        
+        .faq-search button {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          width: 40px;
+          height: 40px;
+          border: none;
+          background: #e3b016;
+          border-radius: 50%;
+          color: white;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+        
+        .faq-search button:hover {
+          background: #d4a314;
+          transform: scale(1.05);
+        }
+        
+        /* Decoration Animation */
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        
+        #faq::before {
+          animation: float 15s ease-in-out infinite;
+        }
+        
+        #faq::after {
+          animation: float 12s ease-in-out infinite reverse;
+        }
+        
         @media (max-width: 768px) {
+          #faq {
+            padding: 70px 0;
+          }
+          
           .faq-title h2 {
             font-size: 2rem;
+          }
+          
+          .accordion-header {
+            padding: 18px 20px 18px 60px;
+          }
+          
+          .accordion-header::before {
+            left: 20px;
+          }
+          
+          .accordion-content {
+            padding: 0 20px;
+          }
+          
+          .faq-search {
+            max-width: 90%;
           }
         }
       </style>
@@ -243,71 +506,82 @@
         <div class="faq-title">
           <h2>Pertanyaan Umum</h2>
           <p>Temukan jawaban dari pertanyaan yang sering diajukan seputar LPK - LN Sentosa Karya Aditama Bekasi.</p>
-        </div>
-    
-        <!-- FAQ Item 1 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Bahasa apa saja yang diajarkan di Cabang Bekasi?
-            <span class="accordion-icon">+</span>
-          </div>
-          <div class="accordion-content">
-            <p>Kami menyediakan pelatihan bahasa Mandarin, Kantonis, Melayu, dan Inggris, disesuaikan dengan kebutuhan negara tujuan kerja.</p>
+          <div class="faq-search">
+            <input type="text" id="faqSearch" placeholder="Cari pertanyaan..." onkeyup="searchFAQ()">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
           </div>
         </div>
     
-        <!-- FAQ Item 2 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Apakah harus sudah bisa bahasa sebelum ikut pelatihan?
-            <span class="accordion-icon">+</span>
+        <div class="faq-group">
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Bahasa apa saja yang diajarkan di LPK kami?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Kami menyediakan pelatihan bahasa Mandarin, Kantonis, Melayu, dan Inggris, disesuaikan dengan kebutuhan negara tujuan kerja.</p>
+            </div>
           </div>
-          <div class="accordion-content">
-            <p>Tidak. Program dirancang untuk pemula dan akan dimulai dari tingkat dasar hingga peserta siap berkomunikasi aktif.</p>
-          </div>
-        </div>
     
-        <!-- FAQ Item 3 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Apa saja keterampilan kerja yang diajarkan selain bahasa?
-            <span class="accordion-icon">+</span>
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Apakah harus sudah bisa bahasa sebelum ikut pelatihan?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Tidak. Program dirancang untuk pemula dan akan dimulai dari tingkat dasar hingga peserta siap berkomunikasi aktif.</p>
+            </div>
           </div>
-          <div class="accordion-content">
-            <p>Selain pelatihan bahasa, kami juga memberikan pelatihan keterampilan dasar seperti house keeping, babysitter, dan seni dasar (art) untuk mendukung kesiapan kerja peserta di luar negeri.</p>
-          </div>
-        </div>
     
-        <!-- FAQ Item 4 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Berapa lama program pelatihan berlangsung?
-            <span class="accordion-icon">+</span>
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Apa saja keterampilan kerja yang diajarkan selain bahasa?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Selain pelatihan bahasa, kami juga memberikan pelatihan keterampilan dasar seperti house keeping, babysitter, dan seni dasar (art) untuk mendukung kesiapan kerja peserta di luar negeri.</p>
+            </div>
           </div>
-          <div class="accordion-content">
-            <p>Durasi pelatihan rata-rata berkisar antara 3 hingga 6 bulan, tergantung jenis bahasa dan kemampuan peserta.</p>
-          </div>
-        </div>
     
-        <!-- FAQ Item 5 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Apakah tersedia kelas online?
-            <span class="accordion-icon">+</span>
+          <!-- FAQ Item 4 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Berapa lama program pelatihan berlangsung?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Durasi pelatihan rata-rata berkisar antara 3 hingga 6 bulan, tergantung jenis bahasa dan kemampuan peserta.</p>
+            </div>
           </div>
-          <div class="accordion-content">
-            <p>Untuk saat ini pelatihan utama dilakukan secara langsung (offline) agar peserta bisa berlatih komunikasi secara intensif. Namun, beberapa materi pendukung juga tersedia secara daring.</p>
-          </div>
-        </div>
     
-        <!-- FAQ Item 6 -->
-        <div class="accordion-item">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            Apakah ada sertifikat setelah menyelesaikan program?
-            <span class="accordion-icon">+</span>
+          <!-- FAQ Item 5 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Apakah tersedia kelas online?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Untuk saat ini pelatihan utama dilakukan secara langsung (offline) agar peserta bisa berlatih komunikasi secara intensif. Namun, beberapa materi pendukung juga tersedia secara daring.</p>
+            </div>
           </div>
-          <div class="accordion-content">
-            <p>Ya. Setelah menyelesaikan pelatihan dan lulus evaluasi, peserta akan mendapatkan sertifikat pelatihan bahasa dan keterampilan kerja.</p>
+    
+          <!-- FAQ Item 6 -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              Apakah ada sertifikat setelah menyelesaikan program?
+              <span class="accordion-icon"></span>
+            </div>
+            <div class="accordion-content">
+              <p>Ya. Setelah menyelesaikan pelatihan dan lulus evaluasi, peserta akan mendapatkan sertifikat pelatihan bahasa dan keterampilan kerja.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -315,11 +589,117 @@
       <script>
         function toggleAccordion(header) {
           const item = header.parentElement;
-          const isActive = item.classList.contains("active");
-          document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
-          if (!isActive) item.classList.add("active");
+          const allItems = document.querySelectorAll(".accordion-item");
+          
+          if (item.classList.contains("active")) {
+            // Jika item yang diklik sudah aktif, tutup saja
+            item.classList.remove("active");
+          } else {
+            // Tutup semua item yang aktif
+            allItems.forEach(i => i.classList.remove("active"));
+            
+            // Buka item yang diklik
+            item.classList.add("active");
+            
+            // Scroll to the item
+            const yOffset = -100; 
+            const y = item.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+            
+            // Tambahkan animasi entrance
+            setTimeout(() => {
+              item.querySelector(".accordion-content p").style.opacity = "1";
+              item.querySelector(".accordion-content p").style.transform = "translateY(0)";
+            }, 300);
+          }
         }
+    
+        function searchFAQ() {
+          const input = document.getElementById("faqSearch");
+          const filter = input.value.toUpperCase();
+          const accordionItems = document.querySelectorAll('.accordion-item');
+          
+          // Reset all items
+          accordionItems.forEach(item => {
+            item.style.display = "block";
+            item.classList.remove("active");
+          });
+          
+          // If no search term, show all
+          if (filter === '') return;
+          
+          let foundMatch = false;
+          
+          // Filter items based on search
+          accordionItems.forEach(item => {
+            const headerText = item.querySelector('.accordion-header').textContent;
+            const contentText = item.querySelector('.accordion-content p').textContent;
+            
+            if (headerText.toUpperCase().includes(filter) || contentText.toUpperCase().includes(filter)) {
+              foundMatch = true;
+              item.classList.add("search-match");
+              
+              // Highlight the first match
+              if (!document.querySelector('.accordion-item.active')) {
+                item.classList.add("active");
+              }
+              
+              // Add animation for matches
+              item.style.animation = "pulse 1s";
+              setTimeout(() => {
+                item.style.animation = "";
+              }, 1000);
+            } else {
+              item.style.display = "none";
+            }
+          });
+          
+          if (!foundMatch) {
+            // No matches found - could add a "no results" message here
+          }
+        }
+    
+        // Animasi entrance untuk item FAQ
+        document.addEventListener("DOMContentLoaded", function() {
+          const accordionItems = document.querySelectorAll(".accordion-item");
+          
+          // First load animation
+          accordionItems.forEach((item, index) => {
+            item.style.opacity = "0";
+            item.style.transform = "translateY(30px)";
+            
+            setTimeout(() => {
+              item.style.transition = "all 0.6s ease";
+              item.style.opacity = "1";
+              item.style.transform = "translateY(0)";
+            }, 100 + (index * 100));
+          });
+          
+          // Open first item after animations complete
+          setTimeout(() => {
+            if (accordionItems.length > 0) {
+              accordionItems[0].classList.add("active");
+            }
+          }, 1000);
+        });
       </script>
+      
+      <style>
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+          }
+          50% {
+            transform: scale(1.02);
+            box-shadow: 0 8px 40px rgba(227, 176, 22, 0.2);
+          }
+          100% {
+            transform: scale(1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+          }
+        }
+      </style>
     </section>
     
     
