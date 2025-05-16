@@ -470,7 +470,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
-          <li><a href="faq.html">FAQ?</a></li>
+          <li><a href="faq.html">Pertanyaan Umum</a></li>
           <li><a href="pendaftaran.html">Pendaftaran</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
@@ -509,220 +509,483 @@
     <!-- End Page Title -->
   
 
-    <section class="combined-section">
-      <!-- Background Elements -->
-      <div class="bg-shape-1"></div>
-      <div class="bg-shape-2"></div>
-      <div class="bg-shape-3"></div>
-      <div class="bg-dots"></div>
-      
-      <div class="container position-relative" style="z-index: 1">
-        <!-- COMBINED HEADER -->
-        <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+    <section id="pendaftaran" class="pendaftaran-section py-5">
+  <div class="container" data-aos="fade-up">
+    <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
           <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
-            Pendaftaran dan Proses Pelatihan
+            Formulir Pendaftaran
             <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
           </h2>
-          <p class="text-muted">Mulai perjalanan karir internasional Anda bersama LPK Sentosa Karya Aditama dengan mengikuti proses yang mudah dan terarah</p>
+          <p class="text-muted mx-auto fw-light fs-5" style="max-width: 800px;">
+           Silahkan isi formulir pendaftaran di bawah ini dengan lengkap dan benar
+          </p>
         </div>
-        
-        
-        <div class="row">
-          <!-- LEFT SIDE: Registration Section -->
-          <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-up">
-            
-            <div class="row g-4">
-              <!-- WhatsApp -->
-              <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-hover p-4 bg-white shadow-sm rounded-4 position-relative">
-                  <div class="accent-line"></div>
-                  <div class="d-flex align-items-center">
-                    <div class="icon-wrapper me-3">
-                      <i class="bi bi-whatsapp text-success" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <div>
-                      <h5 class="fw-semibold">WhatsApp</h5>
-                      <p class="text-muted small mb-2">Klik tombol di bawah untuk menghubungi kami via WhatsApp.</p>
-                      <div class="btn-container text-start">
-                        <a href="https://wa.me/6282298982759" target="_blank" class="btn btn-success rounded-pill btn-hover"
-                           style="font-size: 12px; padding: 4px 12px;">
-                          <i class="bi bi-chat-dots me-1" style="font-size: 1rem;"></i> Chat WhatsApp
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-decoration"></div>
+        <div class="card-body">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
                 </div>
-              </div>
-              
-              <!-- Email -->
-              <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-hover p-4 bg-white shadow-sm rounded-4 position-relative">
-                  <div class="accent-line"></div>
-                  <div class="d-flex align-items-center">
-                    <div class="icon-wrapper me-3">
-                      <i class="bi bi-envelope text-primary" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <div>
-                      <h5 class="fw-semibold">Email</h5>
-                      <p class="text-muted small mb-2">Kirim pertanyaan atau data pendaftaran ke email kami.</p>
-                      <div class="btn-container text-start">
-                        <a href="mailto:lpksentosakaryaaditamabekasi@gmail.com" class="btn btn-outline-primary rounded-pill btn-hover"
-                           style="font-size: 12px; padding: 4px 12px;">
-                          <i class="bi bi-send me-1" style="font-size: 1rem;"></i> Kirim Email
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-decoration"></div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="text-center mt-4">
-              <div class="note-box">
-                <small class="text-muted"><i class="bi bi-info-circle me-1"></i> Kami akan membalas secepatnya melalui WhatsApp atau email.</small>
-              </div>
-            </div>
+            @endif
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow">
+          <div class="card-header" style="background-color: rgba(227, 176, 22, 0.1);">
+            <h4 class="mb-0" style="color: #e3b016;"><i class="bi bi-pencil-square me-2"></i>Form Pendaftaran</h4>
           </div>
-          
-          <!-- Vertical connector for mobile view -->
-          <div class="vertical-connector"></div>
-          
-          <!-- RIGHT SIDE: Timeline Section -->
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            
-            <div class="timeline-container">
-              <!-- Timeline Line -->
-              <div class="timeline-line"></div>
-              
-              <!-- Timeline Items -->
-              <div class="timeline-items">
-                <!-- Item 1 -->
-                <div class="timeline-item" data-aos="fade-up">
-                  <div class="timeline-badge">
-                    <span>1</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Pendaftaran</h5>
-                      <p>Calon peserta cukup menghubungi kami melalui WhatsApp atau email tanpa proses seleksi.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Item 2 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
-                  <div class="timeline-badge">
-                    <span>2</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Orientasi & Jadwal</h5>
-                      <p>Pengenalan lingkungan, jadwal belajar, dan tata tertib pelatihan.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Item 3 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                  <div class="timeline-badge">
-                    <span>3</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Pelatihan Bahasa</h5>
-                      <p>Pembelajaran intensif Bahasa Mandarin, Mandarin, Melayu, dan Inggris sesuai negara tujuan.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Item 4 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
-                  <div class="timeline-badge">
-                    <span>4</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Keterampilan Kerja</h5>
-                      <p>Pelatihan praktik seperti housekeeping, babysitter, dan lainnya sesuai tujuan kerja.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Item 5 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                  <div class="timeline-badge">
-                    <span>5</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Kegiatan Penunjang</h5>
-                      <p>Meliputi praktik memasak, olahraga pagi, acara makan bersama untuk membentuk kedisiplinan.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Item 6 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
-                  <div class="timeline-badge">
-                    <span>6</span>
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                      </svg>
-                    </div>
-                    <div class="timeline-content">
-                      <h5>Sertifikat Kelulusan</h5>
-                      <p>Setelah program selesai, peserta akan mendapatkan sertifikat resmi dari LPK.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="card-body">
+            <div id="success-alert" class="alert alert-success" style="display: none;">
+              Pendaftaran berhasil dikirim!
             </div>
+
+          <form action="{{ route('pendaftaran.store') }}" method="POST" enctype="multipart/form-data">
+  @csrf
+
+  <div class="row">
+    <!-- NIK -->
+    <div class="col-md-6 mb-3">
+      <label for="nik" class="form-label">NIK <span class="text-danger">*</span></label>
+      <input type="text" class="form-control @error('nik') is-invalid @enderror" id="nik" name="nik" value="{{ old('nik') }}" 
+             placeholder="Masukkan NIK" required 
+             minlength="16" maxlength="16" pattern="[0-9]{16}"
+             oninvalid="this.setCustomValidity('NIK harus 16 digit')" 
+             oninput="this.setCustomValidity('')">
+      <small class="text-muted">NIK harus 16 digit</small>
+      @error('nik') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+    <!-- Nama -->
+    <div class="col-md-6 mb-3">
+      <label for="nama" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+      <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}" 
+             placeholder="Masukkan nama lengkap" required>
+      @error('nama') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Tempat Lahir -->
+    <div class="col-md-6 mb-3">
+      <label for="tempat_lahir" class="form-label">Tempat Lahir <span class="text-danger">*</span></label>
+      <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" id="tempat_lahir" 
+             name="tempat_lahir" value="{{ old('tempat_lahir') }}" placeholder="Kota kelahiran" required>
+      @error('tempat_lahir') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+    <!-- Tanggal Lahir -->
+    <div class="col-md-6 mb-3">
+      <label for="tanggal_lahir" class="form-label">Tanggal Lahir <span class="text-danger">*</span></label>
+      <input type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" id="tanggal_lahir" 
+             name="tanggal_lahir" value="{{ old('tanggal_lahir') }}" required
+             min="1900-01-01" max="2005-12-31">
+      <small class="text-muted">Tahun lahir antara 1900-2005</small>
+      @error('tanggal_lahir') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Jenis Kelamin -->
+    <div class="col-md-4 mb-3">
+      <label for="jenis_kelamin" class="form-label">Jenis Kelamin <span class="text-danger">*</span></label>
+      <select class="form-select @error('jenis_kelamin') is-invalid @enderror" id="jenis_kelamin" name="jenis_kelamin" required>
+        <option value="" selected disabled>-- Pilih Jenis Kelamin --</option>
+        <option value="L" {{ old('jenis_kelamin') == 'L' ? 'selected' : '' }}>Laki-laki</option>
+        <option value="P" {{ old('jenis_kelamin') == 'P' ? 'selected' : '' }}>Perempuan</option>
+      </select>
+      @error('jenis_kelamin') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+    <!-- Tinggi Badan -->
+    <div class="col-md-4 mb-3">
+      <label for="tinggibadan" class="form-label">Tinggi Badan <span class="text-danger">*</span></label>
+      <select class="form-select @error('tinggibadan') is-invalid @enderror" id="tinggibadan" name="tinggibadan" required>
+        <option value="" selected disabled>-- Pilih Tinggi (cm) --</option>
+        @for($i = 100; $i <= 200; $i++)
+          <option value="{{ $i }}" {{ old('tinggibadan') == $i ? 'selected' : '' }}>{{ $i }} cm</option>
+        @endfor
+      </select>
+      @error('tinggibadan') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+    <!-- Berat Badan -->
+    <div class="col-md-4 mb-3">
+      <label for="beratbadan" class="form-label">Berat Badan <span class="text-danger">*</span></label>
+      <select class="form-select @error('beratbadan') is-invalid @enderror" id="beratbadan" name="beratbadan" required>
+        <option value="" selected disabled>-- Pilih Berat (kg) --</option>
+        @for($i = 40; $i <= 120; $i++)
+          <option value="{{ $i }}" {{ old('beratbadan') == $i ? 'selected' : '' }}>{{ $i }} kg</option>
+        @endfor
+      </select>
+      @error('beratbadan') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Status Nikah -->
+    <div class="col-md-6 mb-3">
+      <label for="statusnikah" class="form-label">Status Nikah <span class="text-danger">*</span></label>
+      <select class="form-select @error('statusnikah') is-invalid @enderror" id="statusnikah" name="statusnikah" required>
+        <option value="" selected disabled>-- Pilih Status --</option>
+        <option value="Belum" {{ old('statusnikah') == 'Belum' ? 'selected' : '' }}>Belum</option>
+        <option value="Sudah" {{ old('statusnikah') == 'Sudah' ? 'selected' : '' }}>Sudah</option>
+        <option value="Cerai Hidup" {{ old('statusnikah') == 'Cerai Hidup' ? 'selected' : '' }}>Cerai Hidup</option>
+        <option value="Cerai Mati" {{ old('statusnikah') == 'Cerai Mati' ? 'selected' : '' }}>Cerai Mati</option>
+      </select>
+      @error('statusnikah') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+
+    <!-- Pendidikan -->
+    <div class="col-md-6 mb-3">
+      <label for="pendidikan" class="form-label">Pendidikan <span class="text-danger">*</span></label>
+      <select class="form-select @error('pendidikan') is-invalid @enderror" id="pendidikan" name="pendidikan" required>
+        <option value="" selected disabled>-- Pilih Pendidikan --</option>
+        <option value="SD" {{ old('pendidikan') == 'SD' ? 'selected' : '' }}>SD</option>
+        <option value="SMP" {{ old('pendidikan') == 'SMP' ? 'selected' : '' }}>SMP</option>
+        <option value="SMA/SMK" {{ old('pendidikan') == 'SMA/SMK' ? 'selected' : '' }}>SMA/SMK</option>
+        <option value="D3" {{ old('pendidikan') == 'D3' ? 'selected' : '' }}>D3</option>
+        <option value="S1" {{ old('pendidikan') == 'S1' ? 'selected' : '' }}>S1</option>
+      </select>
+      @error('pendidikan') <div class="invalid-feedback">{{ $message }}</div> @enderror
+    </div>
+  </div>
+
+  <!-- Hobi -->
+  <div class="mb-3">
+    <label for="hobi" class="form-label">Hobi <span class="text-danger">*</span></label>
+    <input type="text" class="form-control @error('hobi') is-invalid @enderror" id="hobi" name="hobi" 
+           value="{{ old('hobi') }}" placeholder="Masukkan hobi anda" required>
+    @error('hobi') <div class="invalid-feedback">{{ $message }}</div> @enderror
+  </div>
+
+  <!-- Alamat Section -->
+  <div class="card mb-3" style="background-color: rgba(227, 176, 22, 0.03);">
+    <div class="card-header" style="background-color: rgba(227, 176, 22, 0.1);">
+      <h5 class="mb-0">Informasi Alamat</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <!-- Provinsi -->
+        <!-- Provinsi -->
+<div class="col-md-4 mb-3">
+  <label for="provinsiSelect" class="form-label">Provinsi <span class="text-danger">*</span></label>
+  <select class="form-select" id="provinsiSelect" required>
+    <option value="" disabled selected>-- Pilih Provinsi --</option>
+  </select>
+  <input type="hidden" id="provinsi" name="provinsi">
+</div>
+
+<!-- Kabupaten/Kota -->
+<div class="col-md-4 mb-3">
+  <label for="kabupatenSelect" class="form-label">Kabupaten/Kota <span class="text-danger">*</span></label>
+  <select class="form-select" id="kabupatenSelect" required>
+    <option value="" disabled selected>-- Pilih Kabupaten/Kota --</option>
+  </select>
+  <input type="hidden" id="kabupaten" name="kabupaten">
+</div>
+
+<!-- Kecamatan -->
+<div class="col-md-4 mb-3">
+  <label for="kecamatanSelect" class="form-label">Kecamatan <span class="text-danger">*</span></label>
+  <select class="form-select" id="kecamatanSelect" required>
+    <option value="" disabled selected>-- Pilih Kecamatan --</option>
+  </select>
+  <input type="hidden" id="kecamatan" name="kecamatan">
+</div>
+
+
+      <div class="row">
+        <!-- RT -->
+        <div class="col-md-4 mb-3">
+          <label for="rt" class="form-label">RT</label>
+          <input type="text" class="form-control @error('rt') is-invalid @enderror" id="rt" name="rt" 
+                 value="{{ old('rt') }}" placeholder="RT">
+          @error('rt') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- RW -->
+        <div class="col-md-4 mb-3">
+          <label for="rw" class="form-label">RW</label>
+          <input type="text" class="form-control @error('rw') is-invalid @enderror" id="rw" name="rw" 
+                 value="{{ old('rw') }}" placeholder="RW">
+          @error('rw') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- Kelurahan/Desa -->
+        <div class="col-md-4 mb-3">
+          <label for="kel_desa" class="form-label">Kelurahan/Desa</label>
+          <input type="text" class="form-control @error('kel_desa') is-invalid @enderror" id="kel_desa" 
+                 name="kel_desa" value="{{ old('kel_desa') }}" placeholder="Kelurahan/Desa">
+          @error('kel_desa') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+      </div>
+
+      <!-- Alamat Lengkap -->
+      <div class="mb-3">
+        <label for="alamat_lengkap" class="form-label">Alamat Lengkap <span class="text-danger">*</span></label>
+        <textarea class="form-control @error('alamat_lengkap') is-invalid @enderror" id="alamat_lengkap" 
+                  name="alamat_lengkap" rows="3" placeholder="Alamat lengkap" required>{{ old('alamat_lengkap') }}</textarea>
+        @error('alamat_lengkap') <div class="invalid-feedback">{{ $message }}</div> @enderror
+      </div>
+    </div>
+  </div>
+
+  <!-- Kontak Section -->
+  <div class="card mb-3" style="background-color: rgba(227, 176, 22, 0.03);">
+    <div class="card-header" style="background-color: rgba(227, 176, 22, 0.1);">
+      <h5 class="mb-0">Informasi Kontak</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <!-- Nama Ayah -->
+        <div class="col-md-6 mb-3">
+          <label for="nama_ayah" class="form-label">Nama Ayah <span class="text-danger">*</span></label>
+          <input type="text" class="form-control @error('nama_ayah') is-invalid @enderror" id="nama_ayah" 
+                 name="nama_ayah" value="{{ old('nama_ayah') }}" placeholder="Nama ayah" required>
+          @error('nama_ayah') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- Nama Ibu -->
+        <div class="col-md-6 mb-3">
+          <label for="nama_ibu" class="form-label">Nama Ibu <span class="text-danger">*</span></label>
+          <input type="text" class="form-control @error('nama_ibu') is-invalid @enderror" id="nama_ibu" 
+                 name="nama_ibu" value="{{ old('nama_ibu') }}" placeholder="Nama ibu" required>
+          @error('nama_ibu') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- WA Pribadi -->
+        <div class="col-md-6 mb-3">
+          <label for="wa_pribadi" class="form-label">WA Pribadi <span class="text-danger">*</span></label>
+          <input type="text" class="form-control @error('wa_pribadi') is-invalid @enderror" id="wa_pribadi" 
+                 name="wa_pribadi" value="{{ old('wa_pribadi') }}" placeholder="Nomor WhatsApp" required>
+          @error('wa_pribadi') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- Telp/HP Pribadi -->
+        <div class="col-md-6 mb-3">
+          <label for="telp_hp_pribadi" class="form-label">Telp/HP Pribadi</label>
+          <input type="text" class="form-control @error('telp_hp_pribadi') is-invalid @enderror" id="telp_hp_pribadi" 
+                 name="telp_hp_pribadi" value="{{ old('telp_hp_pribadi') }}" placeholder="Nomor HP">
+          @error('telp_hp_pribadi') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- No HP Orang Tua -->
+        <div class="col-md-6 mb-3">
+          <label for="no_hp_ortu" class="form-label">No HP Orang Tua <span class="text-danger">*</span></label>
+          <input type="text" class="form-control @error('no_hp_ortu') is-invalid @enderror" id="no_hp_ortu" 
+                 name="no_hp_ortu" value="{{ old('no_hp_ortu') }}" placeholder="Nomor HP orang tua" required>
+          @error('no_hp_ortu') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- Telp/HP Orang Tua -->
+        <div class="col-md-6 mb-3">
+          <label for="telp_hp_ortu" class="form-label">Telp/HP Orang Tua</label>
+          <input type="text" class="form-control @error('telp_hp_ortu') is-invalid @enderror" id="telp_hp_ortu" 
+                 name="telp_hp_ortu" value="{{ old('telp_hp_ortu') }}" placeholder="Nomor telepon orang tua">
+          @error('telp_hp_ortu') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Aktif <span class="text-danger">*</span></label>
+        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" 
+               name="email" value="{{ old('email') }}" placeholder="Email aktif" required>
+        @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
+      </div>
+    </div>
+  </div>
+
+  <!-- Pelatihan Section -->
+  <div class="card mb-3" style="background-color: rgba(227, 176, 22, 0.03);">
+    <div class="card-header" style="background-color: rgba(227, 176, 22, 0.1);">
+      <h5 class="mb-0">Informasi Pelatihan</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <!-- Kelas Bahasa -->
+        <div class="col-md-6 mb-3">
+          <label for="kelas_bahasa" class="form-label">Kelas Bahasa <span class="text-danger">*</span></label>
+          <select class="form-select @error('kelas_bahasa') is-invalid @enderror" id="kelas_bahasa" name="kelas_bahasa" required>
+            <option value="" selected disabled>-- Pilih Kelas Bahasa --</option>
+            <option value="Mandarin" {{ old('kelas_bahasa') == 'Mandarin' ? 'selected' : '' }}>Mandarin</option>
+            <option value="Kantonis" {{ old('kelas_bahasa') == 'Kantonis' ? 'selected' : '' }}>Kantonis</option>
+            <option value="Melayu" {{ old('kelas_bahasa') == 'Melayu' ? 'selected' : '' }}>Melayu</option>
+            <option value="Inggris" {{ old('kelas_bahasa') == 'Inggris' ? 'selected' : '' }}>Inggris</option>
+          </select>
+          @error('kelas_bahasa') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+
+        <!-- Materi Bahasa -->
+        <div class="col-md-6 mb-3">
+          <label for="materi_bahasa" class="form-label">Pelatihan <span class="text-danger">*</span></label>
+          <select class="form-select @error('materi_bahasa') is-invalid @enderror" id="materi_bahasa" name="materi_bahasa" required>
+            <option value="" selected disabled>-- Pilih Pelatihan --</option>
+            <option value="Merawat Bayi / BabySitter" {{ old('materi_bahasa') == 'Merawat Bayi / BabySitter' ? 'selected' : '' }}>Merawat Bayi / BabySitter</option>
+            <option value="Merawat Jompo / Caretaker" {{ old('materi_bahasa') == 'Merawat Jompo / Caretaker' ? 'selected' : '' }}>Merawat Jompo / Caretaker</option>
+            <option value="Pekerja Rumah Tangga /  House Maid" {{ old('materi_bahasa') == 'Pekerja Rumah Tangga /  House Maid' ? 'selected' : '' }}>Pekerja Rumah Tangga /  House Maid</option>
+            <option value="Penata Laksana Rumah Tangga / HouseKeeper" {{ old('materi_bahasa') == 'Penata Laksana Rumah Tangga / HouseKeeper' ? 'selected' : '' }}>Penata Laksana Rumah Tangga / HouseKeeper</option>
+            <option value="Manufacture Industry / Pabrik" {{ old('materi_bahasa') == 'Manufacture Industry / Pabrik' ? 'selected' : '' }}>Manufacture Industry / Pabrik</option>
+            <option value="Kontruksi / Contruction" {{ old('materi_bahasa') == 'Kontruksi / Contruction' ? 'selected' : '' }}>Kontruksi / Contruction</option>
+            <option value="Peternakan" {{ old('materi_bahasa') == 'Peternakan' ? 'selected' : '' }}>Peternakan</option>
+            <option value="Welder / Pengelasan" {{ old('materi_bahasa') == 'Welder / Pengelasan' ? 'selected' : '' }}>Welder / Pengelasan</option>
+          </select>
+          @error('materi_bahasa') <div class="invalid-feedback">{{ $message }}</div> @enderror
+        </div>
+      </div>
+
+      <!-- Tujuan Daftar -->
+      <div class="mb-3">
+        <label for="tujuan_daftar" class="form-label">Tujuan Pelatihan <span class="text-danger">*</span></label>
+        <select class="form-select @error('tujuan_daftar') is-invalid @enderror" id="tujuan_daftar" name="tujuan_daftar" required>
+          <option value="" selected disabled>-- Pilih Tujuan Pelatihan --</option>
+          <option value="LPK Sentosa Karya Aditama Bekasi" {{ old('tujuan_daftar') == 'LPK Sentosa Karya Aditama Bekasi' ? 'selected' : '' }}>LPK Sentosa Karya Aditama Bekasi</option>
+          <option value="LPK Sentosa Karya Aditama Subang" {{ old('tujuan_daftar') == 'LPK Sentosa Karya Aditama Subang' ? 'selected' : '' }}>LPK Sentosa Karya Aditama Subang</option>
+          <option value="LPK Sentosa Karya Aditama Cirebon" {{ old('tujuan_daftar') == 'LPK Sentosa Karya Aditama Cirebon' ? 'selected' : '' }}>LPK Sentosa Karya Aditama Cirebon</option>
+          <option value="LPK Sentosa Karya Aditama Cilacap" {{ old('tujuan_daftar') == 'LPK Sentosa Karya Aditama Cilacap' ? 'selected' : '' }}>LPK Sentosa Karya Aditama Cilacap</option>
+        </select>
+        @error('tujuan_daftar') <div class="invalid-feedback">{{ $message }}</div> @enderror
+      </div>
+    </div>
+  </div>
+
+  <!-- Pas Foto -->
+  <div class="mb-4">
+    <label for="pas_foto" class="form-label">Pas Foto <span class="text-danger">*</span></label>
+    <input type="file" class="form-control @error('pas_foto') is-invalid @enderror" id="pas_foto" 
+           name="pas_foto" accept="image/jpg,image/jpeg,image/png" required>
+    <div class="form-text">
+      <small class="text-danger">* Ukuran file maksimal 1 MB</small><br>
+      <small class="text-danger">* Jenis file yang diijinkan JPG/PNG/JPEG</small>
+    </div>
+    @error('pas_foto') <div class="invalid-feedback">{{ $message }}</div> @enderror
+  </div>
+
+  <!-- Buttons -->
+  <div class="d-flex gap-2">
+    <button type="reset" class="btn btn-secondary">Reset</button>
+    <button type="submit" class="btn btn-primary" style="background-color: #e3b016; border-color: #e3b016;">Kirim Pendaftaran</button>
+  </div>
+</form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+  
+<script>
+// Data wilayah Indonesia (contoh minimal untuk demonstrasi)
+document.addEventListener("DOMContentLoaded", function () {
+  // Load Provinsi
+  fetch("https://ibnux.github.io/data-indonesia/provinsi.json")
+    .then(response => response.json())
+    .then(data => {
+      const selectProv = document.getElementById("provinsiSelect");
+      data.forEach(prov => {
+        selectProv.innerHTML += `<option value="${prov.id}" data-nama="${prov.nama}">${prov.nama}</option>`;
+      });
+    });
+
+  // Load Kabupaten saat Provinsi dipilih
+  document.getElementById("provinsiSelect").addEventListener("change", function () {
+    const provId = this.value;
+    const provNama = this.options[this.selectedIndex].getAttribute("data-nama");
+    document.getElementById("provinsi").value = provNama;
+
+    fetch(`https://ibnux.github.io/data-indonesia/kota/${provId}.json`)
+      .then(response => response.json())
+      .then(data => {
+        const selectKab = document.getElementById("kabupatenSelect");
+        selectKab.innerHTML = `<option value="" disabled selected>-- Pilih Kabupaten/Kota --</option>`;
+        document.getElementById("kecamatanSelect").innerHTML = `<option value="" disabled selected>-- Pilih Kecamatan --</option>`;
+        data.forEach(kab => {
+          selectKab.innerHTML += `<option value="${kab.id}" data-nama="${kab.nama}">${kab.nama}</option>`;
+        });
+      });
+  });
+
+  // Load Kecamatan saat Kabupaten dipilih
+  document.getElementById("kabupatenSelect").addEventListener("change", function () {
+    const kabId = this.value;
+    const kabNama = this.options[this.selectedIndex].getAttribute("data-nama");
+    document.getElementById("kabupaten").value = kabNama;
+
+    fetch(`https://ibnux.github.io/data-indonesia/kecamatan/${kabId}.json`)
+      .then(response => response.json())
+      .then(data => {
+        const selectKec = document.getElementById("kecamatanSelect");
+        selectKec.innerHTML = `<option value="" disabled selected>-- Pilih Kecamatan --</option>`;
+        data.forEach(kec => {
+          selectKec.innerHTML += `<option value="${kec.id}" data-nama="${kec.nama}">${kec.nama}</option>`;
+        });
+      });
+  });
+
+  // Set nama kecamatan ke hidden input saat dipilih
+  document.getElementById("kecamatanSelect").addEventListener("change", function () {
+    const kecNama = this.options[this.selectedIndex].getAttribute("data-nama");
+    document.getElementById("kecamatan").value = kecNama;
+  });
+});
+
+// Validasi form sebelum submit
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+  // Tambahkan validasi tambahan jika diperlukan
+  if (!validateForm()) {
+    event.preventDefault();
+  }
+});
+
+function validateForm() {
+  // Contoh validasi NIK
+  const nik = document.getElementById('nik').value;
+  if (nik.length !== 16 || isNaN(nik)) {
+    alert('NIK harus 16 digit angka!');
+    return false;
+  }
+  
+  // Validasi tanggal lahir
+  const tglLahir = new Date(document.getElementById('tanggal_lahir').value);
+  const minDate = new Date('1900-01-01');
+  const maxDate = new Date('2005-12-31');
+  
+  if (tglLahir < minDate || tglLahir > maxDate) {
+    alert('Tanggal lahir harus antara tahun 1900 sampai 2005!');
+    return false;
+  }
+  
+  return true;
+}
+
+// Preview Gambar
+document.getElementById('pas_foto').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    // Validasi ukuran (max 1MB)
+    if (file.size > 1024 * 1024) {
+      alert('Ukuran file terlalu besar! Maksimal 1 MB');
+      this.value = ''; // Reset input
+      return;
+    }
     
+    // Validasi tipe file
+    const fileType = file.type;
+    if (fileType !== 'image/jpeg' && fileType !== 'image/png' && fileType !== 'image/jpg') {
+      alert('Format file tidak didukung! Gunakan JPG, JPEG, atau PNG');
+      this.value = ''; // Reset input
+      return;
+    }
+  }
+});
+</script>
+</section>
+
     
+    <!-- Registration Section -->
+<!-- Registration Section -->
+<!-- /Registration Section --><!-- /Registration Section -->
     <!-- Clients Section -->
   
     
