@@ -118,24 +118,264 @@
   </header>
 
   <main class="main">
+<section class="hero-section">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-    <!-- Page Title -->
-    <div class="page-title-modern py-2 px-3">
-      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div class="d-flex align-items-center gap-2">
-          <i class="bi bi-info-circle-fill fs-4 text-warning"></i>
-          <div>
-            <h5 class="mb-0 fw-bold text-dark">Testimoni</h5>
-          </div>
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+        background-size: cover;
+        background-position: center;
+        filter: blur(2px); /* blur latar belakang */
+    }
+
+    .slide::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px); /* blur tambahan */
+        z-index: 1;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .slide:nth-child(1) {
+        background-image: url('assets/img/11.jpg');
+    }
+
+    .slide:nth-child(2) {
+        background-image: url('assets/img/22.jpg');
+    }
+
+    .slide:nth-child(3) {
+        background-image: url('assets/img/33.jpg');
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        color: white;
+        z-index: 2;
+        max-width: 600px;
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-70%); }
+        to { opacity: 1; transform: translateY(-50%); }
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        background-color: #1473e6;
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #0d66d0;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+
+    .btn-secondary:hover {
+        text-decoration: underline;
+    }
+
+    .slider-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        z-index: 10;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .slider-arrow:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .slider-arrow svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+    }
+
+
+
+ 
+</style>
+    <div class="hero-slider">
+        <div class="slide active">
+            <!-- Slide 1 content -->
+            <div class="overlay"></div>
         </div>
-        <nav>
-          <ol class="breadcrumb mb-0 small">
-            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
-            <li class="breadcrumb-item active text-warning fw-semibold">Testimoni</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+        <div class="slide">
+            <!-- Slide 2 content -->
+            <div class="overlay"></div>
+        </div>
+        <div class="slide">
+            <!-- Slide 3 content -->
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+    <div class="hero-content">
+        <h1>LPK-LN Sentosa Karya Aditama</h1>
+        <p>Kami membekali Calon Pekerja Migran Indonesia dengan pelatihan bahasa asing & keterampilan kerja bersertifikasi BNSP untuk siap bersaing di dunia kerja internasional.</p>
+        <div class="hero-buttons">
+            <a href="#program" class="btn btn-primary">Lihat Program Pelatihan</a>
+            <a href="#pendaftaran" class="btn btn-secondary">Daftar Sekarang</a>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <div class="slider-arrow prev">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </div>
+        <div class="slider-arrow next">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Statistik Counter Langsung di bawah Hero -->
+    
+<script>       
+document.addEventListener('DOMContentLoaded', function() {
+            // Slider functionality
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Auto slide every 3 seconds
+            function startSlideInterval() {
+                slideInterval = setInterval(nextSlide, 3000);
+            }
+
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', function() {
+                clearInterval(slideInterval);
+                prevSlide();
+                startSlideInterval();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                clearInterval(slideInterval);
+                nextSlide();
+                startSlideInterval();
+            });
+
+            // Start the automatic slider
+            startSlideInterval();
+        });
+
+        </script>
+</section>
+    <!-- Page Title -->
+    <!-- End Page Title -->
 
     <!-- Testimonials Section -->
     <section id="mitra-lpk" style="padding: 60px 0; background-color: #ffffff; position: relative; overflow: hidden;">

@@ -75,7 +75,7 @@
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
         <div class="d-flex align-items-center">
           <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
-          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
+      
         </div>
       </a>
       
@@ -137,100 +137,738 @@
     </div><!-- End Page Title -->
 <br>
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container mb-5">
-        <div class="row">
-          <div class="col-12">
-            <div style="width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
-              <iframe 
-                style="width: 100%; height: 400px; border:0;" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid" 
-                allowfullscreen="" 
-                loading="lazy" 
+    <section id="lokasi-enhanced" class="lokasi-section py-5">
+      <style>
+        #lokasi-enhanced {
+          background: linear-gradient(135deg, #f8fdff 0%, #ffffff 50%, #f0f9ff 100%);
+          position: relative;
+          overflow: hidden;
+          padding: 100px 0;
+        }
+    
+        /* Enhanced Decorative Elements */
+        .lokasi-decoration {
+          position: absolute;
+          z-index: 0;
+          pointer-events: none;
+        }
+    
+        .lokasi-deco-1 {
+          top: 10%;
+          right: 5%;
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(45deg, rgba(227, 176, 22, 0.1), rgba(255, 193, 7, 0.05));
+          border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+          animation: lokasi-float 6s ease-in-out infinite;
+        }
+    
+        .lokasi-deco-2 {
+          bottom: 15%;
+          left: 8%;
+          width: 160px;
+          height: 160px;
+          border: 4px solid rgba(227, 176, 22, 0.15);
+          border-radius: 50%;
+          border-style: dashed;
+          animation: lokasi-rotate 20s linear infinite;
+        }
+    
+        .lokasi-deco-3 {
+          top: 50%;
+          right: 10%;
+          width: 100px;
+          height: 100px;
+          background: radial-gradient(circle, rgba(227, 176, 22, 0.08) 0%, transparent 70%);
+          border-radius: 50%;
+          animation: lokasi-pulse 4s ease-in-out infinite;
+        }
+    
+        .lokasi-deco-4 {
+          top: 25%;
+          left: 12%;
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.06), rgba(255, 235, 59, 0.04));
+          transform: rotate(45deg);
+          animation: lokasi-bounce 3s ease-in-out infinite;
+        }
+    
+        .lokasi-deco-5 {
+          bottom: 40%;
+          right: 3%;
+          width: 120px;
+          height: 120px;
+          border: 3px solid rgba(227, 176, 22, 0.08);
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          animation: lokasi-morph 8s ease-in-out infinite;
+        }
+    
+        .lokasi-deco-6 {
+          top: 70%;
+          left: 5%;
+          width: 60px;
+          height: 60px;
+          background: rgba(227, 176, 22, 0.1);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          animation: lokasi-spin 12s linear infinite;
+        }
+    
+        /* Enhanced Title Styling */
+        .lokasi-title-wrapper {
+          text-align: center;
+          margin-bottom: 70px;
+          position: relative;
+          z-index: 1;
+        }
+    
+        .lokasi-title {
+          font-size: 3.2rem;
+          font-weight: 800;
+          color: #2c2c2c;
+          margin-bottom: 20px;
+          position: relative;
+          display: inline-block;
+          padding: 20px 40px;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.05) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(227, 176, 22, 0.05) 100%);
+          border-radius: 25px;
+          box-shadow: 0 10px 30px rgba(227, 176, 22, 0.1);
+          border: 2px solid rgba(227, 176, 22, 0.1);
+          animation: lokasi-glow 3s ease-in-out infinite alternate;
+        }
+    
+        .lokasi-title::before {
+          content: "📍";
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          font-size: 2rem;
+          animation: lokasi-bounce 2s ease-in-out infinite;
+        }
+    
+        .lokasi-title::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, #e3b016, #ffc107, #e3b016);
+          border-radius: 2px;
+          animation: lokasi-expand 2s ease-in-out infinite;
+        }
+    
+        .lokasi-subtitle {
+          color: #6c757d;
+          font-size: 1.3rem;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 15px 25px;
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          position: relative;
+        }
+    
+        .lokasi-subtitle::before {
+          content: "✨";
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          font-size: 1.2rem;
+          animation: lokasi-twinkle 1.5s ease-in-out infinite;
+        }
+    
+        /* Enhanced Location Cards */
+        .lokasi-wrapper {
+          position: relative;
+          z-index: 1;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+    
+        .lokasi-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+    
+        .lokasi-card {
+          background: linear-gradient(145deg, #ffffff 0%, #fafbfc 100%);
+          border-radius: 25px;
+          overflow: hidden;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.05);
+          transition: all 0.4s ease;
+          position: relative;
+          border: 1px solid rgba(227, 176, 22, 0.1);
+        }
+    
+        .lokasi-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, #e3b016, #ffc107, #e3b016);
+          z-index: 2;
+        }
+    
+        .lokasi-card:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 25px 50px rgba(227, 176, 22, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .lokasi-card-header {
+          background: linear-gradient(135deg, #e3b016 0%, #d4a015 50%, #e3b016 100%);
+          padding: 25px;
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .lokasi-card-header::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          animation: lokasi-shine 3s ease-in-out infinite;
+        }
+    
+        .lokasi-card-header h3 {
+          margin: 0;
+          color: #fff;
+          font-size: 1.7rem;
+          font-weight: 700;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          position: relative;
+          z-index: 1;
+        }
+    
+        .lokasi-card-header h3::before {
+          content: "🏢";
+          margin-right: 10px;
+          font-size: 1.3rem;
+        }
+    
+        .lokasi-map-container {
+          height: 280px;
+          overflow: hidden;
+          position: relative;
+        }
+    
+        .lokasi-map-container::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(45deg, rgba(227, 176, 22, 0.05) 0%, transparent 50%);
+          z-index: 1;
+          pointer-events: none;
+        }
+    
+        .lokasi-map-container iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          transition: all 0.3s ease;
+        }
+    
+        .lokasi-card:hover .lokasi-map-container iframe {
+          transform: scale(1.05);
+        }
+    
+        .lokasi-info {
+          padding: 30px;
+          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+          position: relative;
+        }
+    
+        .lokasi-info::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 20px;
+          right: 20px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(227, 176, 22, 0.3), transparent);
+        }
+    
+        .lokasi-contact-info {
+          display: flex;
+          flex-wrap: wrap;
+        }
+    
+        .lokasi-info-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 20px;
+          width: 100%;
+          padding: 15px;
+          background: rgba(227, 176, 22, 0.03);
+          border-radius: 15px;
+          border-left: 4px solid #e3b016;
+          transition: all 0.3s ease;
+        }
+    
+        .lokasi-info-item:hover {
+          background: rgba(227, 176, 22, 0.08);
+          transform: translateX(5px);
+        }
+    
+        .lokasi-info-icon {
+          color: #e3b016;
+          font-size: 1.3rem;
+          margin-right: 15px;
+          margin-top: 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background: rgba(227, 176, 22, 0.15);
+          border-radius: 50%;
+          transition: all 0.3s ease;
+          animation: lokasi-icon-pulse 2s ease-in-out infinite;
+        }
+    
+        .lokasi-card:hover .lokasi-info-icon {
+          background: rgba(227, 176, 22, 0.25);
+          transform: scale(1.1);
+        }
+    
+        .lokasi-info-content h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #333;
+          margin: 0 0 8px 0;
+        }
+    
+        .lokasi-info-content p {
+          margin: 0;
+          color: #6c757d;
+          line-height: 1.7;
+        }
+    
+        .lokasi-directions-btn {
+          display: inline-block;
+          margin-top: 25px;
+          padding: 16px 35px;
+          background: linear-gradient(135deg, #e3b016 0%, #d4a015 50%, #e3b016 100%);
+          color: white;
+          font-weight: 600;
+          font-size: 1.1rem;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 8px 20px rgba(227, 176, 22, 0.3);
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .lokasi-directions-btn::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.5s ease;
+        }
+    
+        .lokasi-directions-btn:hover::before {
+          left: 100%;
+        }
+    
+        .lokasi-directions-btn:hover {
+          background: linear-gradient(135deg, #d4a015 0%, #c09613 50%, #d4a015 100%);
+          transform: translateY(-3px);
+          box-shadow: 0 12px 30px rgba(227, 176, 22, 0.4);
+        }
+    
+        .lokasi-directions-btn i {
+          margin-right: 10px;
+        }
+    /* Color variations for different cards */
+    .lokasi-card-yellow .lokasi-card-header {
+      background: linear-gradient(135deg, #e3b016 0%, #d4a015 50%, #e3b016 100%);
+    }
+    .lokasi-card-yellow .lokasi-card::before {
+      background: linear-gradient(90deg, #e3b016, #ffc107, #e3b016);
+    }
+    .lokasi-card-yellow .lokasi-info-icon {
+      color: #e3b016;
+      background: rgba(227, 176, 22, 0.15);
+    }
+    .lokasi-card-yellow:hover .lokasi-info-icon {
+      background: rgba(227, 176, 22, 0.25);
+    }
+    .lokasi-card-yellow .lokasi-info-item {
+      background: rgba(227, 176, 22, 0.03);
+      border-left: 4px solid #e3b016;
+    }
+    .lokasi-card-yellow .lokasi-info-item:hover {
+      background: rgba(227, 176, 22, 0.08);
+    }
+    .lokasi-card-yellow .lokasi-directions-btn {
+      background: linear-gradient(135deg, #e3b016 0%, #d4a015 50%, #e3b016 100%);
+      box-shadow: 0 8px 20px rgba(227, 176, 22, 0.3);
+    }
+    .lokasi-card-yellow .lokasi-directions-btn:hover {
+      background: linear-gradient(135deg, #d4a015 0%, #c09613 50%, #d4a015 100%);
+      box-shadow: 0 12px 30px rgba(227, 176, 22, 0.4);
+    }
+    
+    /* Blue card */
+    .lokasi-card-blue .lokasi-card-header {
+      background: linear-gradient(135deg, #2196f3 0%, #1976d2 50%, #2196f3 100%);
+    }
+    .lokasi-card-blue .lokasi-card::before {
+      background: linear-gradient(90deg, #2196f3, #42a5f5, #2196f3);
+    }
+    .lokasi-card-blue .lokasi-info-icon {
+      color: #2196f3;
+      background: rgba(33, 150, 243, 0.15);
+    }
+    .lokasi-card-blue:hover .lokasi-info-icon {
+      background: rgba(33, 150, 243, 0.25);
+    }
+    .lokasi-card-blue .lokasi-info-item {
+      background: rgba(33, 150, 243, 0.03);
+      border-left: 4px solid #2196f3;
+    }
+    .lokasi-card-blue .lokasi-info-item:hover {
+      background: rgba(33, 150, 243, 0.08);
+    }
+    .lokasi-card-blue .lokasi-directions-btn {
+      background: linear-gradient(135deg, #2196f3 0%, #1976d2 50%, #2196f3 100%);
+      box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+    }
+    .lokasi-card-blue .lokasi-directions-btn:hover {
+      background: linear-gradient(135deg, #1976d2 0%, #1565c0 50%, #1976d2 100%);
+      box-shadow: 0 12px 30px rgba(33, 150, 243, 0.4);
+    }
+    
+    /* Green card */
+    .lokasi-card-green .lokasi-card-header {
+      background: linear-gradient(135deg, #4caf50 0%, #388e3c 50%, #4caf50 100%);
+    }
+    .lokasi-card-green .lokasi-card::before {
+      background: linear-gradient(90deg, #4caf50, #66bb6a, #4caf50);
+    }
+    .lokasi-card-green .lokasi-info-icon {
+      color: #4caf50;
+      background: rgba(76, 175, 80, 0.15);
+    }
+    .lokasi-card-green:hover .lokasi-info-icon {
+      background: rgba(76, 175, 80, 0.25);
+    }
+    .lokasi-card-green .lokasi-info-item {
+      background: rgba(76, 175, 80, 0.03);
+      border-left: 4px solid #4caf50;
+    }
+    .lokasi-card-green .lokasi-info-item:hover {
+      background: rgba(76, 175, 80, 0.08);
+    }
+    .lokasi-card-green .lokasi-directions-btn {
+      background: linear-gradient(135deg, #4caf50 0%, #388e3c 50%, #4caf50 100%);
+      box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    }
+    .lokasi-card-green .lokasi-directions-btn:hover {
+      background: linear-gradient(135deg, #388e3c 0%, #2e7d32 50%, #388e3c 100%);
+      box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+    }
+    
+    /* Red card */
+    .lokasi-card-red .lokasi-card-header {
+      background: linear-gradient(135deg, #f44336 0%, #d32f2f 50%, #f44336 100%);
+    }
+    .lokasi-card-red .lokasi-card::before {
+      background: linear-gradient(90deg, #f44336, #ef5350, #f44336);
+    }
+    .lokasi-card-red .lokasi-info-icon {
+      color: #f44336;
+      background: rgba(244, 67, 54, 0.15);
+    }
+    .lokasi-card-red:hover .lokasi-info-icon {
+      background: rgba(244, 67, 54, 0.25);
+    }
+    .lokasi-card-red .lokasi-info-item {
+      background: rgba(244, 67, 54, 0.03);
+      border-left: 4px solid #f44336;
+    }
+    .lokasi-card-red .lokasi-info-item:hover {
+      background: rgba(244, 67, 54, 0.08);
+    }
+    .lokasi-card-red .lokasi-directions-btn {
+      background: linear-gradient(135deg, #f44336 0%, #d32f2f 50%, #f44336 100%);
+      box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+    }
+    .lokasi-card-red .lokasi-directions-btn:hover {
+      background: linear-gradient(135deg, #d32f2f 0%, #c62828 50%, #d32f2f 100%);
+      box-shadow: 0 12px 30px rgba(244, 67, 54, 0.4);
+    }
+        /* Enhanced Animations */
+        @keyframes lokasi-float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-25px) rotate(5deg); }
+        }
+    
+        @keyframes lokasi-rotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    
+        @keyframes lokasi-pulse {
+          0%, 100% { transform: scale(1); opacity: 0.7; }
+          50% { transform: scale(1.2); opacity: 1; }
+        }
+    
+        @keyframes lokasi-bounce {
+          0%, 100% { transform: rotate(45deg) translateY(0px); }
+          50% { transform: rotate(45deg) translateY(-15px); }
+        }
+    
+        @keyframes lokasi-morph {
+          0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+          50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+          100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+    
+        @keyframes lokasi-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    
+        @keyframes lokasi-glow {
+          0% { box-shadow: 0 10px 30px rgba(227, 176, 22, 0.1); }
+          100% { box-shadow: 0 15px 40px rgba(227, 176, 22, 0.2); }
+        }
+    
+        @keyframes lokasi-expand {
+          0%, 100% { width: 80px; }
+          50% { width: 120px; }
+        }
+    
+        @keyframes lokasi-twinkle {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.2); }
+        }
+    
+        @keyframes lokasi-shine {
+          0% { left: -100%; }
+          100% { left: 100%; }
+        }
+    
+        @keyframes lokasi-icon-pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 992px) {
+          .lokasi-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+    
+          .lokasi-title {
+            font-size: 2.5rem;
+            padding: 15px 30px;
+          }
+        }
+    
+        @media (max-width: 768px) {
+          .lokasi-map-container {
+            height: 240px;
+          }
+    
+          .lokasi-info {
+            padding: 25px;
+          }
+          
+          .lokasi-title {
+            font-size: 2rem;
+            padding: 12px 25px;
+          }
+    
+          .lokasi-subtitle {
+            font-size: 1.1rem;
+            padding: 12px 20px;
+          }
+        }
+      </style>
+    
+      <!-- Enhanced Background Decorations -->
+      <div class="lokasi-decoration lokasi-deco-1"></div>
+      <div class="lokasi-decoration lokasi-deco-2"></div>
+      <div class="lokasi-decoration lokasi-deco-3"></div>
+      <div class="lokasi-decoration lokasi-deco-4"></div>
+      <div class="lokasi-decoration lokasi-deco-5"></div>
+      <div class="lokasi-decoration lokasi-deco-6"></div>
+    
+      <!-- Enhanced Section Title -->
+      <div class="lokasi-title-wrapper">
+        <h2 class="lokasi-title">Lokasi LPK Kami</h2>
+        <p class="lokasi-subtitle">Temukan Lokasi terdekat dari LPK Sentosa Karya Aditama di berbagai kota</p>
+      </div>
+    
+      <!-- Content -->
+      <div class="lokasi-wrapper">
+        <div class="lokasi-grid">
+          <!-- Location Card 1 -->
+    <div class="lokasi-card lokasi-card-yellow">
+            <div class="lokasi-card-header">
+              <h3>LPK Sentosa Karya Aditama - Bekasi</h3>
+            </div>
+            <div class="lokasi-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.414816518774!2d106.9678254!3d-6.295674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6993003da1c079%3A0x1b395c6d6ba89fed!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20BEKASI!5e0!3m2!1sid!2sid!4v1713860478912!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      
-
-      <div class="container" data-aos="fade">
-
-        <div class="row gy-5 gx-lg-5">
-
-          <div class="col-lg-4">
-            <div class="info p-4 shadow rounded-4" style="background-color: #f9f9f9;">
-              <h3 class="mb-3">Hubungi Kami</h3>
-              <p class="mb-4">
-                LPK Sentosa Karya Aditama siap mendampingi Anda dalam pembelajaran bahasa asing dan kegiatan pendukung lainnya sebagai bekal menuju dunia kerja internasional yang lebih baik.
-              </p>
-          
-              <div class="info-item d-flex mb-3">
-                <i class="bi bi-geo-alt flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
-                <div>
-                  <h5 class="mb-1">Alamat:</h5>
-                  <p class="mb-0">Jl. Balai Desa No. 2, RT.001/RW.004, Kel. Jatirasa, Kec. Jatiasih, Kota Bekasi, Jawa Barat 17424</p>
+            <div class="lokasi-info">
+              <div class="lokasi-contact-info">
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Alamat</h4>
+                    <p>Jl. Balai Desa No.2, RT.001/RW.004, Jatirasa, Kec. Jatiasih, Kota Bekasi, Jawa Barat 17424</p>
+                  </div>
+                </div>
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Telepon</h4>
+                    <p>+62 822-9898-2759</p>
+                  </div>
                 </div>
               </div>
-          
-              <div class="info-item d-flex mb-3">
-                <i class="bi bi-envelope flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
-                <div>
-                  <h5 class="mb-1">Email:</h5>
-                  <p class="mb-0">lpksentosakaryaaditamabekasi@gmail.com</p>
-                </div>
-              </div>
-          
-              <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0 fs-4 me-3" style="color: #e3b016;"></i>
-                <div>
-                  <h5 class="mb-1">Telepon / WhatsApp:</h5>
-                  <p class="mb-0">+62 822-9898-2759</p>
-                </div>
-              </div>
+              <a href="https://maps.google.com" class="lokasi-directions-btn" target="_blank">
+                <i class="bi bi-compass"></i> Lihat Rute
+              </a>
             </div>
           </div>
-          
-          
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form p-4 shadow rounded-4" style="background-color: #f9f9f9;">
-              <div class="row">
-                <div class="col-md-6 form-group mb-3">
-                  <input type="text" name="name" class="form-control rounded-pill" id="name" placeholder="Nama Lengkap" required>
+    
+          <!-- Location Card 2 -->
+    <div class="lokasi-card lokasi-card-blue">
+            <div class="lokasi-card-header">
+              <h3>LPK Sentosa Karya Aditama - Cilacap</h3>
+            </div>
+            <div class="lokasi-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4702.64078694813!2d109.23896773979472!3d-7.6364118336371885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6541005b9c178b%3A0x8383f85e00c99587!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20CILACAP!5e0!3m2!1sid!2sid!4v1747809149431!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="lokasi-info">
+              <div class="lokasi-contact-info">
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Alamat</h4>
+                    <p>Jl. Cimanuk No.31, RT.006/RW.003, Jati, Karangmangu, Kec. Kroya, Kabupaten Cilacap, Jawa Tengah 53282</p>
+                  </div>
                 </div>
-                <div class="col-md-6 form-group mb-3">
-                  <input type="email" class="form-control rounded-pill" name="email" id="email" placeholder="Alamat Email" required>
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Telepon</h4>
+                    <p>+62 822-9898-2759</p>
+                  </div>
                 </div>
               </div>
-              <div class="form-group mb-3">
-                <input type="text" class="form-control rounded-pill" name="subject" id="subject" placeholder="Subjek Pesan" required>
+              <a href="https://maps.google.com" class="lokasi-directions-btn" target="_blank">
+                <i class="bi bi-compass"></i> Lihat Rute
+              </a>
+            </div>
+          </div>
+    
+          <!-- Location Card 3 -->
+    <div class="lokasi-card lokasi-card-green">
+            <div class="lokasi-card-header">
+              <h3>LPK Sentosa Karya Aditama - Cirebon</h3>
+            </div>
+            <div class="lokasi-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.158594105845!2d108.71559247505458!3d-6.871592567234008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f07941bf43691%3A0x7fc41b7e5480fb3f!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20CIREBON!5e0!3m2!1sid!2sid!4v1747809359345!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="lokasi-info">
+              <div class="lokasi-contact-info">
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Alamat</h4>
+                    <p>DUSUN 03, RT.02/RW.05, Babakan Gebang, Kec. Babakan, Kabupaten Cirebon, Jawa Barat 45191</p>
+                  </div>
+                </div>
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Telepon</h4>
+                    <p>+62 822-9898-2759</p>
+                  </div>
+                </div>
               </div>
-              <div class="form-group mb-3">
-                <textarea class="form-control rounded-4" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+              <a href="https://maps.google.com" class="lokasi-directions-btn" target="_blank">
+                <i class="bi bi-compass"></i> Lihat Rute
+              </a>
+            </div>
+          </div>
+    
+          <!-- Location Card 4 -->
+    <div class="lokasi-card lokasi-card-red">
+            <div class="lokasi-card-header">
+              <h3>LPK Sentosa Karya Aditama - Subang</h3>
+            </div>
+            <div class="lokasi-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.8575275588358!2d107.79197275511835!3d-6.300417297136308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6947c25e6e52d3%3A0x96f6ec617c09d8bf!2sLPK%20SENTOSA%20KARYA%20ADITAMA%20SUBANG!5e0!3m2!1sid!2sid!4v1747809485433!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="lokasi-info">
+              <div class="lokasi-contact-info">
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Alamat</h4>
+                    <p>Dusun Krajan II No.RT.10/03, Sukareja, Kec. Sukasari, Kabupaten Subang, Jawa Barat 42154</p>
+                  </div>
+                </div>
+                <div class="lokasi-info-item">
+                  <div class="lokasi-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="lokasi-info-content">
+                    <h4>Telepon</h4>
+                    <p>+62 822-9898-2759</p>
+                  </div>
+                </div>
               </div>
-              <div class="my-3">
-                <div class="loading text-success">Loading...</div>
-                <div class="error-message text-danger"></div>
-                <div class="sent-message text-success">Pesan Anda telah terkirim. Terima kasih!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-success rounded-pill px-4 py-2 d-flex align-items-center justify-content-center gap-2">
-                  <i class="bi bi-send-fill"></i> Kirim Pesan
-                </button>
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-          
-
+              <a href="https://maps.google.com" class="lokasi-directions-btn" target="_blank">
+                <i class="bi bi-compass"></i> Lihat Rute
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
