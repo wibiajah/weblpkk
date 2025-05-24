@@ -75,7 +75,6 @@
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
         <div class="d-flex align-items-center">
           <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
-          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
         </div>
       </a>
       
@@ -89,7 +88,6 @@
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="visimisi.html">Visi - Misi</a></li>
-              <li><a href="legal.html">Legalitas dan Sertifikasi</a></li>
               <li><a href="mitra.html">Mitra Kami</a></li>
               <li><a href="nilai2.html">Nilai Value Kami</a></li>
               <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
@@ -100,7 +98,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
-          <li><a href="faq.html">Pertanyaan Umum</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="pendaftaran.html">Pendaftaran</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
@@ -116,6 +114,7 @@
 
     </div>
   </header>
+
 
   <main class="main">
 
@@ -139,456 +138,1436 @@
     <!-- End Page Title -->
   
 
-    <section id="pelatihan" class="section py-5">
+    <section id="pelatihan-enhanced" class="pelatihan-section py-5">
       <style>
-        /* Color Scheme */
+        /* Enhanced Color Scheme */
         :root {
-          --primary-color: #e3b016;
-          --primary-dark: #c09613;
-          --primary-light: #f8e9c1;
-          --secondary-color: #2a3990;
-          --secondary-light: #e8eaf6;
-          --text-dark: #2c2c2c;
-          --text-muted: #6c757d;
-          --white: #ffffff;
-          --light-bg: #f9f9f9;
+          --pelatihan-primary: #e3b016;
+          --pelatihan-primary-dark: #c09613;
+          --pelatihan-primary-light: #f8e9c1;
+          --pelatihan-secondary: #2a3990;
+          --pelatihan-secondary-light: #e8eaf6;
+          --pelatihan-text-dark: #2c2c2c;
+          --pelatihan-text-muted: #6c757d;
+          --pelatihan-white: #ffffff;
           
-          /* Program Colors */
-          --babysitter-color: #FF6B6B;
-          --babysitter-light: #FFE5E5;
-          --caretaker-color: #4ECDC4;
-          --caretaker-light: #E0F7F5;
-          --housemaid-color: #9D65C9;
-          --housemaid-light: #F0E5F9;
-          --housekeeper-color: #F9CB40;
-          --housekeeper-light: #FEF7E1;
-          --manufaktur-color: #5D9CEC;
-          --manufaktur-light: #E4EFFD;
-          --konstruksi-color: #FC913A;
-          --konstruksi-light: #FFEDD9;
-          --welder-color: #E84855;
-          --welder-light: #FCE1E3;
-          --peternakan-color: #58C184;
-          --peternakan-light: #E3F5EA;
+          /* Enhanced Program Colors */
+          --pelatihan-babysitter: #FF6B6B;
+          --pelatihan-babysitter-light: #FFE5E5;
+          --pelatihan-caretaker: #4ECDC4;
+          --pelatihan-caretaker-light: #E0F7F5;
+          --pelatihan-housemaid: #9D65C9;
+          --pelatihan-housemaid-light: #F0E5F9;
+          --pelatihan-housekeeper: #F9CB40;
+          --pelatihan-housekeeper-light: #FEF7E1;
+          --pelatihan-manufaktur: #5D9CEC;
+          --pelatihan-manufaktur-light: #E4EFFD;
+          --pelatihan-konstruksi: #FC913A;
+          --pelatihan-konstruksi-light: #FFEDD9;
+          --pelatihan-welder: #E84855;
+          --pelatihan-welder-light: #FCE1E3;
+          --pelatihan-peternakan: #58C184;
+          --pelatihan-peternakan-light: #E3F5EA;
         }
         
-        #pelatihan {
-          background-color: var(--light-bg);
+        .pelatihan-section {
+          background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
           overflow: hidden;
           position: relative;
-          padding: 80px 0;
+          padding: 100px 0;
+          min-height: 100vh;
         }
         
-        /* Background Decorations */
-        .decoration {
+        /* Enhanced Background Decorations */
+        .pelatihan-decoration {
           position: absolute;
           z-index: 0;
+          pointer-events: none;
         }
         
-        .decoration-1 {
+        .pelatihan-decoration-1 {
           top: 5%;
           right: 5%;
-          width: 300px;
-          height: 300px;
-          background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
-          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-          opacity: 0.08;
-          animation: float 8s ease-in-out infinite;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, var(--pelatihan-primary-light) 0%, transparent 70%);
+          border-radius: 50%;
+          opacity: 0.15;
+          animation: pelatihan-float 12s ease-in-out infinite;
         }
         
-        .decoration-2 {
+        .pelatihan-decoration-2 {
           bottom: 10%;
           left: 5%;
-          width: 200px;
-          height: 200px;
-          background: linear-gradient(135deg, var(--secondary-light) 0%, var(--secondary-color) 100%);
-          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-          opacity: 0.07;
-          animation: float 6s ease-in-out infinite;
+          width: 300px;
+          height: 300px;
+          background: conic-gradient(from 45deg, var(--pelatihan-secondary-light), var(--pelatihan-primary-light), var(--pelatihan-secondary-light));
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          opacity: 0.1;
+          animation: pelatihan-rotate 20s linear infinite;
         }
         
-        .decoration-3 {
-          top: 40%;
-          left: 15%;
-          width: 100px;
-          height: 100px;
-          border: 8px solid var(--primary-color);
-          opacity: 0.06;
+        .pelatihan-decoration-3 {
+          top: 30%;
+          left: 10%;
+          width: 150px;
+          height: 150px;
+          background: linear-gradient(45deg, var(--pelatihan-primary), transparent);
+          opacity: 0.08;
           border-radius: 30%;
           transform: rotate(45deg);
-          animation: spin 20s linear infinite;
+          animation: pelatihan-pulse 8s ease-in-out infinite;
         }
         
-        .decoration-4 {
+        .pelatihan-decoration-4 {
           bottom: 30%;
-          right: 10%;
-          width: 120px;
-          height: 120px;
-          border: 8px solid var(--secondary-color);
-          opacity: 0.06;
+          right: 15%;
+          width: 200px;
+          height: 200px;
+          border: 3px dashed var(--pelatihan-primary);
+          opacity: 0.12;
           border-radius: 50%;
-          animation: pulse 4s ease-in-out infinite;
+          animation: pelatihan-spin 15s linear infinite;
         }
         
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
+        .pelatihan-decoration-5 {
+          top: 60%;
+          right: 30%;
+          width: 100px;
+          height: 100px;
+          background: var(--pelatihan-primary);
+          opacity: 0.05;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          animation: pelatihan-bounce 6s ease-in-out infinite;
         }
         
-        @keyframes pulse {
-          0% { transform: scale(1); opacity: 0.06; }
-          50% { transform: scale(1.05); opacity: 0.09; }
-          100% { transform: scale(1); opacity: 0.06; }
+        .pelatihan-decoration-6 {
+          top: 20%;
+          left: 70%;
+          width: 80px;
+          height: 80px;
+          background: var(--pelatihan-secondary);
+          opacity: 0.08;
+          border-radius: 20px;
+          transform: rotate(45deg);
+          animation: pelatihan-wiggle 10s ease-in-out infinite;
         }
         
-        @keyframes spin {
-          from { transform: rotate(45deg); }
-          to { transform: rotate(405deg); }
-        }
-        
-        /* Section Title Styling */
-        .section-title {
-          margin-bottom: 60px;
-          position: relative;
+        /* Floating Elements */
+        .pelatihan-floating-elements {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
           z-index: 1;
         }
         
-        .section-title h2 {
+        .pelatihan-floating-icon {
+          position: absolute;
+          font-size: 24px;
+          opacity: 0.1;
+          animation: pelatihan-float-icons 15s linear infinite;
+        }
+        
+        .pelatihan-floating-icon:nth-child(1) {
+          top: 10%;
+          left: 20%;
+          animation-delay: 0s;
+          color: var(--pelatihan-babysitter);
+        }
+        
+        .pelatihan-floating-icon:nth-child(2) {
+          top: 70%;
+          left: 80%;
+          animation-delay: -3s;
+          color: var(--pelatihan-caretaker);
+        }
+        
+        .pelatihan-floating-icon:nth-child(3) {
+          top: 40%;
+          left: 90%;
+          animation-delay: -6s;
+          color: var(--pelatihan-housemaid);
+        }
+        
+        .pelatihan-floating-icon:nth-child(4) {
+          top: 80%;
+          left: 10%;
+          animation-delay: -9s;
+          color: var(--pelatihan-manufaktur);
+        }
+        
+        /* Enhanced Animations */
+        @keyframes pelatihan-float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          25% { transform: translateY(-30px) rotate(5deg); }
+          50% { transform: translateY(-20px) rotate(-5deg); }
+          75% { transform: translateY(-40px) rotate(3deg); }
+        }
+        
+        @keyframes pelatihan-rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pelatihan-pulse {
+          0%, 100% { transform: scale(1) rotate(45deg); opacity: 0.08; }
+          50% { transform: scale(1.2) rotate(225deg); opacity: 0.15; }
+        }
+        
+        @keyframes pelatihan-spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-360deg); }
+        }
+        
+        @keyframes pelatihan-bounce {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pelatihan-wiggle {
+          0%, 100% { transform: rotate(45deg); }
+          25% { transform: rotate(55deg); }
+          75% { transform: rotate(35deg); }
+        }
+        
+        @keyframes pelatihan-float-icons {
+          0% { transform: translateY(100vh) rotate(0deg); }
+          100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        /* Enhanced Section Title */
+        .pelatihan-section-title {
+          margin-bottom: 80px;
+          position: relative;
+          z-index: 2;
+          text-align: center;
+        }
+        
+        .pelatihan-title-container {
           position: relative;
           display: inline-block;
-          padding-bottom: 15px;
-          color: var(--text-dark);
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin-bottom: 15px;
-        }
-        
-        .section-title h2::after {
-          content: "";
-          position: absolute;
-          width: 70px;
-          height: 4px;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          background: var(--primary-color);
-          border-radius: 2px;
-        }
-        
-        .section-title p {
-          font-size: 1.1rem;
-          line-height: 1.7;
-        }
-        
-        /* Program Grid Layout */
-        .program-grid {
-          position: relative;
-          z-index: 1;
-        }
-        
-        .program-row {
-          display: flex;
-          flex-wrap: wrap;
-          margin: 0 -15px;
-        }
-        
-        .program-item {
-          flex: 0 0 25%;
-          max-width: 25%;
-          padding: 0 15px;
+          padding: 30px 50px;
+          background: linear-gradient(135deg, var(--pelatihan-white) 0%, #fafafa 100%);
+          border-radius: 25px;
+          box-shadow: 0 20px 40px rgba(227, 176, 22, 0.1);
+          border: 2px solid var(--pelatihan-primary-light);
           margin-bottom: 30px;
-          transition: all 0.4s ease;
         }
         
-        .program-card {
-          background-color: var(--white);
-          border-radius: 15px;
+        .pelatihan-title-container::before {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          background: linear-gradient(45deg, var(--pelatihan-primary-light), var(--pelatihan-secondary-light));
+          border-radius: 30px;
+          z-index: -1;
+          opacity: 0.3;
+        }
+        
+        .pelatihan-main-title {
+          font-size: 3rem;
+          font-weight: 800;
+          color: var(--pelatihan-text-dark);
+          margin: 0;
+          position: relative;
+          background: linear-gradient(135deg, var(--pelatihan-primary) 0%, var(--pelatihan-secondary) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .pelatihan-subtitle {
+          font-size: 1.2rem;
+          line-height: 1.8;
+          color: var(--pelatihan-text-muted);
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 25px 40px;
+          background: linear-gradient(135deg, var(--pelatihan-primary-light) 0%, var(--pelatihan-secondary-light) 100%);
+          border-radius: 20px;
+          border-left: 5px solid var(--pelatihan-primary);
+          position: relative;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        
+        .pelatihan-subtitle::before {
+          content: '💡';
+          position: absolute;
+          top: -15px;
+          left: 30px;
+          font-size: 2rem;
+          background: var(--pelatihan-white);
+          padding: 10px;
+          border-radius: 50%;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Enhanced Program Grid */
+    .pelatihan-program-grid {
+      position: relative;
+      z-index: 2;
+      max-width: 1600px; /* UBAH DARI 1400px JADI 1600px */
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+        
+    .pelatihan-program-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px; /* UBAH DARI 40px JADI 25px */
+      margin-bottom: 40px;
+    }
+        
+        .pelatihan-program-item {
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: pelatihan-card-entrance 0.8s ease-out forwards;
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        
+        .pelatihan-program-item:nth-child(1) { animation-delay: 0.1s; }
+        .pelatihan-program-item:nth-child(2) { animation-delay: 0.2s; }
+        .pelatihan-program-item:nth-child(3) { animation-delay: 0.3s; }
+        .pelatihan-program-item:nth-child(4) { animation-delay: 0.4s; }
+        .pelatihan-program-item:nth-child(5) { animation-delay: 0.5s; }
+        .pelatihan-program-item:nth-child(6) { animation-delay: 0.6s; }
+        .pelatihan-program-item:nth-child(7) { animation-delay: 0.7s; }
+        .pelatihan-program-item:nth-child(8) { animation-delay: 0.8s; }
+        
+        @keyframes pelatihan-card-entrance {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .pelatihan-program-card {
+          background: linear-gradient(135deg, var(--pelatihan-white) 0%, #fafafa 100%);
+          border-radius: 25px;
           overflow: hidden;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
           height: 100%;
-          transition: all 0.4s ease;
+          transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           position: relative;
-          z-index: 1;
+          border: 2px solid transparent;
         }
         
-        .program-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Card Header with Icon */
-        .program-icon {
-          height: 120px;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-        }
-        
-        .program-icon::before {
+        .pelatihan-program-card::before {
           content: '';
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          z-index: 1;
+          background: linear-gradient(135deg, var(--pelatihan-primary-light), var(--pelatihan-secondary-light));
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: -1;
+          border-radius: 25px;
         }
         
-        .program-icon img {
-          width: 70px;
-          height: 70px;
+        .pelatihan-program-card:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 25px 50px rgba(227, 176, 22, 0.15);
+          border-color: var(--pelatihan-primary);
+        }
+        
+        .pelatihan-program-card:hover::before {
+          opacity: 0.1;
+        }
+        
+        /* Enhanced Program Icon */
+        .pelatihan-program-icon {
+          height: 140px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: linear-gradient(135deg, var(--pelatihan-primary-light) 0%, var(--pelatihan-secondary-light) 100%);
+        }
+        
+        .pelatihan-program-icon::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255,255,255,0.1) 10px,
+            rgba(255,255,255,0.1) 20px
+          );
+        }
+        
+        .pelatihan-program-icon img {
+          width: 80px;
+          height: 80px;
           position: relative;
           z-index: 2;
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+        }
+        
+        .pelatihan-program-card:hover .pelatihan-program-icon img {
+          transform: scale(1.2) rotate(10deg);
+        }
+        
+        /* Program Specific Enhanced Colors */
+        .pelatihan-babysitter-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-babysitter-light) 0%, #FFB8B8 100%);
+        }
+        
+        .pelatihan-caretaker-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-caretaker-light) 0%, #B8F5F0 100%);
+        }
+        
+        .pelatihan-housemaid-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-housemaid-light) 0%, #D4B8E8 100%);
+        }
+        
+        .pelatihan-housekeeper-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-housekeeper-light) 0%, #FFF0B8 100%);
+        }
+        
+        .pelatihan-manufaktur-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-manufaktur-light) 0%, #B8D6F8 100%);
+        }
+        
+        .pelatihan-konstruksi-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-konstruksi-light) 0%, #FFD4B8 100%);
+        }
+        
+        .pelatihan-welder-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-welder-light) 0%, #F7B8C1 100%);
+        }
+        
+        .pelatihan-peternakan-card .pelatihan-program-icon {
+          background: linear-gradient(135deg, var(--pelatihan-peternakan-light) 0%, #B8F0D1 100%);
+        }
+        
+        /* Enhanced Card Content */
+        .pelatihan-program-content {
+          padding: 35px;
+          position: relative;
+          background: var(--pelatihan-white);
+        }
+        
+        .pelatihan-program-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          position: relative;
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 15px;
+          background: linear-gradient(135deg, var(--pelatihan-primary-light) 0%, var(--pelatihan-secondary-light) 100%);
+          border-left: 4px solid var(--pelatihan-primary);
           transition: all 0.3s ease;
         }
         
-        .program-card:hover .program-icon img {
-          transform: scale(1.1);
+        .pelatihan-program-title::before {
+          content: '';
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          right: -3px;
+          bottom: -3px;
+          background: linear-gradient(45deg, var(--pelatihan-primary), var(--pelatihan-secondary));
+          border-radius: 18px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
         
-        /* Program Specific Colors */
-        .babysitter-card .program-icon::before {
-          background: linear-gradient(120deg, var(--babysitter-color) 0%, #FF9E9E 100%);
+        .pelatihan-program-card:hover .pelatihan-program-title::before {
+          opacity: 0.1;
         }
         
-        .caretaker-card .program-icon::before {
-          background: linear-gradient(120deg, var(--caretaker-color) 0%, #A5F2EA 100%);
+        .pelatihan-babysitter-card .pelatihan-program-title {
+          color: var(--pelatihan-babysitter);
+          border-left-color: var(--pelatihan-babysitter);
         }
         
-        .housemaid-card .program-icon::before {
-          background: linear-gradient(120deg, var(--housemaid-color) 0%, #C39BDC 100%);
+        .pelatihan-caretaker-card .pelatihan-program-title {
+          color: var(--pelatihan-caretaker);
+          border-left-color: var(--pelatihan-caretaker);
         }
         
-        .housekeeper-card .program-icon::before {
-          background: linear-gradient(120deg, var(--housekeeper-color) 0%, #FFE596 100%);
+        .pelatihan-housemaid-card .pelatihan-program-title {
+          color: var(--pelatihan-housemaid);
+          border-left-color: var(--pelatihan-housemaid);
         }
         
-        .manufaktur-card .program-icon::before {
-          background: linear-gradient(120deg, var(--manufaktur-color) 0%, #8EB9F5 100%);
+        .pelatihan-housekeeper-card .pelatihan-program-title {
+          color: var(--pelatihan-housekeeper);
+          border-left-color: var(--pelatihan-housekeeper);
         }
         
-        .konstruksi-card .program-icon::before {
-          background: linear-gradient(120deg, var(--konstruksi-color) 0%, #FFBC7D 100%);
+        .pelatihan-manufaktur-card .pelatihan-program-title {
+          color: var(--pelatihan-manufaktur);
+          border-left-color: var(--pelatihan-manufaktur);
         }
         
-        .welder-card .program-icon::before {
-          background: linear-gradient(120deg, var(--welder-color) 0%, #F2969E 100%);
+        .pelatihan-konstruksi-card .pelatihan-program-title {
+          color: var(--pelatihan-konstruksi);
+          border-left-color: var(--pelatihan-konstruksi);
         }
         
-        .peternakan-card .program-icon::before {
-          background: linear-gradient(120deg, var(--peternakan-color) 0%, #90E0AD 100%);
+        .pelatihan-welder-card .pelatihan-program-title {
+          color: var(--pelatihan-welder);
+          border-left-color: var(--pelatihan-welder);
         }
         
-        /* Card Content */
-        .program-content {
-          padding: 25px;
+        .pelatihan-peternakan-card .pelatihan-program-title {
+          color: var(--pelatihan-peternakan);
+          border-left-color: var(--pelatihan-peternakan);
+        }
+        
+        .pelatihan-program-desc {
+          color: var(--pelatihan-text-muted);
+          font-size: 1rem;
+          line-height: 1.8;
+          margin-bottom: 25px;
+          padding: 20px;
+          background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+          border-radius: 15px;
+          border: 1px solid rgba(227, 176, 22, 0.1);
           position: relative;
         }
         
-        .program-title {
-          font-size: 1.3rem;
-          font-weight: 700;
-          margin-bottom: 15px;
-          color: var(--text-dark);
+        .pelatihan-program-desc::before {
+          content: '📋';
+          position: absolute;
+          top: -10px;
+          right: 20px;
+          background: var(--pelatihan-white);
+          padding: 5px;
+          border-radius: 50%;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Enhanced Statistics Section */
+        .pelatihan-stats {
+          margin-top: 80px;
+          text-align: center;
           position: relative;
-          display: inline-block;
+          z-index: 2;
         }
         
-        .babysitter-card .program-title {
-          color: var(--babysitter-color);
+        .pelatihan-stats-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 40px;
+          max-width: 1000px;
+          margin: 0 auto;
         }
         
-        .caretaker-card .program-title {
-          color: var(--caretaker-color);
+        .pelatihan-stat-item {
+          padding: 30px;
+          background: linear-gradient(135deg, var(--pelatihan-white) 0%, #fafafa 100%);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          border: 2px solid var(--pelatihan-primary-light);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
         }
         
-        .housemaid-card .program-title {
-          color: var(--housemaid-color);
+        .pelatihan-stat-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, var(--pelatihan-primary), var(--pelatihan-secondary));
         }
         
-        .housekeeper-card .program-title {
-          color: var(--housekeeper-color);
+        .pelatihan-stat-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(227, 176, 22, 0.15);
         }
         
-        .manufaktur-card .program-title {
-          color: var(--manufaktur-color);
+        .pelatihan-stat-number {
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: var(--pelatihan-primary);
+          margin-bottom: 10px;
+          display: block;
         }
         
-        .konstruksi-card .program-title {
-          color: var(--konstruksi-color);
+        .pelatihan-stat-label {
+          font-size: 1.1rem;
+          color: var(--pelatihan-text-muted);
+          font-weight: 600;
         }
         
-        .welder-card .program-title {
-          color: var(--welder-color);
-        }
-        
-        .peternakan-card .program-title {
-          color: var(--peternakan-color);
-        }
-        
-        .program-desc {
-          color: var(--text-muted);
-          font-size: 0.95rem;
-          line-height: 1.7;
-          margin-bottom: 20px;
-          flex-grow: 1;
-        }
-        
-        /* Removed Button Styling */
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-          .program-item {
-            flex: 0 0 50%;
-            max-width: 50%;
-          }
-          
-          .section-title h2 {
-            font-size: 2rem;
-          }
-        }
+        /* Responsive Design */
+    @media (max-width: 1200px) {
+      .pelatihan-program-row {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* UBAH DARI 280px JADI 320px */
+        gap: 20px; /* UBAH DARI 30px JADI 20px */
+      }
+    }
         
         @media (max-width: 768px) {
-          .program-item {
-            flex: 0 0 100%;
-            max-width: 100%;
+          .pelatihan-main-title {
+            font-size: 2.2rem;
+          }
+          
+          .pelatihan-title-container {
+            padding: 20px 30px;
+            margin: 0 20px 30px;
+          }
+          
+          .pelatihan-subtitle {
+            font-size: 1rem;
+            padding: 20px 25px;
+            margin: 0 20px;
+          }
+    .pelatihan-program-row {
+      grid-template-columns: 1fr;
+      gap: 20px; /* UBAH DARI 25px JADI 20px */
+    }
+          
+          .pelatihan-program-content {
+            padding: 25px;
+          }
+          
+          .pelatihan-stats-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .pelatihan-section {
+            padding: 60px 0;
+          }
+          
+          .pelatihan-main-title {
+            font-size: 1.8rem;
+          }
+          
+          .pelatihan-stats-container {
+            grid-template-columns: 1fr;
           }
         }
       </style>
     
       <!-- Background Decorations -->
-      <div class="decoration decoration-1"></div>
-      <div class="decoration decoration-2"></div>
-      <div class="decoration decoration-3"></div>
-      <div class="decoration decoration-4"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-1"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-2"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-3"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-4"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-5"></div>
+      <div class="pelatihan-decoration pelatihan-decoration-6"></div>
     
-      <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
-        <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;" data-aos="zoom-in" data-aos-delay="100">
-          Pelatihan Kerja
-          <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;" data-aos="fade-up" data-aos-delay="300"></span>
-        </h2>
-        <p class="text-muted mx-auto" style="max-width: 700px;">Tingkatkan keterampilan Anda dengan program pelatihan yang dirancang secara profesional untuk menyiapkan tenaga kerja berkualitas dan siap bersaing di dunia kerja.</p>
+      <!-- Floating Elements -->
+      <div class="pelatihan-floating-elements">
+        <div class="pelatihan-floating-icon">👶</div>
+        <div class="pelatihan-floating-icon">👴</div>
+        <div class="pelatihan-floating-icon">🏠</div>
+        <div class="pelatihan-floating-icon">⚙️</div>
       </div>
     
-      <div class="container program-grid" data-aos="fade-up">
-        <div class="program-row">
-      
-          <!-- Baby Sitter -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2731/2731340.png" alt="Babysitter Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">Baby Sitter</h4>
-                <p class="program-desc">Pelatihan perawatan bayi untuk menjadi pengasuh anak yang profesional dan penuh kasih sayang. Program ini mencakup perkembangan anak, kebutuhan nutrisi, dan teknik pengasuhan yang tepat.</p>
-              </div>
-            </div>
+      <div class="container">
+        <!-- Enhanced Section Title -->
+        <div class="pelatihan-section-title">
+          <div class="pelatihan-title-container">
+            <h2 class="pelatihan-main-title">Pelatihan Kerja</h2>
           </div>
-      
-          <!-- Caretaker -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2755/2755213.png" alt="Caretaker Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">Caretaker</h4>
-                <p class="program-desc">Pelatihan perawatan lansia dengan pendekatan kesehatan dan empati tinggi. Mempelajari teknik mobilisasi, perawatan medis dasar, dan dukungan psikologis.</p>
-              </div>
-            </div>
+          <div class="pelatihan-subtitle">
+            Tingkatkan keterampilan Anda dengan program pelatihan yang dirancang secara profesional untuk menyiapkan tenaga kerja berkualitas dan siap bersaing di dunia kerja modern.
           </div>
-      
-          <!-- House Maid -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/10221/10221689.png" alt="House Maid Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">House Maid</h4>
-                <p class="program-desc">Pelatihan kerja rumah tangga mencakup kebersihan, memasak, dan manajemen rumah. Diajarkan pula penggunaan alat rumah tangga modern.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- House Keeper -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/6966/6966785.png" alt="House Keeper Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">House Keeper</h4>
-                <p class="program-desc">Pelatihan pengelolaan rumah besar, penataan ruang, kebersihan, dan pengelolaan barang-barang rumah tangga.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Manufaktur Industri -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/4598/4598682.png" alt="Manufaktur Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">Manufaktur Industri</h4>
-                <p class="program-desc">Program ini mencakup pelatihan dalam proses produksi, perakitan, dan keselamatan kerja, dan praktik kerja efisien di lingkungan industri modern.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Konstruksi -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="600">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/956/956614.png" alt="Konstruksi Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">Konstruksi</h4>
-                <p class="program-desc">Pelatihan kerja bangunan dari pondasi hingga finishing, termasuk membaca rencana dan penggunaan alat konstruksi.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Welder -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="700">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/949/949964.png" alt="Welder Icon" width="64" />
-              </div>
-              <div class="program-content">
-                <h4 class="program-title">Welder (Pengelasan)</h4>
-                <p class="program-desc">Pelatihan teknik pengelasan industri logam sesuai standar internasional. Termasuk berbagai jenis las dan keselamatan kerja.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Peternakan -->
-          <div class="program-item" data-aos="fade-up" data-aos-delay="800">
-            <div class="program-card">
-              <div class="program-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/9410/9410621.png" alt="Peternakan Icon" width="64" />
-              </div>              
-              <div class="program-content">
-                <h4 class="program-title">Peternakan</h4>
-                <p class="program-desc">Pelatihan beternak, pemberian pakan, kesehatan hewan, dan manajemen peternakan .</p>
-              </div>
-            </div>
-          </div>
-      
         </div>
+    
+        <!-- Enhanced Program Grid -->
+        <div class="pelatihan-program-grid">
+          <div class="pelatihan-program-row">
+            
+            <!-- Baby Sitter -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-babysitter-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2731/2731340.png" alt="Babysitter Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                  <h4 class="pelatihan-program-title">Merawat Bayi / Babysitter</h4>
+                  <p class="pelatihan-program-desc">Pelatihan perawatan bayi untuk menjadi pengasuh anak yang profesional dan penuh kasih sayang. Program ini mencakup perkembangan anak, kebutuhan nutrisi, dan teknik pengasuhan yang tepat.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Caretaker -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-caretaker-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2755/2755213.png" alt="Caretaker Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                  <h4 class="pelatihan-program-title">Perawat Lansia / Caregiver</h4>
+                  <p class="pelatihan-program-desc">Pelatihan perawatan lansia dengan pendekatan kesehatan dan empati tinggi. Mempelajari teknik mobilisasi, perawatan medis dasar, dan dukungan psikologis.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- House Maid -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-housemaid-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4799/4799071.png" alt="House Maid Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                 <h4 class="pelatihan-program-title">Pekerja Panti Jompo / Caretaker</h4>
+                  <p class="pelatihan-program-desc">Program ini mencakup pengelolaan kebutuhan harian penghuni, keterampilan komunikasi yang hangat, serta penerapan standar kebersihan dan kenyamanan di lingkungan panti.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- House Keeper -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-housekeeper-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/10221/10221689.png" alt="House Keeper Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                 <h4 class="pelatihan-program-title">Asisten Rumah Tangga / Housemaid</h4>
+                  <p class="pelatihan-program-desc">Pelatihan kerja rumah tangga mencakup kebersihan, memasak, dan manajemen rumah. Diajarkan pula penggunaan alat rumah tangga modern.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Manufaktur Industri -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-manufaktur-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6966/6966785.png" alt="Manufaktur Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                    <!-- Melanjutkan dari bagian Manufaktur Industri yang terpotong -->
+                   <h4 class="pelatihan-program-title">Penata Rumah / Housekeeper</h4>
+                  <p class="pelatihan-program-desc">Pelatihan pengelolaan rumah besar, penataan ruang, kebersihan, dan pengelolaan barang-barang rumah tangga.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Konstruksi -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-konstruksi-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/956/956614.png" alt="Konstruksi Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                  <h4 class="pelatihan-program-title">Pekerja Konstruksi / Construction</h4>
+                  <p class="pelatihan-program-desc">Pelatihan konstruksi bangunan, tukang batu, tukang kayu, dan instalasi. Diajarkan teknik kerja yang aman dan sesuai standar konstruksi.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Welder -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-welder-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/949/949964.png" alt="Welder Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+                  <h4 class="pelatihan-program-title">Pengelasan / Welder</h4>
+                  <p class="pelatihan-program-desc">Pelatihan las listrik dan gas dengan sertifikasi internasional. Mencakup berbagai teknik pengelasan untuk industri konstruksi dan manufaktur.</p>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Peternakan -->
+            <div class="pelatihan-program-item">
+              <div class="pelatihan-program-card pelatihan-peternakan-card">
+                <div class="pelatihan-program-icon">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4598/4598682.png" alt="Peternakan Icon" />
+                </div>
+                <div class="pelatihan-program-content">
+               <h4 class="pelatihan-program-title">Manufaktur Industri</h4>
+                  <p class="pelatihan-program-desc">Pelatihan operasional pabrik dan manufaktur dengan teknologi modern. Mencakup keselamatan kerja, quality control, dan pengoperasian mesin industri.</p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+        <!-- Enhanced Statistics Section -->
+        <div class="pelatihan-stats">
+          <div class="pelatihan-stats-container">
+            <div class="pelatihan-stat-item" data-aos="fade-up" data-aos-delay="100">
+              <span class="pelatihan-stat-number" data-count="2000">0</span>
+              <div class="pelatihan-stat-label">Peserta Terlatih</div>
+            </div>
+            <div class="pelatihan-stat-item" data-aos="fade-up" data-aos-delay="200">
+              <span class="pelatihan-stat-number" data-count="95">0</span>
+              <div class="pelatihan-stat-label">% Tingkat Kelulusan</div>
+            </div>
+            <div class="pelatihan-stat-item" data-aos="fade-up" data-aos-delay="300">
+              <span class="pelatihan-stat-number" data-count="8">0</span>
+              <div class="pelatihan-stat-label">Program Pelatihan</div>
+            </div>
+            <div class="pelatihan-stat-item" data-aos="fade-up" data-aos-delay="400">
+              <span class="pelatihan-stat-number" data-count="95">0</span>
+              <div class="pelatihan-stat-label">% Tersalurkan Kerja</div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Interactive Features Section -->
+        <div class="pelatihan-interactive-section" style="margin-top: 80px;">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="pelatihan-cta-container">
+                <h3 class="pelatihan-cta-title">Siap Memulai Karir Impian Anda?</h3>
+                <p class="pelatihan-cta-desc">Bergabunglah dengan ribuan peserta yang telah sukses melalui program pelatihan kami</p>
+                <div class="pelatihan-cta-buttons">
+                  <button class="pelatihan-btn pelatihan-btn-primary" onclick="showRegistrationForm()">
+                    <span class="btn-text">Daftar Sekarang</span>
+                    <span class="btn-icon">🚀</span>
+                  </button>
+                  <button class="pelatihan-btn pelatihan-btn-secondary" onclick="showProgramDetails()">
+                    <span class="btn-text">Lihat Detail Program</span>
+                    <span class="btn-icon">📋</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Modal for Registration -->
+        
+    
+        <!-- Particle System -->
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    
       </div>
-      
-      
     
+    <style>
+    /* Additional Styles for Interactive Elements */
+    .pelatihan-cta-container {
+      background: linear-gradient(135deg, var(--pelatihan-white) 0%, #f8f9fa 100%);
+      padding: 60px 40px;
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border: 2px solid var(--pelatihan-primary-light);
+      position: relative;
+      overflow: hidden;
+    }
     
+    .pelatihan-cta-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, var(--pelatihan-primary-light) 0%, transparent 70%);
+      opacity: 0.1;
+      animation: pelatihan-rotate 20s linear infinite;
+    }
+    
+    .pelatihan-cta-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--pelatihan-text-dark);
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--pelatihan-primary) 0%, var(--pelatihan-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .pelatihan-cta-desc {
+      font-size: 1.2rem;
+      color: var(--pelatihan-text-muted);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    
+    .pelatihan-cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .pelatihan-btn {
+      padding: 18px 35px;
+      border-radius: 50px;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      min-width: 200px;
+      justify-content: center;
+    }
+    
+    .pelatihan-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s;
+    }
+    
+    .pelatihan-btn:hover::before {
+      left: 100%;
+    }
+    
+    .pelatihan-btn-primary {
+      background: linear-gradient(135deg, var(--pelatihan-primary) 0%, var(--pelatihan-primary-dark) 100%);
+      color: white;
+      box-shadow: 0 10px 25px rgba(227, 176, 22, 0.3);
+    }
+    
+    .pelatihan-btn-primary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(227, 176, 22, 0.4);
+    }
+    
+    .pelatihan-btn-secondary {
+      background: linear-gradient(135deg, var(--pelatihan-secondary) 0%, #1a237e 100%);
+      color: white;
+      box-shadow: 0 10px 25px rgba(42, 57, 144, 0.3);
+    }
+    
+    .pelatihan-btn-secondary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(42, 57, 144, 0.4);
+    }
+    
+    .btn-icon {
+      font-size: 1.3em;
+      animation: pelatihan-bounce 2s ease-in-out infinite;
+    }
+    
+    /* Modal Styles */
+    .pelatihan-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(5px);
+      animation: pelatihan-modal-fade-in 0.3s ease;
+    }
+    
+    .pelatihan-modal-content {
+      background: var(--pelatihan-white);
+      margin: 5% auto;
+      padding: 0;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+      animation: pelatihan-modal-slide-in 0.4s ease;
+    }
+    
+    .pelatihan-modal-header {
+      padding: 30px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, var(--pelatihan-primary-light) 0%, var(--pelatihan-secondary-light) 100%);
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .pelatihan-modal-header h4 {
+      margin: 0;
+      color: var(--pelatihan-text-dark);
+      font-weight: 700;
+    }
+    
+    .pelatihan-modal-close {
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--pelatihan-text-muted);
+      transition: color 0.3s ease;
+    }
+    
+    .pelatihan-modal-close:hover {
+      color: var(--pelatihan-primary);
+    }
+    
+    .pelatihan-modal-body {
+      padding: 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--pelatihan-text-dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--pelatihan-primary);
+      box-shadow: 0 0 0 3px rgba(227, 176, 22, 0.1);
+    }
+    
+    /* Particle Canvas */
+    .particle-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* Modal Animations */
+    @keyframes pelatihan-modal-fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes pelatihan-modal-slide-in {
+      from { 
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    /* Responsive for CTA Section */
+    @media (max-width: 768px) {
+      .pelatihan-cta-title {
+        font-size: 2rem;
+      }
       
+      .pelatihan-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
       
-      
+      .pelatihan-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all animations and interactions
+        initCountAnimation();
+        initParticleSystem();
+        initScrollAnimations();
+        initCardHoverEffects();
+        initProgressiveLoading();
+    });
+    
+    // Animated Counter for Statistics
+    function initCountAnimation() {
+        const counters = document.querySelectorAll('.pelatihan-stat-number');
+        const options = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+    
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    animateCounter(counter, target);
+                    observer.unobserve(counter);
+                }
+            });
+        }, options);
+    
+        counters.forEach(counter => observer.observe(counter));
+    }
+    
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 50;
+        const duration = 2000;
+        const stepTime = duration / 50;
+    
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current);
+        }, stepTime);
+    }
+    
+    // Particle System
+    function initParticleSystem() {
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+    
+        function resizeCanvas() {
+            const section = document.getElementById('pelatihan-enhanced');
+            canvas.width = section.offsetWidth;
+            canvas.height = section.offsetHeight;
+        }
+    
+        function createParticle() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 3 + 1,
+                speedX: (Math.random() - 0.5) * 2,
+                speedY: (Math.random() - 0.5) * 2,
+                opacity: Math.random() * 0.5 + 0.1,
+                color: Math.random() > 0.5 ? '#e3b016' : '#2a3990'
+            };
+        }
+    
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 50; i++) {
+                particles.push(createParticle());
+            }
+        }
+    
+        function updateParticles() {
+            particles.forEach(particle => {
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+    
+                if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+    
+                particle.opacity += (Math.random() - 0.5) * 0.02;
+                particle.opacity = Math.max(0.05, Math.min(0.5, particle.opacity));
+            });
+        }
+    
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(particle => {
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+                ctx.fill();
+            });
+        }
+    
+        function connectParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+    
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(227, 176, 22, ${0.1 * (1 - distance / 100)})`;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+    
+        function animate() {
+            updateParticles();
+            drawParticles();
+            connectParticles();
+            animationId = requestAnimationFrame(animate);
+        }
+    
+        resizeCanvas();
+        initParticles();
+        animate();
+    
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+    }
+    
+    // Scroll Animations
+    function initScrollAnimations() {
+        const cards = document.querySelectorAll('.pelatihan-program-card');
+        const options = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+    
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, options);
+    
+        cards.forEach(card => {
+            card.style.transform = 'translateY(50px) scale(0.9)';
+            card.style.opacity = '0';
+            card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            observer.observe(card);
+        });
+    }
+    
+    // Enhanced Card Hover Effects
+    function initCardHoverEffects() {
+        const cards = document.querySelectorAll('.pelatihan-program-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Add ripple effect
+                const ripple = document.createElement('div');
+                ripple.className = 'card-ripple';
+                ripple.style.cssText = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    background: radial-gradient(circle, rgba(227, 176, 22, 0.3) 0%, transparent 70%);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    animation: ripple-expand 0.6s ease-out;
+                    pointer-events: none;
+                    z-index: 1;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    if (ripple.parentNode) {
+                        ripple.parentNode.removeChild(ripple);
+                    }
+                }, 600);
+            });
+    
+            // Add tilt effect on mouse move
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+    
+                this.style.transform = `translateY(-15px) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+    
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) rotateX(0) rotateY(0)';
+            });
+        });
+    }
+    
+    // Progressive Loading Animation
+    function initProgressiveLoading() {
+        const items = document.querySelectorAll('.pelatihan-program-item');
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.animation = `pelatihan-card-entrance 0.8s ease-out forwards`;
+            }, index * 100);
+        });
+    }
+    
+    // Modal Functions
+    function showRegistrationForm() {
+        const modal = document.getElementById('registrationModal');
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Add form submission handler
+        const form = document.getElementById('registrationForm');
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            handleFormSubmission();
+        };
+    }
+    
+    function showProgramDetails() {
+        // Create and show program details modal
+        const detailsHTML = `
+            <div id="programDetailsModal" class="pelatihan-modal">
+                <div class="pelatihan-modal-content" style="max-width: 800px;">
+                    <div class="pelatihan-modal-header">
+                        <h4>Detail Program Pelatihan</h4>
+                        <span class="pelatihan-modal-close" onclick="closeModal('programDetailsModal')">&times;</span>
+                    </div>
+                    <div class="pelatihan-modal-body">
+                        <div class="program-details-grid" style="display: grid; gap: 20px;">
+                            <div class="detail-item">
+                                <h5>🕐 Durasi Pelatihan</h5>
+                                <p>2-6 bulan tergantung program yang dipilih</p>
+                            </div>
+                            <div class="detail-item">
+                                <h5>📜 Sertifikasi</h5>
+                                <p>Sertifikat resmi dan diakui industri</p>
+                            </div>
+                            <div class="detail-item">
+                                <h5>💼 Job Placement</h5>
+                                <p>Bantuan penempatan kerja hingga 85% success rate</p>
+                            </div>
+                            <div class="detail-item">
+                                <h5>👨‍🏫 Instruktur</h5>
+                                <p>Tenaga ahli berpengalaman dan tersertifikasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', detailsHTML);
+        document.getElementById('programDetailsModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(modalId = 'registrationModal') {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+            if (modalId === 'programDetailsModal') {
+                modal.remove();
+            }
+        }
+        document.body.style.overflow = 'auto';
+    }
+    
+    function handleFormSubmission() {
+        // Simulate form submission
+        const submitBtn = document.querySelector('#registrationForm button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<span class="spinner"></span> Mengirim...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = '✓ Berhasil Dikirim!';
+            submitBtn.style.background = '#28a745';
+            
+            setTimeout(() => {
+                closeModal();
+                showSuccessMessage();
+                // Reset form
+                document.getElementById('registrationForm').reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 1500);
+        }, 2000);
+    }
+    
+    function showSuccessMessage() {
+        const successModal = `
+            <div id="successModal" class="pelatihan-modal">
+                <div class="pelatihan-modal-content" style="text-align: center; max-width: 400px;">
+                    <div class="pelatihan-modal-body" style="padding: 50px 30px;">
+                        <div style="font-size: 4rem; color: #28a745; margin-bottom: 20px;">✓</div>
+                        <h4 style="color: #28a745; margin-bottom: 15px;">Pendaftaran Berhasil!</h4>
+                        <p>Tim kami akan menghubungi Anda dalam 1x24 jam.</p>
+                        <button class="pelatihan-btn pelatihan-btn-primary" onclick="closeModal('successModal')" style="margin-top: 20px;">
+                            Tutup
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', successModal);
+        document.getElementById('successModal').style.display = 'block';
+    }
+    
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple-expand {
+            from {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            to {
+                width: 300px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modals = document.querySelectorAll('.pelatihan-modal');
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                closeModal(modal.id);
+            }
+        });
+    };
+    </script>
     </section>
     
     
@@ -642,6 +1621,8 @@
             <li><i class="bi bi-translate me-1"></i> Kantonis</li>
             <li><i class="bi bi-translate me-1"></i> Melayu</li>
             <li><i class="bi bi-translate me-1"></i> Inggris</li>
+            <li><i class="bi bi-translate me-1"></i> Korea</li>
+            <li><i class="bi bi-translate me-1"></i> Jepang</li>
           </ul>
         </div>
   

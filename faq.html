@@ -75,7 +75,6 @@
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
         <div class="d-flex align-items-center">
           <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
-          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
         </div>
       </a>
       
@@ -89,7 +88,6 @@
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="visimisi.html">Visi - Misi</a></li>
-              <li><a href="legal.html">Legalitas dan Sertifikasi</a></li>
               <li><a href="mitra.html">Mitra Kami</a></li>
               <li><a href="nilai2.html">Nilai Value Kami</a></li>
               <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
@@ -100,7 +98,7 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
-          <li><a href="faq.html">Pertanyaan Umum</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="pendaftaran.html">Pendaftaran</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
@@ -116,6 +114,7 @@
 
     </div>
   </header>
+
 
   <main class="main">
 
@@ -139,567 +138,729 @@
     <!-- End Page Title -->
   
 
-    <section id="faq" class="section">
+    <section id="enhanced-faq-gallery-section" class="enhanced-faq-gallery-wrapper">
       <style>
-        #faq {
-          background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+        /* Enhanced FAQ Gallery Styles */
+        .enhanced-faq-gallery-wrapper {
+          background: #ffffff;
           padding: 100px 0;
           position: relative;
           overflow: hidden;
+          font-family: inherit;
         }
         
-        #faq::before {
-          content: "";
-          position: absolute;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background: rgba(227, 176, 22, 0.03);
-          top: -100px;
-          left: -100px;
+        .enhanced-faq-gallery-wrapper * {
+          box-sizing: border-box;
         }
         
-        #faq::after {
-          content: "";
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background: rgba(227, 176, 22, 0.05);
-          bottom: -80px;
-          right: -80px;
-        }
-        
-        .faq-wrapper {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 0 20px;
-          position: relative;
-          z-index: 1;
-        }
-        
-        .faq-title {
-          text-align: center;
-          margin-bottom: 60px;
-        }
-        
-        .faq-title h2 {
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin-bottom: 20px;
-          color: #000;
-          position: relative;
-          display: inline-block;
-        }
-        
-        .faq-title h2::after {
-          content: "";
-          position: absolute;
-          width: 60px;
-          height: 4px;
-          background: #e3b016;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          border-radius: 2px;
-        }
-        
-        .faq-title p {
-          color: #000;
-          font-size: 1.1rem;
-          max-width: 700px;
-          margin: 0 auto;
-        }
-        
-        .faq-group {
-          display: grid;
-          grid-gap: 25px;
-          position: relative;
-        }
-        
-        /* Decoration lines */
-        .faq-group::before {
-          content: "";
-          position: absolute;
-          left: 20px;
-          top: 0;
-          height: 100%;
-          width: 2px;
-          background: linear-gradient(to bottom, transparent, #e3b016 20%, #e3b016 80%, transparent);
-          opacity: 0.2;
-        }
-        
-        .faq-group::after {
-          content: "";
-          position: absolute;
-          right: 20px;
-          top: 0;
-          height: 100%;
-          width: 2px;
-          background: linear-gradient(to bottom, transparent, #e3b016 20%, #e3b016 80%, transparent);
-          opacity: 0.2;
-        }
-        
-        .accordion-item {
-          background-color: #fff;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-          transform: translateY(0);
-          transition: all 0.4s ease;
-          position: relative;
-          z-index: 1;
-        }
-        
-        .accordion-item::before {
-          content: "";
+        /* Enhanced Background Decorations */
+        .enhanced-faq-bg-decoration {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, rgba(227, 176, 22, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
-          z-index: -1;
-          opacity: 0;
-          transition: opacity 0.4s ease;
+          pointer-events: none;
+          z-index: 0;
         }
         
-        .accordion-item:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        .enhanced-faq-pattern-1 {
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border: 3px solid rgba(227, 176, 22, 0.1);
+          border-radius: 50%;
+          top: -150px;
+          left: -150px;
+          animation: enhancedRotateClockwise 25s linear infinite;
         }
         
-        .accordion-item:hover::before {
-          opacity: 1;
+        .enhanced-faq-pattern-2 {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border: 2px solid rgba(83, 131, 255, 0.08);
+          border-radius: 50%;
+          bottom: -100px;
+          right: -100px;
+          animation: enhancedRotateCounterClockwise 20s linear infinite;
         }
         
-        /* Numbered bullets */
-        .accordion-item {
-          counter-increment: faq-counter;
+        .enhanced-faq-geometric-shape {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-bottom: 52px solid rgba(227, 176, 22, 0.05);
+          top: 20%;
+          right: 10%;
+          animation: enhancedFloat 6s ease-in-out infinite;
         }
         
-        .accordion-header {
-          padding: 22px 30px 22px 70px;
-          cursor: pointer;
-          font-weight: 600;
+        .enhanced-faq-dots {
+          position: absolute;
+          top: 60%;
+          left: 5%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+        }
+        
+        .enhanced-faq-dot {
+          width: 8px;
+          height: 8px;
+          background: rgba(227, 176, 22, 0.3);
+          border-radius: 50%;
+          animation: enhancedDotPulse 2s ease-in-out infinite;
+        }
+        
+        .enhanced-faq-dot:nth-child(2) { animation-delay: 0.3s; }
+        .enhanced-faq-dot:nth-child(3) { animation-delay: 0.6s; }
+        .enhanced-faq-dot:nth-child(4) { animation-delay: 0.9s; }
+        
+        /* Main Container */
+        .enhanced-faq-gallery-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          position: relative;
+          z-index: 1;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 1.05rem;
-          color: #333;
-          border-left: 3px solid transparent;
-          transition: all 0.3s ease;
+          flex-wrap: wrap;
+          gap: 40px;
+        }
+        
+        /* Enhanced Left Side - Gallery */
+        .enhanced-faq-gallery-left {
+          flex: 0 0 350px;
           position: relative;
         }
         
-        .accordion-header::before {
-          content: counter(faq-counter, decimal-leading-zero);
-          position: absolute;
-          left: 25px;
-          font-size: 1.2rem;
+        .enhanced-faq-gallery-heading {
+          font-size: 1.8rem;
+          margin-bottom: 30px;
+          color: #333;
           font-weight: 700;
-          color: #e3b016;
-          opacity: 0.5;
-          transition: all 0.3s ease;
+          position: relative;
+          padding: 25px;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.1) 0%, rgba(227, 176, 22, 0.02) 100%);
+          border-radius: 15px;
+          border-left: 5px solid #e3b016;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          animation: enhancedSlideInLeft 0.8s ease-out;
         }
         
-        .accordion-item:nth-child(1) .accordion-header {
-          border-left-color: #e3b016;
+        .enhanced-faq-gallery-heading::before {
+          content: "📚";
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          font-size: 2rem;
+          background: #fff;
+          padding: 10px;
+          border-radius: 50%;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          animation: enhancedBounce 2s ease-in-out infinite;
         }
         
-        .accordion-item:nth-child(2) .accordion-header {
-          border-left-color: #5383ff;
+        .enhanced-faq-gallery-images {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          position: relative;
         }
         
-        .accordion-item:nth-child(3) .accordion-header {
-          border-left-color: #FF6B6B;
+        .enhanced-faq-gallery-item {
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+          position: relative;
+          transform: translateY(0);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
-        .accordion-item:nth-child(4) .accordion-header {
-          border-left-color: #4CD964;
+        .enhanced-faq-gallery-item::before {
+          content: "";
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(45deg, #e3b016, #5383ff, #FF6B6B, #4CD964);
+          border-radius: 22px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
         
-        .accordion-item:nth-child(5) .accordion-header {
-          border-left-color: #9C27B0;
-        }
-        
-        .accordion-item:nth-child(6) .accordion-header {
-          border-left-color: #FF9500;
-        }
-        
-        .accordion-item.active .accordion-header {
-          background-color: rgba(227, 176, 22, 0.05);
-        }
-        
-        .accordion-item.active .accordion-header::before {
+        .enhanced-faq-gallery-item:hover::before {
           opacity: 1;
-          transform: scale(1.2);
         }
         
-        .accordion-content {
+        .enhanced-faq-gallery-item:hover {
+          transform: translateY(-10px) scale(1.02);
+          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .enhanced-faq-gallery-item img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+        
+        .enhanced-faq-gallery-item:hover img {
+          transform: scale(1.05);
+        }
+        
+        /* Enhanced Right Side - FAQ */
+        .enhanced-faq-gallery-right {
+          flex: 1;
+          min-width: 350px;
+        }
+        
+        .enhanced-faq-main-title {
+          text-align: left;
+          margin-bottom: 50px;
+          position: relative;
+        }
+        
+        .enhanced-faq-main-title h2 {
+          font-size: 2.5rem;
+          font-weight: 800;
+          margin-bottom: 20px;
+          color: #222;
+          position: relative;
+          display: inline-block;
+          padding: 30px;
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.08) 0%, rgba(83, 131, 255, 0.05) 100%);
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          animation: enhancedSlideInRight 0.8s ease-out;
+        }
+        
+        .enhanced-faq-main-title h2::before {
+          content: "❓";
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          font-size: 2.5rem;
+          background: linear-gradient(45deg, #e3b016, #5383ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: enhancedRotate360 3s ease-in-out infinite;
+        }
+        
+        .enhanced-faq-main-title h2::after {
+          content: "";
+          position: absolute;
+          bottom: 10px;
+          left: 30px;
+          width: 80px;
+          height: 6px;
+          background: linear-gradient(90deg, #e3b016, #5383ff);
+          border-radius: 3px;
+          animation: enhancedExpand 2s ease-in-out infinite;
+        }
+        
+        /* Enhanced FAQ Items */
+        .enhanced-faq-items-container {
+          display: grid;
+          grid-gap: 25px;
+          position: relative;
+          counter-reset: enhanced-faq-counter;
+        }
+        
+        .enhanced-faq-item {
+          background: #fff;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          position: relative;
+          z-index: 1;
+          counter-increment: enhanced-faq-counter;
+          border: 2px solid transparent;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          background-clip: padding-box;
+        }
+        
+        .enhanced-faq-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, #e3b016, #5383ff, #FF6B6B, #4CD964, #9C27B0, #FF9500);
+          border-radius: 20px;
+          padding: 2px;
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        
+        .enhanced-faq-item:hover::before {
+          opacity: 1;
+        }
+        
+        .enhanced-faq-item:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .enhanced-faq-question {
+          padding: 25px 30px 25px 80px;
+          cursor: pointer;
+          font-weight: 700;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.1rem;
+          color: #333;
+          position: relative;
+          transition: all 0.3s ease;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.5) 100%);
+        }
+        
+        .enhanced-faq-question::before {
+          content: counter(enhanced-faq-counter, decimal-leading-zero);
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.4rem;
+          font-weight: 900;
+          color: #fff;
+          background: linear-gradient(45deg, #e3b016, #5383ff);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3);
+          animation: enhancedPulse 2s ease-in-out infinite;
+        }
+        
+        .enhanced-faq-item.active .enhanced-faq-question {
+          background: linear-gradient(135deg, rgba(227, 176, 22, 0.1) 0%, rgba(83, 131, 255, 0.05) 100%);
+          color: #222;
+        }
+        
+        .enhanced-faq-item.active .enhanced-faq-question::before {
+          animation: enhancedSpinGlow 1s ease-in-out;
+          background: linear-gradient(45deg, #4CD964, #e3b016);
+        }
+        
+        .enhanced-faq-toggle-icon {
+          position: relative;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .enhanced-faq-toggle-icon::before,
+        .enhanced-faq-toggle-icon::after {
+          content: "";
+          position: absolute;
+          background: linear-gradient(45deg, #555, #333);
+          transition: all 0.3s ease;
+          border-radius: 2px;
+        }
+        
+        .enhanced-faq-toggle-icon::before {
+          width: 16px;
+          height: 3px;
+        }
+        
+        .enhanced-faq-toggle-icon::after {
+          width: 3px;
+          height: 16px;
+        }
+        
+        .enhanced-faq-item.active .enhanced-faq-toggle-icon {
+          background: linear-gradient(45deg, #e3b016, #5383ff);
+          transform: rotate(180deg);
+          box-shadow: 0 8px 20px rgba(227, 176, 22, 0.3);
+        }
+        
+        .enhanced-faq-item.active .enhanced-faq-toggle-icon::before,
+        .enhanced-faq-item.active .enhanced-faq-toggle-icon::after {
+          background: #fff;
+        }
+        
+        .enhanced-faq-item.active .enhanced-faq-toggle-icon::after {
+          opacity: 0;
+          transform: scale(0);
+        }
+        
+        .enhanced-faq-answer {
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+          transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
           padding: 0 30px;
+          background: linear-gradient(135deg, rgba(248, 249, 250, 0.3) 0%, rgba(255, 255, 255, 0.8) 100%);
         }
         
-        .accordion-content p {
+        .enhanced-faq-answer-content {
           margin: 0;
-          padding: 20px 0;
-          color: #666;
-          line-height: 1.7;
+          padding: 25px 0 30px;
+          color: #555;
+          line-height: 1.8;
+          font-size: 1.05rem;
           opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.4s ease, transform 0.4s ease;
-          transition-delay: 0.1s;
+          transform: translateY(15px);
+          transition: all 0.5s ease;
+          position: relative;
+          padding-left: 60px;
         }
         
-        .accordion-item.active .accordion-content {
+        .enhanced-faq-answer-content::before {
+          content: "💡";
+          position: absolute;
+          left: 0;
+          top: 25px;
+          font-size: 1.5rem;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background: linear-gradient(45deg, #e3b016, #5383ff);
+          border-radius: 50%;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        .enhanced-faq-item.active .enhanced-faq-answer {
           max-height: 1000px;
-          transition: max-height 1s ease-in-out;
+          transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .accordion-item.active .accordion-content p {
+        .enhanced-faq-item.active .enhanced-faq-answer-content {
           opacity: 1;
           transform: translateY(0);
         }
         
-        .accordion-icon {
-          position: relative;
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: #f8f9fa;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease;
+        /* Enhanced Animations */
+        @keyframes enhancedRotateClockwise {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
         
-        .accordion-icon::before,
-        .accordion-icon::after {
-          content: "";
-          position: absolute;
-          background: #555;
-          transition: all 0.3s ease;
+        @keyframes enhancedRotateCounterClockwise {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
         }
         
-        .accordion-icon::before {
-          width: 12px;
-          height: 2px;
+        @keyframes enhancedFloat {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          33% { transform: translateY(-15px) rotate(5deg); }
+          66% { transform: translateY(5px) rotate(-3deg); }
         }
         
-        .accordion-icon::after {
-          width: 2px;
-          height: 12px;
+        @keyframes enhancedDotPulse {
+          0%, 100% { transform: scale(1); opacity: 0.3; }
+          50% { transform: scale(1.5); opacity: 0.8; }
         }
         
-        .accordion-item.active .accordion-icon {
-          background: #e3b016;
-          transform: rotate(180deg);
+        @keyframes enhancedSlideInLeft {
+          from { transform: translateX(-50px); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
         }
         
-        .accordion-item.active .accordion-icon::before,
-        .accordion-item.active .accordion-icon::after {
-          background: #fff;
+        @keyframes enhancedSlideInRight {
+          from { transform: translateX(50px); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
         }
         
-        .accordion-item.active .accordion-icon::after {
-          opacity: 0;
+        @keyframes enhancedBounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
         
-        /* Search Box */
-        .faq-search {
-          position: relative;
-          max-width: 500px;
-          margin: 30px auto 40px;
+        @keyframes enhancedRotate360 {
+          0%, 100% { transform: rotate(0deg) scale(1); }
+          50% { transform: rotate(180deg) scale(1.1); }
         }
         
-        .faq-search input {
-          width: 100%;
-          padding: 15px 20px;
-          padding-right: 50px;
-          border: none;
-          border-radius: 30px;
-          background: #fff;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-          font-size: 1rem;
-          transition: all 0.3s ease;
+        @keyframes enhancedExpand {
+          0%, 100% { width: 80px; opacity: 0.8; }
+          50% { width: 120px; opacity: 1; }
         }
         
-        .faq-search input:focus {
-          outline: none;
-          box-shadow: 0 5px 25px rgba(227, 176, 22, 0.2);
+        @keyframes enhancedPulse {
+          0%, 100% { transform: translateY(-50%) scale(1); box-shadow: 0 5px 15px rgba(227, 176, 22, 0.3); }
+          50% { transform: translateY(-50%) scale(1.1); box-shadow: 0 8px 25px rgba(227, 176, 22, 0.5); }
         }
         
-        .faq-search button {
-          position: absolute;
-          right: 5px;
-          top: 5px;
-          width: 40px;
-          height: 40px;
-          border: none;
-          background: #e3b016;
-          border-radius: 50%;
-          color: white;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease;
+        @keyframes enhancedSpinGlow {
+          0% { transform: translateY(-50%) rotate(0deg); }
+          100% { transform: translateY(-50%) rotate(360deg); }
         }
         
-        .faq-search button:hover {
-          background: #d4a314;
-          transform: scale(1.05);
+        @keyframes enhancedFadeInUp {
+          from { transform: translateY(30px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
         }
         
-        /* Decoration Animation */
-        @keyframes float {
-          0% {
-            transform: translateY(0);
+        /* Enhanced Responsive Design */
+        @media (max-width: 992px) {
+          .enhanced-faq-gallery-container {
+            flex-direction: column;
+            gap: 30px;
           }
-          50% {
-            transform: translateY(-10px);
+          
+          .enhanced-faq-gallery-left {
+            flex: 1;
+            width: 100%;
           }
-          100% {
-            transform: translateY(0);
+          
+          .enhanced-faq-gallery-images {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
           }
-        }
-        
-        #faq::before {
-          animation: float 15s ease-in-out infinite;
-        }
-        
-        #faq::after {
-          animation: float 12s ease-in-out infinite reverse;
+          
+          .enhanced-faq-gallery-item {
+            flex: 0 0 calc(50% - 10px);
+          }
+          
+          .enhanced-faq-main-title h2 {
+            font-size: 2rem;
+            padding: 20px;
+          }
         }
         
         @media (max-width: 768px) {
-          #faq {
-            padding: 70px 0;
+          .enhanced-faq-gallery-wrapper {
+            padding: 80px 0;
           }
           
-          .faq-title h2 {
-            font-size: 2rem;
+          .enhanced-faq-gallery-heading {
+            font-size: 1.5rem;
+            padding: 20px;
           }
           
-          .accordion-header {
-            padding: 18px 20px 18px 60px;
+          .enhanced-faq-main-title h2 {
+            font-size: 1.8rem;
+            padding: 15px;
           }
           
-          .accordion-header::before {
-            left: 20px;
+          .enhanced-faq-question {
+            padding: 20px 25px 20px 70px;
+            font-size: 1rem;
           }
           
-          .accordion-content {
-            padding: 0 20px;
+          .enhanced-faq-question::before {
+            width: 35px;
+            height: 35px;
+            font-size: 1.2rem;
           }
           
-          .faq-search {
-            max-width: 90%;
+          .enhanced-faq-gallery-images {
+            flex-direction: column;
+          }
+          
+          .enhanced-faq-gallery-item {
+            flex: 0 0 100%;
+          }
+          
+          .enhanced-faq-answer-content {
+            padding-left: 40px;
           }
         }
       </style>
-    
-      <div class="faq-wrapper" data-aos="fade-up">
-        <div class="faq-title">
-          <h2>Pertanyaan Umum</h2>
-          <p>Temukan jawaban dari pertanyaan yang sering diajukan seputar LPK - LN Sentosa Karya Aditama Bekasi.</p>
-          <div class="faq-search">
-            <input type="text" id="faqSearch" placeholder="Cari pertanyaan..." onkeyup="searchFAQ()">
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </button>
+
+      <!-- Enhanced Background Decorations -->
+      <div class="enhanced-faq-bg-decoration">
+        <div class="enhanced-faq-pattern-1"></div>
+        <div class="enhanced-faq-pattern-2"></div>
+        <div class="enhanced-faq-geometric-shape"></div>
+        <div class="enhanced-faq-dots">
+          <div class="enhanced-faq-dot"></div>
+          <div class="enhanced-faq-dot"></div>
+          <div class="enhanced-faq-dot"></div>
+          <div class="enhanced-faq-dot"></div>
+        </div>
+      </div>
+
+      <div class="enhanced-faq-gallery-container">
+        <div class="enhanced-faq-gallery-left">
+          <h3 class="enhanced-faq-gallery-heading">FAQ & Pertanyaan Umum</h3>
+          <div class="enhanced-faq-gallery-images">
+            <div class="enhanced-faq-gallery-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.4s both;">
+              <img src="assets/images/mitra/23.jpeg" alt="Kegiatan pelatihan 1">
+            </div>
+            <div class="enhanced-faq-gallery-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.6s both;">
+              <img src="assets/img/team/1.jpeg" alt="Kegiatan pelatihan 2">
+            </div>
           </div>
         </div>
-    
-        <div class="faq-group">
-          <!-- FAQ Item 1 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Bahasa apa saja yang diajarkan di LPK kami?
-              <span class="accordion-icon"></span>
-            </div>
-            <div class="accordion-content">
-              <p>Kami menyediakan pelatihan bahasa Mandarin, Kantonis, Melayu, dan Inggris, disesuaikan dengan kebutuhan negara tujuan kerja.</p>
-            </div>
+
+        <div class="enhanced-faq-gallery-right">
+          <div class="enhanced-faq-main-title">
+            <h2>Temukan jawaban dari pertanyaan yang sering diajukan seputar LPK Kami</h2>
           </div>
-    
-          <!-- FAQ Item 2 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Apakah harus sudah bisa bahasa sebelum ikut pelatihan?
-              <span class="accordion-icon"></span>
+
+          <div class="enhanced-faq-items-container">
+            <!-- Enhanced FAQ Item 1 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.5s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Bahasa apa saja yang diajarkan di LPK kami?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Kami menyediakan pelatihan bahasa Mandarin, Kantonis, Melayu, dan Inggris, disesuaikan dengan kebutuhan negara tujuan kerja.</p>
+              </div>
             </div>
-            <div class="accordion-content">
-              <p>Tidak. Program dirancang untuk pemula dan akan dimulai dari tingkat dasar hingga peserta siap berkomunikasi aktif.</p>
+
+            <!-- Enhanced FAQ Item 2 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.6s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Apakah harus sudah bisa bahasa sebelum ikut pelatihan?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Tidak. Program dirancang untuk pemula dan akan dimulai dari tingkat dasar hingga peserta siap berkomunikasi aktif.</p>
+              </div>
             </div>
-          </div>
-    
-          <!-- FAQ Item 3 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Apa saja keterampilan kerja yang diajarkan selain bahasa?
-              <span class="accordion-icon"></span>
+
+            <!-- Enhanced FAQ Item 3 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.7s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Apa saja keterampilan kerja yang diajarkan selain bahasa?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Selain pelatihan bahasa, kami juga memberikan pelatihan keterampilan dasar seperti house keeping, babysitter, dan seni dasar (art) untuk mendukung kesiapan kerja peserta di luar negeri.</p>
+              </div>
             </div>
-            <div class="accordion-content">
-              <p>Selain pelatihan bahasa, kami juga memberikan pelatihan keterampilan dasar seperti house keeping, babysitter, dan seni dasar (art) untuk mendukung kesiapan kerja peserta di luar negeri.</p>
+
+            <!-- Enhanced FAQ Item 4 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.8s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Berapa lama program pelatihan berlangsung?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Durasi pelatihan rata-rata berkisar antara 3 hingga 6 bulan, tergantung jenis bahasa dan kemampuan peserta.</p>
+              </div>
             </div>
-          </div>
-    
-          <!-- FAQ Item 4 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Berapa lama program pelatihan berlangsung?
-              <span class="accordion-icon"></span>
+
+            <!-- Enhanced FAQ Item 5 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 0.9s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Apakah tersedia kelas online?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Untuk saat ini pelatihan utama dilakukan secara langsung (offline) agar peserta bisa berlatih komunikasi secara intensif. Namun, beberapa materi pendukung juga tersedia secara daring.</p>
+              </div>
             </div>
-            <div class="accordion-content">
-              <p>Durasi pelatihan rata-rata berkisar antara 3 hingga 6 bulan, tergantung jenis bahasa dan kemampuan peserta.</p>
-            </div>
-          </div>
-    
-          <!-- FAQ Item 5 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Apakah tersedia kelas online?
-              <span class="accordion-icon"></span>
-            </div>
-            <div class="accordion-content">
-              <p>Untuk saat ini pelatihan utama dilakukan secara langsung (offline) agar peserta bisa berlatih komunikasi secara intensif. Namun, beberapa materi pendukung juga tersedia secara daring.</p>
-            </div>
-          </div>
-    
-          <!-- FAQ Item 6 -->
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              Apakah ada sertifikat setelah menyelesaikan program?
-              <span class="accordion-icon"></span>
-            </div>
-            <div class="accordion-content">
-              <p>Ya. Setelah menyelesaikan pelatihan dan lulus evaluasi, peserta akan mendapatkan sertifikat pelatihan bahasa dan keterampilan kerja.</p>
+
+            <!-- Enhanced FAQ Item 6 -->
+            <div class="enhanced-faq-item" style="animation: enhancedFadeInUp 0.8s ease-out 1s both;">
+              <div class="enhanced-faq-question" data-enhanced-faq-toggle>
+                Apakah ada sertifikat setelah menyelesaikan program?
+                <span class="enhanced-faq-toggle-icon"></span>
+              </div>
+              <div class="enhanced-faq-answer">
+                <p class="enhanced-faq-answer-content">Ya. Setelah menyelesaikan pelatihan dan lulus evaluasi, peserta akan mendapatkan sertifikat pelatihan bahasa dan keterampilan kerja.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    
+
       <script>
-        function toggleAccordion(header) {
-          const item = header.parentElement;
-          const allItems = document.querySelectorAll(".accordion-item");
-          
-          if (item.classList.contains("active")) {
-            // Jika item yang diklik sudah aktif, tutup saja
-            item.classList.remove("active");
-          } else {
-            // Tutup semua item yang aktif
-            allItems.forEach(i => i.classList.remove("active"));
-            
-            // Buka item yang diklik
-            item.classList.add("active");
-            
-            // Scroll to the item
-            const yOffset = -100; 
-            const y = item.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({top: y, behavior: 'smooth'});
-            
-            // Tambahkan animasi entrance
-            setTimeout(() => {
-              item.querySelector(".accordion-content p").style.opacity = "1";
-              item.querySelector(".accordion-content p").style.transform = "translateY(0)";
-            }, 300);
-          }
-        }
-    
-        function searchFAQ() {
-          const input = document.getElementById("faqSearch");
-          const filter = input.value.toUpperCase();
-          const accordionItems = document.querySelectorAll('.accordion-item');
-          
-          // Reset all items
-          accordionItems.forEach(item => {
-            item.style.display = "block";
-            item.classList.remove("active");
-          });
-          
-          // If no search term, show all
-          if (filter === '') return;
-          
-          let foundMatch = false;
-          
-          // Filter items based on search
-          accordionItems.forEach(item => {
-            const headerText = item.querySelector('.accordion-header').textContent;
-            const contentText = item.querySelector('.accordion-content p').textContent;
-            
-            if (headerText.toUpperCase().includes(filter) || contentText.toUpperCase().includes(filter)) {
-              foundMatch = true;
-              item.classList.add("search-match");
-              
-              // Highlight the first match
-              if (!document.querySelector('.accordion-item.active')) {
-                item.classList.add("active");
-              }
-              
-              // Add animation for matches
-              item.style.animation = "pulse 1s";
-              setTimeout(() => {
-                item.style.animation = "";
-              }, 1000);
-            } else {
-              item.style.display = "none";
-            }
-          });
-          
-          if (!foundMatch) {
-            // No matches found - could add a "no results" message here
-          }
-        }
-    
-        // Animasi entrance untuk item FAQ
         document.addEventListener("DOMContentLoaded", function() {
-          const accordionItems = document.querySelectorAll(".accordion-item");
+          // Enhanced FAQ toggle functionality
+          const enhancedFaqToggles = document.querySelectorAll('[data-enhanced-faq-toggle]');
           
-          // First load animation
-          accordionItems.forEach((item, index) => {
-            item.style.opacity = "0";
-            item.style.transform = "translateY(30px)";
-            
-            setTimeout(() => {
-              item.style.transition = "all 0.6s ease";
-              item.style.opacity = "1";
-              item.style.transform = "translateY(0)";
-            }, 100 + (index * 100));
+          enhancedFaqToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+              const faqItem = this.parentElement;
+              const isActive = faqItem.classList.contains('active');
+              
+              // Close all items with animation
+              document.querySelectorAll('.enhanced-faq-item').forEach(item => {
+                item.classList.remove('active');
+              });
+              
+              // If clicked item wasn't active, make it active
+              if (!isActive) {
+                faqItem.classList.add('active');
+                
+                // Enhanced smooth scroll to the item on mobile
+                if (window.innerWidth < 768) {
+                  const yOffset = -30;
+                  const y = faqItem.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({
+                    top: y, 
+                    behavior: 'smooth'
+                  });
+                }
+              }
+            });
           });
           
-          // Open first item after animations complete
+          // Auto-open first FAQ item with enhanced timing
           setTimeout(() => {
-            if (accordionItems.length > 0) {
-              accordionItems[0].classList.add("active");
+            const firstFaqItem = document.querySelector('.enhanced-faq-item');
+            if (firstFaqItem) {
+              firstFaqItem.classList.add('active');
             }
-          }, 1000);
+          }, 1500);
+          
+          // Enhanced hover effects for gallery items
+          const enhancedGalleryItems = document.querySelectorAll('.enhanced-faq-gallery-item');
+          enhancedGalleryItems.forEach((item, index) => {
+            item.addEventListener('mouseenter', function() {
+              this.style.transform = 'translateY(-15px) scale(1.03) rotate(1deg)';
+              this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+              this.style.transform = '';
+            });
+          });
+          
+          // Enhanced parallax effect for background elements
+          window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.enhanced-faq-pattern-1, .enhanced-faq-pattern-2');
+            
+            parallaxElements.forEach((element, index) => {
+              const speed = index === 0 ? 0.5 : -0.3;
+              element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+          });
+          
+          // Enhanced intersection observer for animations
+          const enhancedObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+              }
+            });
+          }, {
+            threshold: 0.1
+          });
+          
+          document.querySelectorAll('.enhanced-faq-item, .enhanced-faq-gallery-item').forEach(item => {
+            enhancedObserver.observe(item);
+          });
         });
       </script>
-      
-      <style>
-        @keyframes pulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-          }
-          50% {
-            transform: scale(1.02);
-            box-shadow: 0 8px 40px rgba(227, 176, 22, 0.2);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-          }
-        }
-      </style>
     </section>
     
     
@@ -753,6 +914,8 @@
             <li><i class="bi bi-translate me-1"></i> Kantonis</li>
             <li><i class="bi bi-translate me-1"></i> Melayu</li>
             <li><i class="bi bi-translate me-1"></i> Inggris</li>
+            <li><i class="bi bi-translate me-1"></i> Korea</li>
+            <li><i class="bi bi-translate me-1"></i> Jepang</li>
           </ul>
         </div>
   

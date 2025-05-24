@@ -75,7 +75,6 @@
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
         <div class="d-flex align-items-center">
           <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
-          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
         </div>
       </a>
       
@@ -89,7 +88,6 @@
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="visimisi.html">Visi - Misi</a></li>
-              <li><a href="legal.html">Legalitas dan Sertifikasi</a></li>
               <li><a href="mitra.html">Mitra Kami</a></li>
               <li><a href="nilai2.html">Nilai Value Kami</a></li>
               <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
@@ -100,13 +98,13 @@
           <li><a href="galeri.html">Galeri</a></li>
           <!-- <li><a href="loker.html">Lowongan</a></li> -->
           <li><a href="berita.html">Berita</a></li>
-          <li><a href="faq.html">Pertanyaan Umum</a></li>
+          <li><a href="faq.html">FAQ?</a></li>
           <li><a href="pendaftaran.html">Pendaftaran</a></li>
           <li><a href="contact.html">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      
+
       <div class="header-social-links">
         <a href="https://wa.me/6282298982759"><i class="bi bi-whatsapp"></i></a>
         <a href="https://www.facebook.com/people/Sentosakarya-Aditama/61557006988058/?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
@@ -117,359 +115,693 @@
     </div>
   </header>
 
+
   <main class="main">
-<section class="hero-section">
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .hero-section {
-        position: relative;
-        width: 100%;
-        height: 600px;
-        overflow: hidden;
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    .hero-slider {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 2s ease-in-out;
-        background-size: cover;
-        background-position: center;
-        filter: blur(2px); /* blur latar belakang */
-    }
-
-    .slide::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(2px); /* blur tambahan */
-        z-index: 1;
-    }
-
-    .slide.active {
-        opacity: 1;
-    }
-
-    .slide:nth-child(1) {
-        background-image: url('assets/img/11.jpg');
-    }
-
-    .slide:nth-child(2) {
-        background-image: url('assets/img/22.jpg');
-    }
-
-    .slide:nth-child(3) {
-        background-image: url('assets/img/33.jpg');
-    }
-
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translateY(-50%);
-        color: white;
-        z-index: 2;
-        max-width: 600px;
-        animation: fadeIn 1s ease-out;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-70%); }
-        to { opacity: 1; transform: translateY(-50%); }
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-        line-height: 1.5;
-    }
-
-    .hero-buttons {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .btn {
-        padding: 0.75rem 1.5rem;
-        border-radius: 25px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        font-size: 0.9rem;
-    }
-
-    .btn-primary {
-        background-color: #1473e6;
-        color: white;
-        border: none;
-    }
-
-    .btn-primary:hover {
-        background-color: #0d66d0;
-        transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-        background-color: transparent;
-        color: white;
-        border: none;
-    }
-
-    .btn-secondary:hover {
-        text-decoration: underline;
-    }
-
-    .slider-nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 2rem;
-        z-index: 10;
-    }
-
-    .slider-arrow {
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .slider-arrow:hover {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    .slider-arrow svg {
-        width: 20px;
-        height: 20px;
-        fill: white;
-    }
-
-
-
- 
-</style>
-    <div class="hero-slider">
-        <div class="slide active">
-            <!-- Slide 1 content -->
-            <div class="overlay"></div>
+    <div class="page-title-modern py-2 px-3">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill fs-4 text-warning"></i>
+          <div>
+            <h5 class="mb-0 fw-bold text-dark">Partner Kami</h5>
+          </div>
         </div>
-        <div class="slide">
-            <!-- Slide 2 content -->
-            <div class="overlay"></div>
-        </div>
-        <div class="slide">
-            <!-- Slide 3 content -->
-            <div class="overlay"></div>
-        </div>
+        <nav>
+          <ol class="breadcrumb mb-0 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-warning fw-semibold">Partner Kami</li>
+          </ol>
+        </nav>
+      </div>
     </div>
-
-    <div class="hero-content">
-        <h1>LPK-LN Sentosa Karya Aditama</h1>
-        <p>Kami membekali Calon Pekerja Migran Indonesia dengan pelatihan bahasa asing & keterampilan kerja bersertifikasi BNSP untuk siap bersaing di dunia kerja internasional.</p>
-        <div class="hero-buttons">
-            <a href="#program" class="btn btn-primary">Lihat Program Pelatihan</a>
-            <a href="#pendaftaran" class="btn btn-secondary">Daftar Sekarang</a>
-        </div>
-    </div>
-
-    <div class="slider-nav">
-        <div class="slider-arrow prev">
-            <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-            </svg>
-        </div>
-        <div class="slider-arrow next">
-            <svg viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-            </svg>
-        </div>
-    </div>
-
-    <!-- Statistik Counter Langsung di bawah Hero -->
-    
-<script>       
-document.addEventListener('DOMContentLoaded', function() {
-            // Slider functionality
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.prev');
-            const nextBtn = document.querySelector('.next');
-            let currentSlide = 0;
-            let slideInterval;
-
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                slides[index].classList.add('active');
-                currentSlide = index;
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            // Auto slide every 3 seconds
-            function startSlideInterval() {
-                slideInterval = setInterval(nextSlide, 3000);
-            }
-
-            // Event listeners for navigation buttons
-            prevBtn.addEventListener('click', function() {
-                clearInterval(slideInterval);
-                prevSlide();
-                startSlideInterval();
-            });
-
-            nextBtn.addEventListener('click', function() {
-                clearInterval(slideInterval);
-                nextSlide();
-                startSlideInterval();
-            });
-
-            // Start the automatic slider
-            startSlideInterval();
-        });
-
-        </script>
-</section>
-    <!-- Page Title -->
-    <!-- End Page Title -->
-
-    <!-- Testimonials Section -->
     <section id="mitra-lpk" style="padding: 60px 0; background-color: #ffffff; position: relative; overflow: hidden;">
-        <!-- Background Decorative Elements (Simplified) -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
-          <svg width="100%" height="100%" viewBox="0 0 1440 500" preserveAspectRatio="none">
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="20" y="20"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="50" y="50"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="80" y="80"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="110" y="110"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="140" y="140"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="170" y="170"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="200" y="200"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="230" y="230"></rect>
-            <!-- Repeat on right side -->
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1200" y="20"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1230" y="50"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1260" y="80"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1290" y="110"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1320" y="140"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1350" y="170"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1380" y="200"></rect>
-            <rect width="10" height="10" fill="#e3b016" opacity="0.05" x="1410" y="230"></rect>
-          </svg>
-        </div>
-      
-        <div class="container" style="max-width: 1100px; margin: auto; padding: 0 20px; position: relative; z-index: 1;">
-          <!-- Heading with Simple Animation -->
-          <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-bottom: 15px; position: relative; display: inline-block;">
-              Kerja Sama & Mitra
-              <span style="position: absolute; bottom: -8px; left: 30%; width: 40%; height: 3px; background-color: #e3b016;"></span>
-            </h2>
-            <p style="text-align: center; color: #555; max-width: 700px; margin: 0 auto; font-size: 17px; line-height: 1.6;">
-              LPK Sentosa Karya Aditama menjalin kerja sama dengan lembaga pemerintah dan sertifikasi untuk menjamin kualitas pelatihan dan penempatan tenaga kerja.
-            </p>
-          </div>
-          
-          <!-- Partner Cards with Simple Hover Effect -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
-            
-            <!-- BP2MI -->
-            <div class="partner-card" style="background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
-              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background-color: #e3b016;"></div>
-              <div style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="assets/images/mitra/bp2mi.png" alt="BP2MI Logo" style="max-width: 110px; max-height: 90px;">
-              </div>
-              <h4 style="margin-bottom: 12px; color: #333; font-size: 20px; font-weight: 600;">BP2MI</h4>
-              <p style="color: #666; font-size: 15px; line-height: 1.5;">Terdaftar sebagai P3MI (Perusahaan Penempatan Pekerja Migran Indonesia).</p>
-            </div>
-      
-            <div class="partner-card" style="background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
-              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background-color: #e3b016;"></div>
-              <div style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="assets/images/mitra/kemnaker.png" alt="Kemnaker Logo" style="max-width: 110px; max-height: 90px;">
-              </div>
-              <h4 style="margin-bottom: 12px; color: #333; font-size: 20px; font-weight: 600;">Kemnaker</h4>
-              <p style="color: #666; font-size: 15px; line-height: 1.5;">Bekerja sama dengan Kementerian Ketenagakerjaan untuk program pelatihan resmi.</p>
-            </div>
-            <!-- BNSP -->
-            <div class="partner-card" style="background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
-              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background-color: #e3b016;"></div>
-              <div style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="assets/images/mitra/bnsp.png" alt="BNSP Logo" style="max-width: 110px; max-height: 90px;">
-              </div>
-              <h4 style="margin-bottom: 12px; color: #333; font-size: 20px; font-weight: 600;">BNSP</h4>
-              <p style="color: #666; font-size: 15px; line-height: 1.5;">Badan Nasional Sertifikasi Profesi, lembaga resmi sertifikasi kompetensi kerja di Indonesia.</p>
-            </div>
-            
-            
-            
-      
-            <!-- LSP Surya Sentosa -->
-            <div class="partner-card" style="background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;">
-              <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background-color: #e3b016;"></div>
-              <div style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="assets/images/mitra/lsp.png" alt="LSP Surya Sentosa Logo" style="max-width: 130px; max-height: 90px;">
-              </div>
-              <h4 style="margin-bottom: 12px; color: #333; font-size: 20px; font-weight: 600;">LSP Surya Sentosa</h4>
-              <p style="color: #666; font-size: 15px; line-height: 1.5;">Mitra pelatihan & sertifikasi tenaga kerja domestik berskala nasional.</p>
-            </div>
-            
-            <!-- Kemnaker (New Card) -->
+      <div class="mitra-bg-ornaments">
+           <div class="mitra-floating-shape"></div>
+           <div class="mitra-floating-shape"></div>
+           <div class="mitra-floating-shape"></div>
+           <div class="mitra-floating-shape"></div>
+       </div>
+
+       <!-- Geometric Pattern Background -->
+       <svg class="mitra-geometric-pattern" viewBox="0 0 1440 800" preserveAspectRatio="none">
+           <!-- Animated lines -->
+           <polyline class="mitra-pattern-line" points="0,400 200,300 400,350 600,250 800,300 1000,200 1200,250 1440,150"></polyline>
+           <polyline class="mitra-pattern-line" points="0,600 300,500 600,550 900,450 1200,500 1440,400"></polyline>
+           <polyline class="mitra-pattern-line" points="100,700 400,600 700,650 1000,550 1300,600 1440,500"></polyline>
+       </svg>
+
+       <!-- Corner Decorations -->
+       <div class="mitra-corner-decoration top-left"></div>
+       <div class="mitra-corner-decoration bottom-right"></div>
+
+       <div class="mitra-container">
+           <!-- Header -->
+             <div class="legalitas-title-container">
+           <div class="legalitas-title-decoration-top"></div>
+           <h2 class="legalitas-main-title">
+               <span class="legalitas-title-icon">🏆</span>
+               <span class="legalitas-title-text">Partner Resmi Kami</span>
+           </h2>
+           <div class="legalitas-title-decoration-bottom"></div>
+       </div>
            
-          </div>
-        </div>
-      
-        <style>
-          #mitra-lpk .partner-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-          }
-        </style>
-      </section><!-- /Testimonials Section -->
+           <!-- Partner Cards -->
+           <div class="mitra-grid">
+               <!-- BP2MI -->
+               <div class="mitra-partner-card">
+                   <div class="mitra-card-top-accent"></div>
+                   <div class="mitra-logo-container">
+                       <img src="assets/img/kp2mi.png" alt="BP2MI Logo" class="mitra-partner-logo">
+                   </div>
+
+               </div>
+
+               <!-- Kemnaker -->
+               <div class="mitra-partner-card">
+                   <div class="mitra-card-top-accent"></div>
+                   <div class="mitra-logo-container">
+                       <img src="assets/img/kemnak.webp" alt="Kemnaker Logo" class="mitra-partner-logo">
+                   </div>
+
+               </div>
+
+               <!-- BNSP -->
+               <div class="mitra-partner-card">
+                   <div class="mitra-card-top-accent"></div>
+                   <div class="mitra-logo-container">
+                       <img src="assets/img/bnsep.png" alt="BNSP Logo" class="mitra-partner-logo">
+                   </div>
+
+               </div>
+           </div>
+       </div>
+   
+      <style>
+         .legalitas-title-container {
+         position: relative;
+         display: block;
+         margin-bottom: 2rem;
+         text-align: center;
+         width: 100%;
+       }
+       
+       .legalitas-title-decoration-top {
+         width: 120px;
+         height: 4px;
+         background: linear-gradient(90deg, transparent, #e3b016, transparent);
+         margin: 0 auto 1rem;
+         position: relative;
+         overflow: hidden;
+         border-radius: 2px;
+       }
+       
+ @keyframes legalitas-shine {
+         0% { left: -100%; }
+         100% { left: 100%; }
+       }
+       
+       @keyframes legalitas-bounce {
+         0%, 100% { transform: translateY(0); }
+         50% { transform: translateY(-10px); }
+       }
+       
+       @keyframes legalitas-gradientMove {
+         0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+       }
+       
+       /* Responsive Design */
+       @media (max-width: 768px) {
+         .legalitas-main-title {
+           font-size: 2rem;
+           flex-direction: column;
+           gap: 0.5rem;
+         }
+       }
+
+       .legalitas-title-decoration-top::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(90deg, transparent, rgba(227, 176, 22, 0.8), transparent);
+         animation: legalitas-shine 3s ease-in-out infinite;
+       }
+       
+       .legalitas-main-title {
+         position: relative;
+         font-size: 3rem;
+         font-weight: 700;
+         color: #2c3e50;
+         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 1rem;
+       }
+       
+       .legalitas-title-icon {
+         font-size: 2.5rem;
+         animation: legalitas-bounce 2s ease-in-out infinite;
+       }
+       
+       .legalitas-title-text {
+         background: linear-gradient(45deg, #2c3e50, #e3b016, #2c3e50);
+         background-size: 200% 200%;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         animation: legalitas-gradientMove 3s ease-in-out infinite;
+       }
+       
+       .legalitas-title-decoration-bottom {
+         width: 180px;
+         height: 3px;
+         background: linear-gradient(90deg, transparent, #e3b016, transparent);
+         margin: 1rem auto 0;
+         border-radius: 2px;
+       }
+       /* Reset dan Base Styles untuk Mitra Section */
+       .mitra-lpk-section * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       .mitra-lpk-section {
+           padding: 80px 0;
+           background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+           position: relative;
+           overflow: hidden;
+           font-family: 'Arial', sans-serif;
+       }
+
+       /* Background Ornaments */
+       .mitra-bg-ornaments {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           pointer-events: none;
+           z-index: 1;
+       }
+
+       .mitra-floating-shape {
+           position: absolute;
+           border-radius: 50%;
+           background: rgba(227, 176, 22, 0.1);
+           animation: mitra-float 6s ease-in-out infinite;
+       }
+
+       .mitra-floating-shape:nth-child(1) {
+           width: 120px;
+           height: 120px;
+           top: 10%;
+           left: 5%;
+           animation-delay: 0s;
+       }
+
+       .mitra-floating-shape:nth-child(2) {
+           width: 80px;
+           height: 80px;
+           top: 60%;
+           left: 8%;
+           animation-delay: 2s;
+       }
+
+       .mitra-floating-shape:nth-child(3) {
+           width: 100px;
+           height: 100px;
+           top: 20%;
+           right: 10%;
+           animation-delay: 1s;
+       }
+
+       .mitra-floating-shape:nth-child(4) {
+           width: 60px;
+           height: 60px;
+           top: 70%;
+           right: 5%;
+           animation-delay: 3s;
+       }
+
+       .mitra-geometric-pattern {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           opacity: 0.03;
+       }
+
+       .mitra-pattern-line {
+           stroke: #e3b016;
+           stroke-width: 2;
+           fill: none;
+           animation: mitra-draw-line 8s ease-in-out infinite;
+       }
+
+       /* Container */
+       .mitra-container {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 0 20px;
+           position: relative;
+           z-index: 2;
+       }
+
+       /* Header */
+       .mitra-header {
+           text-align: center;
+           margin-bottom: 60px;
+           animation: mitra-fade-in-up 1s ease-out;
+       }
+
+       .mitra-title {
+           font-size: 42px;
+           font-weight: 700;
+           color: #ffffff;
+           margin-bottom: 20px;
+           position: relative;
+           display: inline-block;
+       }
+
+       .mitra-title::after {
+           content: '';
+           position: absolute;
+           bottom: -10px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 80px;
+           height: 4px;
+           background: linear-gradient(45deg, #e3b016, #f1c232);
+           border-radius: 2px;
+           animation: mitra-glow 2s ease-in-out infinite alternate;
+       }
+
+       .mitra-subtitle {
+           color: rgba(255, 255, 255, 0.9);
+           max-width: 800px;
+           margin: 0 auto;
+           font-size: 18px;
+           line-height: 1.7;
+           animation: mitra-fade-in-up 1s ease-out 0.3s both;
+       }
+
+       /* Partner Cards Grid */
+       .mitra-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 30px;
+           animation: mitra-fade-in-up 1s ease-out 0.6s both;
+       }
+
+       .mitra-partner-card {
+           background: rgba(255, 255, 255, 0.95);
+           backdrop-filter: blur(10px);
+           border-radius: 20px;
+           padding: 35px 25px;
+           text-align: center;
+           position: relative;
+           overflow: hidden;
+           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+           border: 1px solid rgba(227, 176, 22, 0.2);
+           animation: mitra-card-appear 0.8s ease-out;
+       }
+
+       .mitra-partner-card:nth-child(1) { animation-delay: 0.1s; }
+       .mitra-partner-card:nth-child(2) { animation-delay: 0.2s; }
+       .mitra-partner-card:nth-child(3) { animation-delay: 0.3s; }
+
+       .mitra-partner-card::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: -100%;
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(90deg, transparent, rgba(227, 176, 22, 0.1), transparent);
+           transition: left 0.6s ease;
+       }
+
+       .mitra-partner-card:hover::before {
+           left: 100%;
+       }
+
+       .mitra-partner-card:hover {
+           transform: translateY(-15px) scale(1.02);
+           box-shadow: 0 25px 50px rgba(227, 176, 22, 0.25);
+           border-color: #e3b016;
+       }
+
+       .mitra-card-top-accent {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 5px;
+           background: linear-gradient(45deg, #e3b016, #f1c232);
+           border-radius: 20px 20px 0 0;
+       }
+
+.mitra-logo-container {
+   height: 200px; /* Atur tinggi container agar lebih besar */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+   position: relative;
+}
+
+       .mitra-logo-container::after {
+           content: '';
+           position: absolute;
+           width: 120px;
+           height: 120px;
+           border: 2px solid rgba(227, 176, 22, 0.1);
+           border-radius: 50%;
+           animation: mitra-rotate 10s linear infinite;
+       }
+
+.mitra-partner-logo {
+   width: 100%;
+   height: 100%;
+   object-fit: contain; /* atau cover jika ingin penuh walau terpotong sedikit */
+   position: relative;
+   z-index: 1;
+   transition: transform 0.3s ease;
+}
+
+       .mitra-partner-card:hover .mitra-partner-logo {
+           transform: scale(1.1);
+       }
+
+       .mitra-partner-name {
+           font-size: 24px;
+           font-weight: 700;
+           color: #333;
+           margin-bottom: 15px;
+           position: relative;
+       }
+
+       .mitra-partner-name::after {
+           content: '';
+           position: absolute;
+           bottom: -5px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 0;
+           height: 2px;
+           background: #e3b016;
+           transition: width 0.3s ease;
+       }
+
+       .mitra-partner-card:hover .mitra-partner-name::after {
+           width: 60px;
+       }
+
+       .mitra-partner-desc {
+           color: #666;
+           font-size: 16px;
+           line-height: 1.6;
+       }
+
+       /* Decorative Elements */
+       .mitra-corner-decoration {
+           position: absolute;
+           width: 60px;
+           height: 60px;
+           border: 3px solid rgba(227, 176, 22, 0.3);
+           border-radius: 50%;
+       }
+
+       .mitra-corner-decoration.top-left {
+           top: 20px;
+           left: 20px;
+           border-right: none;
+           border-bottom: none;
+           animation: mitra-pulse 3s ease-in-out infinite;
+       }
+
+       .mitra-corner-decoration.bottom-right {
+           bottom: 20px;
+           right: 20px;
+           border-left: none;
+           border-top: none;
+           animation: mitra-pulse 3s ease-in-out infinite 1.5s;
+       }
+
+       /* Keyframe Animations */
+       @keyframes mitra-float {
+           0%, 100% { transform: translateY(0px); }
+           50% { transform: translateY(-20px); }
+       }
+
+       @keyframes mitra-fade-in-up {
+           from {
+               opacity: 0;
+               transform: translateY(30px);
+           }
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+
+       @keyframes mitra-card-appear {
+           from {
+               opacity: 0;
+               transform: translateY(50px) scale(0.8);
+           }
+           to {
+               opacity: 1;
+               transform: translateY(0) scale(1);
+           }
+       }
+
+       @keyframes mitra-glow {
+           from { box-shadow: 0 0 10px rgba(227, 176, 22, 0.5); }
+           to { box-shadow: 0 0 20px rgba(227, 176, 22, 0.8); }
+       }
+
+       @keyframes mitra-rotate {
+           from { transform: rotate(0deg); }
+           to { transform: rotate(360deg); }
+       }
+
+       @keyframes mitra-pulse {
+           0%, 100% { 
+               opacity: 0.3;
+               transform: scale(1);
+           }
+           50% { 
+               opacity: 0.7;
+               transform: scale(1.1);
+           }
+       }
+
+       @keyframes mitra-draw-line {
+           0% { stroke-dasharray: 0 1000; }
+           50% { stroke-dasharray: 1000 1000; }
+           100% { stroke-dasharray: 0 1000; }
+       }
+
+       /* Responsive Design */
+       @media (max-width: 768px) {
+           .mitra-lpk-section {
+               padding: 60px 0;
+           }
+
+           .mitra-title {
+               font-size: 32px;
+           }
+
+           .mitra-subtitle {
+               font-size: 16px;
+           }
+
+           .mitra-grid {
+               grid-template-columns: 1fr;
+               gap: 20px;
+           }
+
+           .mitra-partner-card {
+               padding: 25px 20px;
+           }
+       }
+   </style>
+   
+   <script>
+
+       document.addEventListener('DOMContentLoaded', function() {
+           // Title animation on load
+           const titleText = document.querySelector('.legalitas-title-text');
+           if (titleText) {
+               setTimeout(() => {
+                   titleText.style.animation = 'legalitas-gradientMove 3s ease-in-out infinite';
+               }, 500);
+           }
+
+           console.log('Legalitas title section initialized');
+       });
+
+       // Mitra LPK Interactive Script
+       (function() {
+           'use strict';
+
+           // Initialize when DOM is loaded
+           document.addEventListener('DOMContentLoaded', function() {
+               initMitraAnimations();
+               initCardInteractions();
+               initScrollAnimations();
+           });
+
+           function initMitraAnimations() {
+               // Add staggered animation to cards
+               const cards = document.querySelectorAll('.mitra-partner-card');
+               cards.forEach((card, index) => {
+                   card.style.animationDelay = `${0.2 + (index * 0.1)}s`;
+               });
+
+               // Floating shapes random movement
+               const shapes = document.querySelectorAll('.mitra-floating-shape');
+               shapes.forEach(shape => {
+                   const randomDuration = 6 + Math.random() * 4; // 6-10 seconds
+                   const randomDelay = Math.random() * 3; // 0-3 seconds
+                   shape.style.animationDuration = `${randomDuration}s`;
+                   shape.style.animationDelay = `${randomDelay}s`;
+               });
+           }
+
+           function initCardInteractions() {
+               const cards = document.querySelectorAll('.mitra-partner-card');
+               
+               cards.forEach(card => {
+                   card.addEventListener('mouseenter', function() {
+                       // Add extra glow effect on hover
+                       this.style.boxShadow = '0 25px 50px rgba(227, 176, 22, 0.3), 0 0 0 1px rgba(227, 176, 22, 0.4)';
+                   });
+
+                   card.addEventListener('mouseleave', function() {
+                       // Reset to default shadow
+                       this.style.boxShadow = '';
+                   });
+
+                   // Add click ripple effect
+                   card.addEventListener('click', function(e) {
+                       createRippleEffect(e, this);
+                   });
+               });
+           }
+
+           function createRippleEffect(event, element) {
+               const rect = element.getBoundingClientRect();
+               const size = Math.max(rect.width, rect.height);
+               const x = event.clientX - rect.left - size / 2;
+               const y = event.clientY - rect.top - size / 2;
+               
+               const ripple = document.createElement('div');
+               ripple.style.cssText = `
+                   position: absolute;
+                   width: ${size}px;
+                   height: ${size}px;
+                   left: ${x}px;
+                   top: ${y}px;
+                   background: radial-gradient(circle, rgba(227, 176, 22, 0.3) 0%, transparent 70%);
+                   border-radius: 50%;
+                   transform: scale(0);
+                   animation: mitra-ripple 0.6s ease-out;
+                   pointer-events: none;
+                   z-index: 10;
+               `;
+               
+               element.appendChild(ripple);
+               
+               // Add ripple animation
+               const style = document.createElement('style');
+               style.textContent = `
+                   @keyframes mitra-ripple {
+                       to {
+                           transform: scale(2);
+                           opacity: 0;
+                       }
+                   }
+               `;
+               document.head.appendChild(style);
+               
+               setTimeout(() => {
+                   ripple.remove();
+                   style.remove();
+               }, 600);
+           }
+
+           function initScrollAnimations() {
+               // Intersection Observer for scroll animations
+               const observer = new IntersectionObserver((entries) => {
+                   entries.forEach(entry => {
+                       if (entry.isIntersecting) {
+                           entry.target.classList.add('mitra-visible');
+                           
+                           // Trigger counter animations or other effects
+                           if (entry.target.classList.contains('mitra-partner-card')) {
+                               animateCard(entry.target);
+                           }
+                       }
+                   });
+               }, {
+                   threshold: 0.1,
+                   rootMargin: '0px 0px -50px 0px'
+               });
+
+               // Observe all animated elements
+               document.querySelectorAll('.mitra-partner-card, .mitra-header').forEach(el => {
+                   observer.observe(el);
+               });
+           }
+
+           function animateCard(card) {
+               // Add special animation when card comes into view
+               const logo = card.querySelector('.mitra-partner-logo');
+               if (logo) {
+                   setTimeout(() => {
+                       logo.style.transform = 'scale(1.1) rotate(5deg)';
+                       setTimeout(() => {
+                           logo.style.transform = 'scale(1) rotate(0deg)';
+                       }, 300);
+                   }, 200);
+               }
+           }
+
+           // Parallax effect for floating shapes
+           window.addEventListener('scroll', function() {
+               const scrolled = window.pageYOffset;
+               const rate = scrolled * -0.5;
+               
+               document.querySelectorAll('.mitra-floating-shape').forEach((shape, index) => {
+                   const speed = 0.5 + (index * 0.1);
+                   shape.style.transform = `translateY(${scrolled * speed}px)`;
+               });
+           });
+
+           // Performance optimization: throttle scroll events
+           function throttle(func, limit) {
+               let inThrottle;
+               return function() {
+                   const args = arguments;
+                   const context = this;
+                   if (!inThrottle) {
+                       func.apply(context, args);
+                       inThrottle = true;
+                       setTimeout(() => inThrottle = false, limit);
+                   }
+               }
+           }
+
+       })();
+   </script>
+   </section>
 
   </main>
 
@@ -515,6 +847,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><i class="bi bi-translate me-1"></i> Kantonis</li>
             <li><i class="bi bi-translate me-1"></i> Melayu</li>
             <li><i class="bi bi-translate me-1"></i> Inggris</li>
+            <li><i class="bi bi-translate me-1"></i> Korea</li>
+            <li><i class="bi bi-translate me-1"></i> Jepang</li>
           </ul>
         </div>
   

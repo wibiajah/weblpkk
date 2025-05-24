@@ -76,7 +76,7 @@
         <img src="assets/img/logoweb.png" alt="Logo" style="height: 30px; margin-right: 10px;">
         <div class="d-flex align-items-center">
           <h1 class="sitename mb-0 me-2">LPK - LN Sentosa Karya Aditama</h1>
-          <span class="px-2 py-1 bg-warning text-dark rounded-3" style="font-size: 0.85rem;">Bekasi</span>
+
         </div>
       </a>
       
@@ -90,7 +90,6 @@
           <li class="dropdown"><a href="tentang.html"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="visimisi.html">Visi - Misi</a></li>
-              <li><a href="legal.html">Legalitas dan Sertifikasi</a></li>
               <li><a href="mitra.html">Mitra Kami</a></li>
               <li><a href="nilai2.html">Nilai Value Kami</a></li>
               <li><a href="kerjaan.html">Pelatihan Kerja</a></li>
@@ -1220,7 +1219,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <img src="https://img.icons8.com/color/96/training.png" alt="Pelatihan" width="48" height="48">
             </div>
             <div class="stat-counter-content">
-              <div class="stat-counter-number" data-target="9">0</div>
+              <div class="stat-counter-number" data-target="8">0</div>
               <div class="stat-counter-label">Pelatihan Kerja</div>
             </div>
           </div>
@@ -2498,7 +2497,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="language-card" data-language="inggris">
             <div class="card-header">
               <div class="language-title">
-                <div class="language-icon">🇬🇧</div>
+                <div class="language-icon">👑</div>
                 <h3>Bahasa Inggris</h3>
               </div>
               <div class="flag-container">
@@ -3022,9 +3021,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       
         .flag-container {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
+          width: 80px;
+          height: 50px;
+          border-radius: 8px;
           overflow: hidden;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
           transition: all 0.3s ease;
@@ -3525,7 +3524,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <p class="text-white-50 mb-4">Jangan lewatkan kesempatan untuk mengembangkan potensi Anda</p>
                         </div>
                         
-                        <a href="#" class="btn-register">
+                        <a href="pendaftaran.html" class="btn-register">
                             <span class="btn-register-text">MULAI PENDAFTARAN <i class="fas fa-arrow-right ms-2"></i></span>
                             <div class="btn-register-hover"></div>
                         </a>
@@ -4527,7 +4526,7 @@ document.addEventListener('DOMContentLoaded', function() {
       background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 50%, #ffffff 100%);
       position: relative;
       overflow: hidden;
-      padding: 80px 0;
+      padding: 40px 0;
       min-height: 90vh;
     }
     
@@ -4618,32 +4617,231 @@ document.addEventListener('DOMContentLoaded', function() {
     /* Enhanced Section Header */
     .section-header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
       position: relative;
       z-index: 2;
     }
     
-    .section-title {
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-blue) 50%, var(--accent-purple) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title::before {
-      content: '✨';
-      position: absolute;
-      top: -10px;
-      left: -40px;
-      font-size: 1.5rem;
-      animation: sparkle 2s ease-in-out infinite;
-    }
-    
+    /* Enhanced Title Wrapper */
+.enhanced-title-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Background Text Effect */
+.title-background-text {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(227, 176, 22, 0.08);
+  letter-spacing: 8px;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Enhanced Section Title Override */
+.enhanced-title-wrapper .section-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Individual Word Styling */
+.title-word-1 {
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.8rem;
+  display: block;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.title-word-2 {
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3.5rem;
+  display: block;
+  font-weight: 900;
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.title-word-3 {
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.6rem;
+  display: block;
+  animation: slideInRight 0.8s ease-out 0.4s both;
+}
+
+/* Decorative Line */
+.title-decorative-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--secondary-blue), var(--accent-purple));
+  margin: 10px auto;
+  border-radius: 2px;
+  position: relative;
+  animation: expandLine 1s ease-out 0.6s both;
+}
+
+.title-decorative-line::before,
+.title-decorative-line::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-gold);
+}
+
+.title-decorative-line::before {
+  left: -5px;
+}
+
+.title-decorative-line::after {
+  right: -5px;
+}
+
+/* Enhanced Subtitle */
+.enhanced-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+  position: relative;
+}
+
+.enhanced-subtitle::before {
+  content: '✨';
+  margin-right: 8px;
+}
+
+.enhanced-subtitle::after {
+  content: '✨';
+  margin-left: 8px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive untuk Enhanced Title */
+@media (max-width: 768px) {
+  .title-background-text {
+    font-size: 4rem;
+    top: -10px;
+  }
+  
+  .enhanced-title-wrapper .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .title-word-1 {
+    font-size: 2.2rem;
+  }
+  
+  .title-word-2 {
+    font-size: 2.8rem;
+  }
+  
+  .title-word-3 {
+    font-size: 2rem;
+  }
+  
+  .enhanced-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-background-text {
+    font-size: 2.5rem;
+  }
+  
+  .enhanced-title-wrapper .section-title {
+    font-size: 2rem;
+  }
+  
+  .title-word-1 {
+    font-size: 1.8rem;
+  }
+  
+  .title-word-2 {
+    font-size: 2.2rem;
+  }
+  
+  .title-word-3 {
+    font-size: 1.6rem;
+  }
+}
     .section-title::after {
       content: '🎯';
       position: absolute;
@@ -4883,7 +5081,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     @media (max-width: 768px) {
       .homepage-training {
-        padding: 60px 0;
+        padding: 30px 0;
       }
       
       .section-title {
@@ -5032,6 +5230,190 @@ document.addEventListener('DOMContentLoaded', function() {
       border-color: rgba(88, 193, 132, 0.6);
     }
     
+/* Enhanced Title Wrapper - Lebih Spesifik */
+.homepage-training .section-header .enhanced-title-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+/* Background Text Effect - Spesifik */
+.homepage-training .enhanced-title-wrapper .title-background-text {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(227, 176, 22, 0.08);
+  letter-spacing: 6px;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Enhanced Section Title Override - Sangat Spesifik */
+.homepage-training .section-header .enhanced-title-wrapper .section-title {
+  font-size: 3.2rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 15px !important;
+  position: relative;
+  z-index: 2;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+/* Individual Word Styling - Sangat Spesifik */
+.homepage-training .enhanced-title-wrapper .section-title .title-word-1 {
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  animation: training-slideInLeft 0.8s ease-out;
+  display: inline-block;
+}
+
+.homepage-training .enhanced-title-wrapper .section-title .title-word-2 {
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3.5rem;
+  font-weight: 900;
+  animation: training-slideInUp 0.8s ease-out 0.2s both;
+  display: inline-block;
+}
+
+.homepage-training .enhanced-title-wrapper .section-title .title-word-3 {
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  animation: training-slideInRight 0.8s ease-out 0.4s both;
+  display: inline-block;
+}
+
+/* Decorative Line - Spesifik */
+.homepage-training .enhanced-title-wrapper .title-decorative-line {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--secondary-blue), var(--accent-purple));
+  margin: 20px auto;
+  border-radius: 2px;
+  position: relative;
+  animation: training-expandLine 1s ease-out 0.6s both;
+}
+
+.homepage-training .enhanced-title-wrapper .title-decorative-line::before,
+.homepage-training .enhanced-title-wrapper .title-decorative-line::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-gold);
+}
+
+.homepage-training .enhanced-title-wrapper .title-decorative-line::before {
+  left: -5px;
+}
+
+.homepage-training .enhanced-title-wrapper .title-decorative-line::after {
+  right: -5px;
+}
+
+/* Animations dengan nama unik */
+@keyframes training-slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes training-slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes training-slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes training-expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+/* Responsive untuk enhanced title - Spesifik */
+@media (max-width: 768px) {
+  .homepage-training .enhanced-title-wrapper .title-background-text {
+    font-size: 3rem !important;
+    top: -10px !important;
+  }
+  
+  .homepage-training .section-header .enhanced-title-wrapper .section-title {
+    font-size: 2.2rem !important;
+    gap: 8px !important;
+  }
+  
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-1, 
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-3 {
+    font-size: 2rem !important;
+  }
+  
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-2 {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage-training .section-header .enhanced-title-wrapper .section-title {
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+  
+  .homepage-training .enhanced-title-wrapper .title-background-text {
+    font-size: 2rem !important;
+  }
+  
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-1, 
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-2, 
+  .homepage-training .enhanced-title-wrapper .section-title .title-word-3 {
+    font-size: 1.8rem !important;
+  }
+}
+
     @keyframes float-photos {
       0%, 100% { 
         transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
@@ -5102,10 +5484,17 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
   <div class="container">
     <!-- Section Header -->
-    <div class="section-header">
-      <h2 class="section-title">Program Pelatihan Unggulan</h2>
-      
-    </div>
+<div class="section-header">
+  <div class="enhanced-title-wrapper">
+    <div class="title-background-text">TRAINING</div>
+    <h2 class="section-title">
+      <span class="title-word-1">Program</span>
+      <span class="title-word-2">Pelatihan</span>
+      <span class="title-word-3">Unggulan</span>
+    </h2>
+    <div class="title-decorative-line"></div>
+  </div>
+</div>
 
     <!-- Training Grid -->
     <div class="training-grid">
@@ -5199,7 +5588,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- View More Button -->
     <div class="view-more-btn">
-      <a href="#pelatihan-lengkap" class="btn-view-more">
+      <a href="kerjaan.html" class="btn-view-more">
         Lihat Semua Program 🚀
       </a>
     </div>
@@ -6264,7 +6653,7 @@ cards.forEach(card => {
 
     <!-- View All Button -->
     <div class="homepage-view-all">
-      <a href="#" class="homepage-view-all-btn">
+      <a href="contact.html" class="homepage-view-all-btn">
         Lihat Semua Lokasi & Peta
         <i class="bi bi-arrow-right"></i>
       </a>
@@ -7090,6 +7479,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><i class="bi bi-translate me-1"></i> Kantonis</li>
             <li><i class="bi bi-translate me-1"></i> Melayu</li>
             <li><i class="bi bi-translate me-1"></i> Inggris</li>
+            <li><i class="bi bi-translate me-1"></i> Korea</li>
+            <li><i class="bi bi-translate me-1"></i> Jepang</li>
           </ul>
         </div>
   
